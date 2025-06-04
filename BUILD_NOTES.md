@@ -103,9 +103,24 @@ NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 - **Persistence**
   - All user settings persist via localStorage and React context, so preferences carry across all pages and reloads.
 
+### Layout Consistency & Accessibility Controls
+
+- The Navbar (navigation) and AccessibilityToolbar (accessibility controls) **must always be included in the global layout** (e.g., `src/app/layout.tsx`).
+- Do **not** add these components to individual pages. This ensures all pages have consistent navigation and accessibility features.
+- The Skip Link should also be included in the layout for accessibility.
+
 ---
 
 This approach ensures the site is accessible, user-friendly, and meets Australian accessibility standards. For further details, see the relevant code in `ThemeProvider.tsx`, `AccessibilityToolbar.tsx`, and `globals.css`.
+
+---
+
+## Skeleton Loading & Loading States
+
+- For every new page or component that fetches data, create a `loading.tsx` file (or a loading skeleton component) in the same directory.
+- Use the reusable `<Skeleton />` component from `src/components/ui/skeleton.tsx` to provide a consistent loading experience.
+- This ensures users see a smooth, accessible loading state while data is being fetched or during navigation.
+- See the `archives`, `archives/[archiveId]`, and `archives/[archiveId]/[assetId]` directories for examples.
 
 ---
 
@@ -120,3 +135,23 @@ This approach ensures the site is accessible, user-friendly, and meets Australia
 - Next.js SSG/ISR: https://nextjs.org/docs/app/building-your-application/rendering/static-and-dynamic-rendering
 - Vercel Environment Variables: https://vercel.com/docs/projects/environment-variables
 - Australian English: https://www.macquariedictionary.com.au/
+
+## shadcn/ui Component Import Path
+
+When using shadcn/ui components, always import from the correct path:
+
+- For example, the breadcrumb component should be imported from:
+  ```ts
+  import {
+    Breadcrumb,
+    BreadcrumbItem,
+    BreadcrumbLink,
+    BreadcrumbList,
+    BreadcrumbPage,
+    BreadcrumbSeparator,
+  } from '@/components/ui/breadcrumb'
+  ```
+
+- Do not import from 'lucide-react' unless you are using Lucide icons directly.
+
+This ensures all shadcn/ui components are used consistently and avoids module not found errors.

@@ -34,3 +34,11 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Low-Res Blur Preview Generation
+
+Before each build, a script automatically generates 16x16px low-res versions of all images in `public/images/` and saves them to `public/images/blur/`. These are used for culturally sensitive asset previews (`blurPreviewUrl`).
+
+- Script: `npm run generate-blur-previews`
+- Output: `public/images/blur/filename_blur.jpg`
+- Runs automatically before `next build`.
