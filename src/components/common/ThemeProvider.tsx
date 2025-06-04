@@ -1,7 +1,7 @@
 "use client";
 import { createContext, useContext, useEffect, useState } from 'react';
 
-type Theme = 'light' | 'dark';
+type Theme = 'light' | 'dark' | 'system';
 
 interface ThemeContextType {
   theme: Theme;
@@ -19,7 +19,7 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>('light');
+  const [theme, setThemeState] = useState<Theme>('system');
   const [fontSize, setFontSize] = useState(100); // percentage
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [highContrast, setHighContrast] = useState(false);
@@ -38,8 +38,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     const systemHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
     if (savedTheme) {
       setThemeState(savedTheme);
-    } else if (systemDark) {
-      setThemeState('dark');
+    } else {
+      setThemeState('system');
     }
     if (savedFontSize) setFontSize(Number(savedFontSize));
     if (savedReducedMotion !== null) {
@@ -60,9 +60,13 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (isMounted) {
       const html = document.querySelector('html');
+      let appliedTheme = theme;
+      if (theme === 'system') {
+        appliedTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
       if (html) {
-        html.className = theme;
-        html.setAttribute('data-theme', theme);
+        html.className = appliedTheme;
+        html.setAttribute('data-theme', appliedTheme);
       }
       localStorage.setItem('theme', theme);
     }

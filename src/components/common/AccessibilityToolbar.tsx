@@ -9,7 +9,7 @@ import { Switch } from '@/components/ui/switch';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
-import { Settings, TextCursorInput, Moon, Sun, Contrast, Type, X, Info, Zap, ZapOff } from 'lucide-react';
+import { Settings, TextCursorInput, Moon, Sun, Contrast, Type, X, Info, Zap, ZapOff, Monitor } from 'lucide-react';
 
 export default function AccessibilityToolbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,6 +29,7 @@ export default function AccessibilityToolbar() {
   const themeOptions = [
     { value: 'light', label: 'Light', icon: <Sun className="h-4 w-4" /> },
     { value: 'dark', label: 'Dark', icon: <Moon className="h-4 w-4" /> },
+    { value: 'system', label: 'System (use device theme)', icon: <Monitor className="h-4 w-4" /> },
   ];
 
   const currentTheme = themeOptions.find(option => option.value === theme);
@@ -162,7 +163,7 @@ export default function AccessibilityToolbar() {
                       <div>
                         <Select
                           value={theme}
-                          onValueChange={(value) => setTheme(value as 'light' | 'dark')}
+                          onValueChange={(value) => setTheme(value as 'light' | 'dark' | 'system')}
                           disabled={highContrast}
                         >
                           <SelectTrigger className="w-full" disabled={highContrast}>
