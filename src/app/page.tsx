@@ -1,7 +1,7 @@
 import StatsCards from '../components/common/StatsCards';
 import QuickActions from '../components/common/QuickActions';
-import Breadcrumbs from '../components/common/Breadcrumbs';
 import { getArchives } from '../lib/fotoware-client';
+import Link from 'next/link';
 
 export const revalidate = 3600; // Revalidate every hour
 
@@ -28,6 +28,7 @@ export default async function Home() {
                 className="flex w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm pl-10 pr-20 h-11"
                 placeholder="Search for images, videos, documents..."
                 aria-label="Search assets"
+                aria-controls="search-results-listbox"
                 aria-expanded="false"
                 aria-haspopup="listbox"
                 role="combobox"
@@ -41,7 +42,7 @@ export default async function Home() {
               disabled
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-shuffle h-4 w-4 mr-2"><path d="M2 18h1.4c1.3 0 2.5-.6 3.3-1.7l6.1-8.6c.7-1.1 2-1.7 3.3-1.7H22"></path><path d="m18 2 4 4-4 4"></path><path d="M2 6h1.9c1.5 0 2.9.9 3.6 2.2"></path><path d="M22 18h-5.9c-1.3 0-2.6-.7-3.3-1.8l-.5-.8"></path><path d="m18 14 4 4-4 4"></path></svg>
-              I'm Feeling Lucky
+              I&apos;m Feeling Lucky
             </button>
           </div>
         </div>
@@ -62,10 +63,10 @@ export default async function Home() {
       <section className="mb-8">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-2xl font-semibold">Archives</h2>
-          <a href="/archives" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">
+          <Link href="/archives" className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">
             View All
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right ml-2 h-4 w-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-          </a>
+          </Link>
         </div>
         {archives.length === 0 ? (
           <div className="rounded-lg border bg-card text-card-foreground shadow-sm p-12 text-center">
@@ -81,11 +82,11 @@ export default async function Home() {
           <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {archives.map((archive) => (
               <li key={archive.id} className="border rounded-lg p-6 bg-white dark:bg-gray-900 shadow hover:shadow-lg transition">
-                <a href={`/archives/${archive.id}`} className="block focus:outline-none focus:ring-2 focus:ring-primary">
+                <Link href={`/archives/${archive.id}`} className="block focus:outline-none focus:ring-2 focus:ring-primary">
                   <h2 className="text-xl font-semibold mb-2">{archive.name}</h2>
                   {archive.description && <p className="text-gray-500 dark:text-gray-400">{archive.description}</p>}
                   <span className="inline-block mt-4 text-primary underline">View archive</span>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

@@ -2,7 +2,7 @@
 // Page for listing FotoWare archives
 // TODO: Implement archives list UI and data fetching
 
-import { Archive, ArchiveIcon, Grid3X3, List, Search, ArrowRight, ArrowDown, ArrowDownWideNarrow, ArrowUpNarrowWide } from 'lucide-react';
+import { Archive, ArchiveIcon, Grid3X3, List, Search, ArrowRight, ArrowDownWideNarrow, ArrowUpNarrowWide } from 'lucide-react';
 import Link from 'next/link';
 import { Card, CardHeader, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';

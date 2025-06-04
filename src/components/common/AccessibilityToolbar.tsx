@@ -37,8 +37,9 @@ export default function AccessibilityToolbar() {
   const titleId = "accessibility-toolbar-title";
   // Focus trap: keep focus inside the popup when open
   useEffect(() => {
-    if (isOpen && cardRef.current) {
-      const focusable = cardRef.current.querySelectorAll<HTMLElement>(
+    const currentCardRef = cardRef.current;
+    if (isOpen && currentCardRef) {
+      const focusable = currentCardRef.querySelectorAll<HTMLElement>(
         'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
       );
       const first = focusable[0];
@@ -55,10 +56,10 @@ export default function AccessibilityToolbar() {
           }
         }
       }
-      cardRef.current.addEventListener('keydown', handleKey);
+      currentCardRef.addEventListener('keydown', handleKey);
       // Focus the first element
       first?.focus();
-      return () => cardRef.current?.removeEventListener('keydown', handleKey);
+      return () => currentCardRef?.removeEventListener('keydown', handleKey);
     }
   }, [isOpen]);
 
@@ -161,7 +162,7 @@ export default function AccessibilityToolbar() {
                       <div>
                         <Select
                           value={theme}
-                          onValueChange={(value) => setTheme(value as any)}
+                          onValueChange={(value) => setTheme(value as 'light' | 'dark')}
                           disabled={highContrast}
                         >
                           <SelectTrigger className="w-full" disabled={highContrast}>

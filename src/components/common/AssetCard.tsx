@@ -5,7 +5,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
-import { EyeOff, Info, AlertTriangle } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
 import * as React from 'react';
 import { useState } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
@@ -25,7 +25,6 @@ interface AssetCardProps {
   href?: string;
   meta?: Record<string, string>;
   onClick?: () => void;
-  maskType?: 'cover';
 }
 
 export function AssetCard({
@@ -36,7 +35,6 @@ export function AssetCard({
   href,
   meta = {},
   onClick,
-  maskType = 'cover',
 }: AssetCardProps) {
   // Use meta.title as the card title
   const title = meta.title || '';

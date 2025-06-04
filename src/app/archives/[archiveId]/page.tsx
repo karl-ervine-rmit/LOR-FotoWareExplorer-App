@@ -2,10 +2,8 @@
 // Page for a single archive, listing albums and assets
 // TODO: Implement archive detail UI and data fetching
 
-import { Breadcrumbs } from '../../../components/common/Breadcrumbs';
 import { useParams } from 'next/navigation';
 import { Card, CardContent } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Button } from '@/components/ui/button';
 import { useState, useRef, useEffect } from 'react';
@@ -16,7 +14,7 @@ import { Skeleton } from '@/components/ui/skeleton';
 import { Checkbox } from '@/components/ui/checkbox';
 import { cn } from '@/lib/utils';
 import { AssetCard, AssetFlag } from '@/components/common/AssetCard';
-import { EyeOff, Info, Star, CheckCircle } from 'lucide-react';
+import { EyeOff, Info, Star } from 'lucide-react';
 import { Switch } from '@/components/ui/switch';
 
 const mockTaxonomy = [
@@ -235,7 +233,7 @@ export default function ArchiveDetailPage() {
     } else {
       setAriaMessage('');
     }
-  }, [search, visibleGroups.length, totalVisibleValues]);
+  }, [search, visibleGroups, totalVisibleValues]);
 
   // Focus search input when sidebar opens on mobile
   useEffect(() => {
