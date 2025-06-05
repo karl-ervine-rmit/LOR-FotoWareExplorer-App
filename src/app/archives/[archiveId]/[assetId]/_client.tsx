@@ -1,11 +1,7 @@
 'use client';
 import Script from "next/script";
 import UniversalEmbed from '@/components/common/UniversalEmbed';
-import { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
-import { AlertTriangle } from 'lucide-react';
-import { motion } from 'framer-motion';
-import { cn } from '@/lib/utils';
+
 
 interface Asset {
   id: string;

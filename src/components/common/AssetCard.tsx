@@ -77,9 +77,9 @@ export function AssetCard({
   // Use meta.title as the card title
   const title = meta.title || '';
   // For accessibility: describe mask
-  const maskLabel = isCulturallySensitive
-    ? 'Culturally sensitive content. Image is hidden for cultural safety.'
-    : undefined;
+  // const maskLabel = isCulturallySensitive
+  //   ? 'Culturally sensitive content. Image is hidden for cultural safety.'
+  //   : undefined;
 
   // Local state for per-asset reveal
   const [revealed, setRevealed] = useState(false);

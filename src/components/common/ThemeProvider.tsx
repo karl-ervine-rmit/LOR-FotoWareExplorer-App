@@ -33,7 +33,6 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     const savedReducedMotion = localStorage.getItem('reducedMotion');
     const savedHighContrast = localStorage.getItem('highContrast');
     const savedDyslexicFont = localStorage.getItem('dyslexicFont');
-    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const systemReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const systemHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
     if (savedTheme) {

@@ -32,7 +32,7 @@ export interface UniversalEmbedProps {
   fallback?: string;
   isCulturallySensitive?: boolean;
   showCulturallySensitive?: boolean;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 export default function UniversalEmbed({

@@ -3,7 +3,7 @@
 // TODO: Implement archive detail UI and data fetching
 
 import type { Metadata } from "next";
-import Script from "next/script";
+
 import ArchiveDetailClient from './_client';
 
 export const metadata: Metadata = {
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   }
 };
 
-export default function ArchiveDetailPage() {
+export default async function ArchiveDetailPage() {
   const archiveId = 'example-archive';
   const assets = [
     {

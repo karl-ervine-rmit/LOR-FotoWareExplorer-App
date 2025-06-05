@@ -34,7 +34,7 @@ function ArchiveCard({ archive }: { archive: { id: string; name: string; descrip
   );
 }
 
-export default function ArchivesPageClient({ archives }: { archives: { id: string; name: string; description?: string }[] }) {
+export default async function ArchivesPageClient({ archives }: { archives: { id: string; name: string; description?: string }[] }) {
   const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
 
   return (
