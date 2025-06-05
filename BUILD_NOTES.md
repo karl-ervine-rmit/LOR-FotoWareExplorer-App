@@ -1,5 +1,34 @@
 # FotoWare Front-End MVP: Build & Deployment Notes
 
+---
+
+## 🚦 Quick Reference (Read This First!)
+
+- [Environment Variables](#environment-variables)
+- [Build Process (Local)](#build-process-local)
+- [Build Process (Vercel)](#build-process-vercel)
+- [Client vs Server Components](#recent-build--deployment-fixes-june-2024)
+- [TypeScript & Linting](#recent-build--deployment-fixes-june-2024)
+- [Troubleshooting](#troubleshooting)
+- [Accessibility & Australian English](#accessibility--australian-english)
+- [SEO & Canonical URLs](#seo-metadata--canonical-urls)
+
+---
+
+## ⚠️ Special Notes for Cursor & Windsurf Developers
+
+- **Never mark a Client Component as `async`.**
+- **Do all data fetching in Server Components, then pass results as props to Client Components.**
+- **Do not use `any` types—always use specific interfaces.**
+- **Remove or prefix unused variables with `_` to avoid lint errors.**
+- **Always use `.tsx` for files containing JSX.**
+- **Ensure `tsconfig.json` has `"jsx": "react-jsx"`.**
+- **Keep `@types/react` up to date and compatible with your React version.**
+- **All user-facing content must use Australian spelling.**
+- **Accessibility is not optional—follow all ARIA and keyboard navigation guidelines.**
+
+---
+
 ## Build & Deployment Overview
 
 This project uses Next.js 15.3 with the App Router, React 19.1, Tailwind CSS v4, shadcn/ui, Zustand, React Query, and more. It is designed for static site generation (SSG) with Incremental Static Regeneration (ISR) for public pages, and client-side fetching for dynamic data (e.g., search).
@@ -206,5 +235,68 @@ This ensures all shadcn/ui components are used consistently and avoids module no
   - The config exports `SITE_URL` and `SEO_DEFAULTS` (site name, description, default image, etc.), which are imported into each page's `metadata` export.
   - This approach means you only need to update your site URL or branding in one place, and all pages will use the correct values at build time.
   - When adding new pages or layouts, import from `@/lib/seo` and follow the same pattern for consistent, maintainable SEO.
+
+---
+
+## Recent Build & Deployment Fixes (June 2024)
+
+### Why These Changes Were Needed
+
+- **Next.js Client/Server Component Rules:**
+  - Next.js requires that only Server Components (no `'use client'` at the top) can be `async`. Client Components must be synchronous. Some components were incorrectly marked as `async` Client Components, causing build errors.
+- **TypeScript Strictness:**
+  - The codebase uses strict TypeScript settings, which disallow `any` types and unused variables. Lint errors were triggered by explicit `any` usage and unused parameters.
+- **React/JSX Type Errors:**
+  - Errors like `JSX element implicitly has type 'any'` and missing React hooks were caused by incorrect TypeScript config, missing types, or improper imports.
+
+### What Was Fixed
+
+- **Client Component Async Functions:**
+  - All Client Components (those with `'use client'`) were refactored to be synchronous. Any data fetching or async logic was moved to Server Components or handled before passing props to Client Components.
+- **TypeScript Linting:**
+  - Replaced all explicit `any` types with more specific types or interfaces.
+  - Removed or renamed unused variables (e.g., `_searchParams`) to avoid lint errors.
+- **React/JSX Imports:**
+  - Ensured all React hooks (`useState`, `useEffect`, etc.) are imported correctly.
+  - Checked that all files using JSX have the `.tsx` extension and that `tsconfig.json` includes `"jsx": "react-jsx"`.
+  - Verified that `@types/react` is installed and matches the React version.
+
+### If You Need to Make Similar Changes in the Future
+
+- **Client vs Server Components:**
+  - Only Server Components can be `async`. If you need to fetch data, do it in a Server Component and pass the result as props to a Client Component.
+  - Never mark a Client Component as `async`.
+- **TypeScript Best Practices:**
+  - Avoid using `any`. Always define and use specific types or interfaces.
+  - Remove or prefix unused variables with `_` to avoid lint errors.
+- **React/JSX Setup:**
+  - Always use `.tsx` for files containing JSX.
+  - Ensure your `tsconfig.json` has `"jsx": "react-jsx"`.
+  - Keep `@types/react` up to date and compatible with your React version.
+
+### What These Fixes Achieved
+
+- **Successful Build & Deployment:**
+  - The app now builds and deploys cleanly on both local and Vercel environments.
+- **Cleaner, More Maintainable Code:**
+  - TypeScript and linting errors are resolved, making the codebase easier to maintain and extend.
+- **Future-Proofing:**
+  - Following these patterns will help avoid similar issues as Next.js and TypeScript evolve.
+
+---
+
+## 📝 Outstanding TODOs & Implementation Reminders
+
+- **API Client Logic:** Implement the FotoWare API client in `src/lib/fotoware-client.ts`.
+- **Error Fallback UI:** Complete the error fallback UI in `src/components/common/ErrorFallback.tsx`.
+- **Debounce Hook:** Implement debounce logic in `src/hooks/useDebounce.ts`.
+- **Type Definitions:** Define all shared types for archives, albums, assets, and API responses in `src/types/index.d.ts`. Avoid using `any`.
+- **UniversalEmbed:** Only MVP embed types are supported; defer others to Phase 2 as per the MVP plan.
+- **Error & Not-Found Pages:** Add animation and helpful resources to `src/app/error.tsx` and `src/app/not-found.tsx`. Ensure minimal SEO metadata is always present.
+- **Testing:** Add unit and accessibility tests for new components as planned in the MVP.
+- **Analytics:** If using only GA4, you may remove the analytics API route.
+- **Accessibility & SEO:** For all new features, ensure accessibility, SEO, and Australian English compliance.
+- **Global Layout:** Do not add Navbar or AccessibilityToolbar to individual pages—only include them in the global layout.
+- **Check for TODOs:** Review code comments marked `TODO` for further reminders and outstanding work.
 
 ---
