@@ -1,11 +1,5 @@
 import type { Metadata } from "next";
 import { SITE_URL, SEO_DEFAULTS } from '@/lib/seo';
-import { Archive, ArchiveIcon, Grid3X3, List, Search, ArrowRight, ArrowDownWideNarrow, ArrowUpNarrowWide } from 'lucide-react';
-import Link from 'next/link';
-import { Card, CardHeader, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Select, SelectTrigger, SelectContent, SelectItem, SelectValue } from '@/components/ui/select';
 import ArchivesPageClient from './_client';
 
 export const metadata: Metadata = {

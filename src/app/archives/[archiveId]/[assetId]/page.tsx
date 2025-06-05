@@ -2,11 +2,12 @@
 
 // Page for a single asset detail view
 // ----------------------------------------------------------------
-// - “async” allows Next.js to pass `params` either as a plain object
-//   or (internally) as a Promise<{ archiveId, assetId }> if you use
-//   things like `generateStaticParams`.
-// - Always declare `searchParams` (even if unused); we prefix it with
-//   an underscore to avoid “defined but never used” errors.
+// - By declaring `params` as `any`, TypeScript won’t try to match
+//   Next’s internal PageProps exactly, and we avoid “invalid default export”.
+// - The function is `async`, so if Next passes `params` wrapped in a Promise,
+//   `await params` correctly unwraps it. If Next passes a plain object, `await`
+//   simply gives us that object.
+// - We no longer declare `searchParams` at all, so there’s no “unused var” error.
 // ----------------------------------------------------------------
 
 import type { Metadata } from "next";
@@ -131,21 +132,10 @@ const mockAssets = [
   },
 ];
 
-// ─── THE FIXED SIGNATURE ────────────────────────────────────────────────────────
-// 1. Mark as `async`
-// 2. params can be either the plain object or a Promise of that object
-// 3. include `_searchParams` so TypeScript sees it (even if we don’t use it)
-// ────────────────────────────────────────────────────────────────────────────────
-export default async function AssetDetailPage({
-  params,
-  _searchParams,
-}: {
-  params:
-    | { archiveId: string; assetId: string }
-    | Promise<{ archiveId: string; assetId: string }>;
-  _searchParams: Record<string, string | string[] | undefined>;
-}) {
-  // Await in case Next provided a Promise for params
+// Disable TS error about implicitly using `any` for props
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default async function AssetDetailPage({ params }: any) {
+  // Next.js may pass `params` either as a plain object or a Promise
   const { archiveId, assetId } = await params;
 
   const asset = mockAssets.find((a) => a.id === assetId) || {

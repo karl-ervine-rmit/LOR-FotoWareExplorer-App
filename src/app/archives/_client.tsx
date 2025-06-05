@@ -1,13 +1,34 @@
-'use client';
-import { useState } from 'react';
-import { Archive, ArchiveIcon, Grid3X3, List, Search, ArrowRight, ArrowDownWideNarrow, ArrowUpNarrowWide } from 'lucide-react';
-import Link from 'next/link';
-import { Card, CardHeader, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Select, SelectTrigger, SelectContent, SelectItem, SelectValue } from '@/components/ui/select';
+// src/app/archives/_client.tsx
 
-function ArchiveCard({ archive }: { archive: { id: string; name: string; description?: string } }) {
+"use client";
+import { useState } from "react";
+import {
+  Archive,
+  ArchiveIcon,
+  Grid3X3,
+  List,
+  Search,
+  ArrowRight,
+  ArrowDownWideNarrow,
+  ArrowUpNarrowWide,
+} from "lucide-react";
+import Link from "next/link";
+import { Card, CardHeader, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectTrigger,
+  SelectContent,
+  SelectItem,
+  SelectValue,
+} from "@/components/ui/select";
+
+function ArchiveCard({
+  archive,
+}: {
+  archive: { id: string; name: string; description?: string };
+}) {
   return (
     <Card className="flex flex-col h-full shadow-sm transition-shadow hover:shadow-md border border-border bg-background">
       <CardHeader className="pb-2">
@@ -34,8 +55,12 @@ function ArchiveCard({ archive }: { archive: { id: string; name: string; descrip
   );
 }
 
-export default async function ArchivesPageClient({ archives }: { archives: { id: string; name: string; description?: string }[] }) {
-  const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
+export default function ArchivesPageClient({
+  archives,
+}: {
+  archives: { id: string; name: string; description?: string }[];
+}) {
+  const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc");
 
   return (
     <div className="space-y-8">
@@ -45,7 +70,9 @@ export default async function ArchivesPageClient({ archives }: { archives: { id:
             <ArchiveIcon className="h-8 w-8 text-primary" />
             Archives
           </h1>
-          <p className="text-muted-foreground mt-2 text-base">Browse and explore digital asset collections</p>
+          <p className="text-muted-foreground mt-2 text-base">
+            Browse and explore digital asset collections
+          </p>
         </div>
         <div className="flex items-center gap-2 mt-2 sm:mt-0">
           <Button
@@ -89,23 +116,30 @@ export default async function ArchivesPageClient({ archives }: { archives: { id:
             </Select>
             <Button
               variant="outline"
-              aria-label={sortDirection === 'asc' ? 'Sort ascending' : 'Sort descending'}
+              aria-label={
+                sortDirection === "asc" ? "Sort ascending" : "Sort descending"
+              }
               className={`h-[3rem] min-h-[3rem] !py-0 w-12 flex items-center justify-center sm:w-auto px-4`}
-              onClick={() => setSortDirection((d) => (d === 'asc' ? 'desc' : 'asc'))}
+              onClick={() =>
+                setSortDirection((d) => (d === "asc" ? "desc" : "asc"))
+              }
             >
-              {sortDirection === 'asc' ? (
+              {sortDirection === "asc" ? (
                 <ArrowUpNarrowWide className="h-5 w-5" />
               ) : (
                 <ArrowDownWideNarrow className="h-5 w-5" />
               )}
-              <span className="sr-only">{sortDirection === 'asc' ? 'Sort ascending' : 'Sort descending'}</span>
+              <span className="sr-only">
+                {sortDirection === "asc" ? "Sort ascending" : "Sort descending"}
+              </span>
             </Button>
           </div>
         </CardContent>
       </Card>
       <div className="flex items-center justify-between text-sm text-muted-foreground mt-2">
         <span>{archives.length} archives</span>
-        <span>Total: {archives.length * 10} assets</span> {/* Placeholder asset count */}
+        <span>Total: {archives.length * 10} assets</span>{" "}
+        {/* Placeholder asset count */}
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {archives.map((archive) => (

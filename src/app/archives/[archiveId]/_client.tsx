@@ -1,20 +1,25 @@
-'use client';
-import { useState, useRef, useEffect } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
+// src/app/archives/[archiveId]/_client.tsx
 
-import { Button } from '@/components/ui/button';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Input } from '@/components/ui/input';
-import { Badge } from '@/components/ui/badge';
-import { Skeleton } from '@/components/ui/skeleton';
-import { Checkbox } from '@/components/ui/checkbox';
-import { cn } from '@/lib/utils';
-import { AssetCard, AssetFlag } from '@/components/common/AssetCard';
-import { EyeOff, Info, Star } from 'lucide-react';
-import { Switch } from '@/components/ui/switch';
+"use client";
+import { useState, useRef, useEffect } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { Input } from "@/components/ui/input";
+import { Badge } from "@/components/ui/badge";
+import { Skeleton } from "@/components/ui/skeleton";
+import { Checkbox } from "@/components/ui/checkbox";
+import { cn } from "@/lib/utils";
+import { AssetCard, AssetFlag } from "@/components/common/AssetCard";
+import { EyeOff, Info, Star } from "lucide-react";
+import { Switch } from "@/components/ui/switch";
 import Script from "next/script";
 
-// You may want to type Asset more strictly
 interface Asset {
   id: string;
   name: string;
@@ -32,121 +37,173 @@ interface ArchiveDetailClientProps {
   assets: Asset[];
 }
 
-export default function ArchiveDetailClient({ archiveId, assets }: ArchiveDetailClientProps) {
-  // Example taxonomy and state logic (can be replaced with real data)
+export default function ArchiveDetailClient({
+  archiveId,
+  assets,
+}: ArchiveDetailClientProps) {
+  // Example taxonomy (replace with real data if needed)
   const mockTaxonomy = [
-    { label: 'Subject', values: [
-      { value: 'Art and Design', count: 12 },
-      { value: 'Science', count: 9 },
-      { value: 'History', count: 7 },
-      { value: 'Mathematics', count: 5 },
-      { value: 'Technology', count: 8 },
-      { value: 'Geography', count: 6 },
-      { value: 'Health and Physical Education', count: 4 },
-      { value: 'Languages', count: 3 },
-      { value: 'Civics and Citizenship', count: 2 },
-      { value: 'Economics and Business', count: 3 },
-      { value: 'Music', count: 6 },
-      { value: 'Drama', count: 2 },
-      { value: 'Media Arts', count: 1 },
-      { value: 'English', count: 10 },
-      { value: 'Aboriginal and Torres Strait Islander Histories and Cultures', count: 2 },
-    ] },
-    { label: 'Type', values: [
-      { value: 'Essay', count: 10 },
-      { value: 'Photograph', count: 14 },
-      { value: 'Document', count: 8 },
-      { value: 'Audio', count: 5 },
-      { value: 'Video', count: 7 },
-      { value: 'Map', count: 3 },
-      { value: 'Poster', count: 2 },
-      { value: 'Infographic', count: 4 },
-      { value: 'Interview', count: 2 },
-      { value: 'Report', count: 6 },
-      { value: 'Lesson Plan', count: 3 },
-      { value: 'Resource Pack', count: 1 },
-    ] },
-    { label: 'Level', values: [
-      { value: 'Undergraduate', count: 15 },
-      { value: 'Postgraduate', count: 7 },
-      { value: 'Primary', count: 8 },
-      { value: 'Secondary', count: 12 },
-      { value: 'Early Childhood', count: 4 },
-      { value: 'Vocational', count: 3 },
-      { value: 'Professional Development', count: 2 },
-    ] },
-    { label: 'Year', values: [
-      { value: '2024', count: 8 },
-      { value: '2023', count: 10 },
-      { value: '2022', count: 6 },
-      { value: '2021', count: 5 },
-      { value: '2020', count: 3 },
-      { value: '2019', count: 2 },
-      { value: '2018', count: 1 },
-    ] },
-    { label: 'Tags', values: [
-      { value: 'Sustainability', count: 4 },
-      { value: 'Innovation', count: 3 },
-      { value: 'Heritage', count: 2 },
-      { value: 'STEM', count: 5 },
-      { value: 'Inclusion', count: 2 },
-      { value: 'Digital Literacy', count: 3 },
-      { value: 'Critical Thinking', count: 4 },
-      { value: 'First Nations', count: 2 },
-      { value: 'Environment', count: 3 },
-      { value: 'Community', count: 2 },
-      { value: 'Leadership', count: 1 },
-      { value: 'Creativity', count: 2 },
-      { value: 'Collaboration', count: 2 },
-    ] },
+    {
+      label: "Subject",
+      values: [
+        { value: "Art and Design", count: 12 },
+        { value: "Science", count: 9 },
+        { value: "History", count: 7 },
+        { value: "Mathematics", count: 5 },
+        { value: "Technology", count: 8 },
+        { value: "Geography", count: 6 },
+        { value: "Health and Physical Education", count: 4 },
+        { value: "Languages", count: 3 },
+        { value: "Civics and Citizenship", count: 2 },
+        { value: "Economics and Business", count: 3 },
+        { value: "Music", count: 6 },
+        { value: "Drama", count: 2 },
+        { value: "Media Arts", count: 1 },
+        { value: "English", count: 10 },
+        {
+          value: "Aboriginal and Torres Strait Islander Histories and Cultures",
+          count: 2,
+        },
+      ],
+    },
+    {
+      label: "Type",
+      values: [
+        { value: "Essay", count: 10 },
+        { value: "Photograph", count: 14 },
+        { value: "Document", count: 8 },
+        { value: "Audio", count: 5 },
+        { value: "Video", count: 7 },
+        { value: "Map", count: 3 },
+        { value: "Poster", count: 2 },
+        { value: "Infographic", count: 4 },
+        { value: "Interview", count: 2 },
+        { value: "Report", count: 6 },
+        { value: "Lesson Plan", count: 3 },
+        { value: "Resource Pack", count: 1 },
+      ],
+    },
+    {
+      label: "Level",
+      values: [
+        { value: "Undergraduate", count: 15 },
+        { value: "Postgraduate", count: 7 },
+        { value: "Primary", count: 8 },
+        { value: "Secondary", count: 12 },
+        { value: "Early Childhood", count: 4 },
+        { value: "Vocational", count: 3 },
+        { value: "Professional Development", count: 2 },
+      ],
+    },
+    {
+      label: "Year",
+      values: [
+        { value: "2024", count: 8 },
+        { value: "2023", count: 10 },
+        { value: "2022", count: 6 },
+        { value: "2021", count: 5 },
+        { value: "2020", count: 3 },
+        { value: "2019", count: 2 },
+        { value: "2018", count: 1 },
+      ],
+    },
+    {
+      label: "Tags",
+      values: [
+        { value: "Sustainability", count: 4 },
+        { value: "Innovation", count: 3 },
+        { value: "Heritage", count: 2 },
+        { value: "STEM", count: 5 },
+        { value: "Inclusion", count: 2 },
+        { value: "Digital Literacy", count: 3 },
+        { value: "Critical Thinking", count: 4 },
+        { value: "First Nations", count: 2 },
+        { value: "Environment", count: 3 },
+        { value: "Community", count: 2 },
+        { value: "Leadership", count: 1 },
+        { value: "Creativity", count: 2 },
+        { value: "Collaboration", count: 2 },
+      ],
+    },
   ];
+
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState("");
   const [showMore, setShowMore] = useState<{ [label: string]: boolean }>({});
   const [openGroups, setOpenGroups] = useState<string[]>([]);
-  const [ariaMessage, setAriaMessage] = useState('');
+  const [ariaMessage, setAriaMessage] = useState("");
   const searchInputRef = useRef<HTMLInputElement>(null);
   const [loading, setLoading] = useState(true);
-  const [selectedFilters, setSelectedFilters] = useState<{ [group: string]: Set<string> }>({});
-  const [showCulturallySensitive, setShowCulturallySensitive] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const stored = localStorage.getItem('showCulturallySensitive');
-      return stored === 'true';
-    }
-    return false;
-  });
+  const [selectedFilters, setSelectedFilters] = useState<{
+    [group: string]: Set<string>;
+  }>({});
+  const [showCulturallySensitive, setShowCulturallySensitive] = useState(false);
 
+  // ── Read the toggle state from localStorage once on mount ──
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const stored = localStorage.getItem("showCulturallySensitive");
+      setShowCulturallySensitive(stored === "true");
+    }
+  }, []);
+
+  // ── Write the toggle state back to localStorage whenever it changes ──
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem(
+        "showCulturallySensitive",
+        showCulturallySensitive.toString()
+      );
+    }
+  }, [showCulturallySensitive]);
+
+  // ── Simulate loading spinner ──
   useEffect(() => {
     setLoading(true);
     const timer = setTimeout(() => setLoading(false), 1500);
     return () => clearTimeout(timer);
   }, []);
 
+  // ── Filter taxonomy based on search string ──
   const filteredTaxonomy = mockTaxonomy.map((group) => {
     const filteredValues = group.values.filter((v) =>
       v.value.toLowerCase().includes(search.toLowerCase())
     );
     return { ...group, values: filteredValues };
   });
-  const visibleGroups = filteredTaxonomy.filter(group => group.values.length > 0);
-  const totalVisibleValues = visibleGroups.reduce((acc, group) => acc + group.values.length, 0);
+  const visibleGroups = filteredTaxonomy.filter(
+    (group) => group.values.length > 0
+  );
+  const totalVisibleValues = visibleGroups.reduce(
+    (acc, group) => acc + group.values.length,
+    0
+  );
 
+  // ── Only depend on `search` itself (NOT visibleGroups) to avoid infinite updates ──
   useEffect(() => {
     if (search) {
-      setOpenGroups(visibleGroups.map(g => g.label));
+      setOpenGroups(visibleGroups.map((g) => g.label));
     } else {
       setOpenGroups([]);
     }
-  }, [search, filteredTaxonomy.length]);
+  }, [search]); // <-- removed visibleGroups from deps
 
+  // ── Announce counts for screen readers when search changes ──
   useEffect(() => {
     if (search) {
-      setAriaMessage(`${visibleGroups.length} group${visibleGroups.length !== 1 ? 's' : ''} and ${totalVisibleValues} value${totalVisibleValues !== 1 ? 's' : ''} match your search.`);
+      setAriaMessage(
+        `${visibleGroups.length} group${
+          visibleGroups.length !== 1 ? "s" : ""
+        } and ${totalVisibleValues} value${
+          totalVisibleValues !== 1 ? "s" : ""
+        } match your search.`
+      );
     } else {
-      setAriaMessage('');
+      setAriaMessage("");
     }
   }, [search, visibleGroups, totalVisibleValues]);
 
+  // ── Focus search input when sidebar opens ──
   useEffect(() => {
     if (sidebarOpen && searchInputRef.current) {
       searchInputRef.current.focus();
@@ -155,9 +212,18 @@ export default function ArchiveDetailClient({ archiveId, assets }: ArchiveDetail
 
   function highlightMatch(text: string, query: string) {
     if (!query) return text;
-    const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'ig');
+    const regex = new RegExp(
+      `(${query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})`,
+      "ig"
+    );
     return text.split(regex).map((part, i) =>
-      regex.test(part) ? <mark key={i} className="bg-yellow-200 text-foreground rounded px-0.5">{part}</mark> : part
+      regex.test(part) ? (
+        <mark key={i} className="bg-yellow-200 text-foreground rounded px-0.5">
+          {part}
+        </mark>
+      ) : (
+        part
+      )
     );
   }
 
@@ -179,10 +245,6 @@ export default function ArchiveDetailClient({ archiveId, assets }: ArchiveDetail
     return selectedFilters[group]?.has(value);
   }
 
-  useEffect(() => {
-    localStorage.setItem('showCulturallySensitive', showCulturallySensitive.toString());
-  }, [showCulturallySensitive]);
-
   return (
     <>
       <Script id="schema-collection" type="application/ld+json">
@@ -190,21 +252,25 @@ export default function ArchiveDetailClient({ archiveId, assets }: ArchiveDetail
           "@context": "https://schema.org",
           "@type": "CollectionPage",
           name: `Archive: ${archiveId} | FotoWare Explorer`,
-          description: "Browse a curated collection of learning resources in this archive. All content uses Australian spelling and meets accessibility standards.",
+          description:
+            "Browse a curated collection of learning resources in this archive. All content uses Australian spelling and meets accessibility standards.",
           url: `https://your-site.com/archives/${archiveId}`,
           image: "https://your-site.com/images/og-default.jpg",
           inLanguage: "en-AU",
-          hasPart: assets.slice(0, 2).map(asset => ({
+          hasPart: assets.slice(0, 2).map((asset) => ({
             "@type": "LearningResource",
             name: asset.meta?.title || asset.name,
-            url: `https://your-site.com/archives/${archiveId}/asset/${asset.id}`
-          }))
+            url: `https://your-site.com/archives/${archiveId}/asset/${asset.id}`,
+          })),
         })}
       </Script>
+
       <div className="flex flex-col md:flex-row gap-6 md:gap-8">
         {/* Sidebar */}
         <aside
-          className={`w-full md:w-64 shrink-0 md:sticky md:top-8 z-10 ${sidebarOpen ? "" : "hidden md:block"}`}
+          className={`w-full md:w-64 shrink-0 md:sticky md:top-8 z-10 ${
+            sidebarOpen ? "" : "hidden md:block"
+          }`}
           aria-label="Taxonomy sidebar"
         >
           <Card className="h-full bg-muted/40 border-border">
@@ -222,7 +288,8 @@ export default function ArchiveDetailClient({ archiveId, assets }: ArchiveDetail
                     <span>Show culturally sensitive content</span>
                   </label>
                   <div className="text-xs text-muted-foreground mt-1">
-                    Some content may be culturally sensitive or distressing. By default, it is hidden for your safety and respect.
+                    Some content may be culturally sensitive or distressing. By
+                    default, it is hidden for your safety and respect.
                   </div>
                 </div>
                 {loading ? (
@@ -305,7 +372,7 @@ export default function ArchiveDetailClient({ archiveId, assets }: ArchiveDetail
                   </>
                 )}
               </div>
-              {/* Filter groups section (no scroll area) */}
+              {/* Filter groups */}
               {!loading && (
                 <div className="px-4 pb-4" aria-label="Filter groups">
                   <div
@@ -381,7 +448,7 @@ export default function ArchiveDetailClient({ archiveId, assets }: ArchiveDetail
                                   aria-label={
                                     showMore[group.label]
                                       ? `Show less ${group.label}`
-                                      : `Show all ${group.values.length} ${group.label}`
+                                      : `Show all (${group.values.length})`
                                   }
                                 >
                                   {showMore[group.label]
@@ -400,6 +467,7 @@ export default function ArchiveDetailClient({ archiveId, assets }: ArchiveDetail
             </CardContent>
           </Card>
         </aside>
+
         {/* Mobile sidebar toggle button */}
         <div className="md:hidden mb-2">
           <Button
@@ -412,35 +480,41 @@ export default function ArchiveDetailClient({ archiveId, assets }: ArchiveDetail
             {sidebarOpen ? "Hide Filters" : "Show Filters"}
           </Button>
         </div>
+
         {/* Main content */}
         <main className="flex-1">
           <Card>
             <CardContent className="p-6">
               <div className="mb-6">
-                <h1 className="text-3xl font-bold leading-tight mb-2">Archive: {archiveId}</h1>
+                <h1 className="text-3xl font-bold leading-tight mb-2">
+                  Archive: {archiveId}
+                </h1>
                 <p className="text-muted-foreground text-base mb-0">
-                  This is a placeholder description for the archive. It provides an overview of the collection, its purpose, and any relevant details for users browsing the assets below.
+                  This is a placeholder description for the archive. It provides
+                  an overview of the collection, its purpose, and any relevant
+                  details for users browsing the assets below.
                 </p>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-3 gap-y-6 gap-x-6">
                 {assets.map((asset) => {
                   const flags: AssetFlag[] = [
                     asset.isCulturallySensitive && {
-                      type: 'cultural',
-                      label: 'Culturally sensitive content',
+                      type: "cultural",
+                      label: "Culturally sensitive content",
                       icon: <EyeOff className="h-4 w-4 text-yellow-500" />,
                     },
                     asset.isSuperseded && {
-                      type: 'superseded',
-                      label: 'This asset has been superseded',
+                      type: "superseded",
+                      label: "This asset has been superseded",
                       icon: <Info className="h-4 w-4 text-red-500" />,
                     },
                     asset.isFeatured && {
-                      type: 'featured',
-                      label: 'Featured asset',
+                      type: "featured",
+                      label: "Featured asset",
                       icon: <Star className="h-4 w-4 text-blue-500" />,
                     },
                   ].filter(Boolean) as AssetFlag[];
+
                   return (
                     <AssetCard
                       key={asset.id}

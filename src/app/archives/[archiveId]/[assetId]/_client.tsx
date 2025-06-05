@@ -1,7 +1,6 @@
-'use client';
+"use client";
 import Script from "next/script";
-import UniversalEmbed from '@/components/common/UniversalEmbed';
-
+import UniversalEmbed from "@/components/common/UniversalEmbed";
 
 interface Asset {
   id: string;
@@ -9,6 +8,7 @@ interface Asset {
   type: string;
   src: string;
   meta: Record<string, string>;
+  isCulturallySensitive?: boolean;
 }
 
 interface AssetDetailClientProps {
@@ -17,31 +17,45 @@ interface AssetDetailClientProps {
 }
 
 const SUPPORTED_EMBED_TYPES = [
-  'image', 'video', 'youtube', 'vimeo', 'pdf', 'audio', 'epub', 'document', 'code', 'iframe', 'fallback'
+  "image",
+  "video",
+  "youtube",
+  "vimeo",
+  "pdf",
+  "audio",
+  "epub",
+  "document",
+  "code",
+  "iframe",
+  "fallback",
 ] as const;
-type EmbedType = typeof SUPPORTED_EMBED_TYPES[number];
+type EmbedType = (typeof SUPPORTED_EMBED_TYPES)[number];
 
 function isEmbedType(type: string): type is EmbedType {
   return (SUPPORTED_EMBED_TYPES as readonly string[]).includes(type);
 }
 
-export default function AssetDetailClient({ archiveId, asset }: AssetDetailClientProps) {
+export default function AssetDetailClient({
+  archiveId,
+  asset,
+}: AssetDetailClientProps) {
   // Determine embed type from asset meta/type
-  const rawType = (asset.meta?.type || asset.type || '').toLowerCase();
-  const embedType: EmbedType = isEmbedType(rawType) ? rawType : 'fallback';
-  const isCulturallySensitive = 'isCulturallySensitive' in asset ? Boolean((asset as any).isCulturallySensitive) : false;
+  const rawType = (asset.meta?.type || asset.type || "").toLowerCase();
+  const embedType: EmbedType = isEmbedType(rawType) ? rawType : "fallback";
+  const isCulturallySensitive = asset.isCulturallySensitive ?? false;
 
   // Schema.org LearningResource JSON-LD
   const schema = {
     "@context": "https://schema.org",
     "@type": "LearningResource",
     name: asset.meta?.title || asset.name,
-    description: asset.meta?.description || '',
+    description: asset.meta?.description || "",
     url: `/archives/${archiveId}/${asset.id}`,
     image: asset.src,
     inLanguage: "en-AU",
     identifier: asset.id,
-    learningResourceType: embedType.charAt(0).toUpperCase() + embedType.slice(1),
+    learningResourceType:
+      embedType.charAt(0).toUpperCase() + embedType.slice(1),
   };
 
   return (
@@ -49,7 +63,9 @@ export default function AssetDetailClient({ archiveId, asset }: AssetDetailClien
       <Script id="schema-learning-resource" type="application/ld+json">
         {JSON.stringify(schema)}
       </Script>
-      <h1 className="text-2xl font-bold mb-4">Asset: {asset.meta?.title || asset.name}</h1>
+      <h1 className="text-2xl font-bold mb-4">
+        Asset: {asset.meta?.title || asset.name}
+      </h1>
       <UniversalEmbed
         type={embedType}
         src={asset.src}
@@ -59,9 +75,9 @@ export default function AssetDetailClient({ archiveId, asset }: AssetDetailClien
         fallback={undefined}
         isCulturallySensitive={isCulturallySensitive}
         showCulturallySensitive={(() => {
-          if (typeof window !== 'undefined') {
-            const stored = localStorage.getItem('showCulturallySensitive');
-            return stored === 'true';
+          if (typeof window !== "undefined") {
+            const stored = localStorage.getItem("showCulturallySensitive");
+            return stored === "true";
           }
           return false;
         })()}
