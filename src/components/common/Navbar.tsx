@@ -11,7 +11,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-6">
             <Link href="/" className="text-2xl font-bold hover:text-primary transition-colors">
-              FotoWare
+              LOR
             </Link>
             <div className="hidden md:flex items-center space-x-4">
               <Link href="/archives" className="text-sm hover:text-primary transition-colors">Archives</Link>

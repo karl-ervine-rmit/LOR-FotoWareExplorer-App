@@ -14,6 +14,7 @@ Create a `.env.local` file in the project root with:
 FOTOWARE_API_URL=https://your-fotoware-instance.example.com
 FOTOWARE_API_TOKEN=your_api_token_here
 NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+NEXT_PUBLIC_BASE_URL=https://your-site.example.com
 ```
 
 - If the API token is missing, the app will show empty data for development.
@@ -155,3 +156,55 @@ When using shadcn/ui components, always import from the correct path:
 - Do not import from 'lucide-react' unless you are using Lucide icons directly.
 
 This ensures all shadcn/ui components are used consistently and avoids module not found errors.
+
+---
+
+## Future Enhancements & Improvements
+
+- **Dynamic Open Graph Images:**
+  - Review the option to generate dynamic Open Graph images for assets and collections at build time or on-demand. This can improve social sharing and engagement but is currently on hold due to budget and complexity. Revisit after MVP launch.
+  - TODO: Add implementation reminder in relevant SEO/meta components.
+
+- **Dynamic Metadata with generateMetadata:**
+  - For pages where the title, description, or image depend on fetched data (e.g., asset or archive details), consider using Next.js's `export async function generateMetadata(params)` to generate metadata at runtime. This allows for fully dynamic SEO based on API or database content, and is recommended for highly dynamic or user-generated content.
+  - TODO: Add implementation reminder in archive and asset page components.
+
+- **404 Page Enhancements:**
+  - Update the 404 page template to include a visually engaging animation and links to useful resources (e.g., help, search, or popular archives) to improve user experience and navigation when a page is not found.
+  - TODO: Add implementation reminder in `src/app/not-found.tsx`.
+
+- **Error Page SEO:**
+  - Error pages (e.g., 404, 500) should include minimal SEO metadata to provide a clear title and description for users and crawlers.
+  - Example: title "Page Not Found | FotoWare Explorer", description "Sorry, the page you are looking for could not be found."
+  - This helps ensure a consistent user experience and prevents search engines from indexing error content as valid pages.
+  - TODO: Add implementation reminder in `src/app/not-found.tsx` and `src/app/error.tsx`.
+
+- **3D and Map Embed Support:**
+  - Support for 3D models (e.g., <model-viewer>) and interactive map embeds will be added in a future release.
+  - See the TODO in `src/components/common/UniversalEmbed.tsx` for implementation notes.
+
+> TODO comments have been added to the relevant components as reminders for these enhancements.
+
+---
+
+## Structured Data & Schema.org Usage
+
+- **Schema.org Markup:**
+  - The site uses Schema.org structured data to improve search engine understanding and discoverability of educational resources.
+  - **Where:**
+    - On individual asset pages (`archives/[archiveId]/[assetId]`), we use the `LearningResource` type to describe each learning object.
+    - On archive/collection pages (`archives/[archiveId]`), we use the `CollectionPage` type, listing representative learning objects with `hasPart`.
+  - **Why:**
+    - This helps search engines (including Google) better index and present our educational content, potentially enabling rich results and improving visibility for relevant queries.
+    - It also supports accessibility and discoverability for educators and learners searching for Australian educational resources.
+
+## SEO Metadata & Canonical URLs
+
+- **Centralised SEO Config:**
+  - All SEO metadata (title, description, Open Graph, Twitter, canonical URLs) is managed via a central config in `src/lib/seo.ts`.
+  - The site URL is set using the `NEXT_PUBLIC_BASE_URL` environment variable in `.env.local` and Vercel dashboard. This ensures all canonical and share URLs are correct for each environment.
+  - The config exports `SITE_URL` and `SEO_DEFAULTS` (site name, description, default image, etc.), which are imported into each page's `metadata` export.
+  - This approach means you only need to update your site URL or branding in one place, and all pages will use the correct values at build time.
+  - When adding new pages or layouts, import from `@/lib/seo` and follow the same pattern for consistent, maintainable SEO.
+
+---

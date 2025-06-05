@@ -31,7 +31,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import React from 'react';
 
-const ITEMS_TO_DISPLAY = 3;
+const ITEMS_TO_DISPLAY = 2;
 
 export function Breadcrumbs() {
   const pathname = usePathname();
