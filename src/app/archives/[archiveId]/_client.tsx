@@ -208,8 +208,8 @@ export default function ArchiveDetailClient({ archiveId, assets }: ArchiveDetail
           aria-label="Taxonomy sidebar"
         >
           <Card className="h-full bg-muted/40 border-border">
-            <CardContent className="p-0">
-              <ScrollArea className="h-[420px] md:h-[calc(100vh-4rem)] p-4">
+            <CardContent className="p-0 flex flex-col h-full">
+              <div className="p-4 flex-shrink-0">
                 <h2 className="text-lg font-semibold mb-4">Taxonomy</h2>
                 {/* Culturally sensitive toggle */}
                 <div className="mb-4">
@@ -302,96 +302,101 @@ export default function ArchiveDetailClient({ archiveId, assets }: ArchiveDetail
                         </Button>
                       </div>
                     )}
-                    <div
-                      aria-live="polite"
-                      aria-atomic="true"
-                      className="sr-only"
-                    >
-                      {ariaMessage}
-                    </div>
-                    <Accordion
-                      type="multiple"
-                      className="w-full"
-                      value={openGroups}
-                      onValueChange={setOpenGroups}
-                    >
-                      {visibleGroups.map((group) => (
-                        <AccordionItem value={group.label} key={group.label}>
-                          <AccordionTrigger className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
-                            {group.label}
-                          </AccordionTrigger>
-                          <AccordionContent>
-                            <ul className="space-y-1">
-                              {(showMore[group.label]
-                                ? group.values
-                                : group.values.slice(0, 8)
-                              ).map((v) => (
-                                <li key={v.value}>
-                                  <label
-                                    className={cn(
-                                      "flex items-center gap-2 w-full cursor-pointer rounded-md px-2 py-2 transition-colors",
-                                      "hover:bg-accent",
-                                      "focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
-                                      isFilterSelected(group.label, v.value) &&
-                                        "bg-accent/60 font-semibold"
-                                    )}
-                                  >
-                                    <Checkbox
-                                      checked={isFilterSelected(
-                                        group.label,
-                                        v.value
-                                      )}
-                                      onCheckedChange={() =>
-                                        toggleFilter(group.label, v.value)
-                                      }
-                                      aria-label={v.value}
-                                      className="shrink-0"
-                                    />
-                                    <span className="flex-1 text-sm">
-                                      {highlightMatch(v.value, search)}
-                                    </span>
-                                    <Badge
-                                      variant="secondary"
-                                      className="ml-2 min-w-[2rem] justify-center"
-                                    >
-                                      {v.count}
-                                    </Badge>
-                                  </label>
-                                </li>
-                              ))}
-                              {group.values.length > 8 && (
-                                <li>
-                                  <Button
-                                    variant="link"
-                                    size="sm"
-                                    className="w-full justify-start px-2 py-1 text-xs mt-1"
-                                    onClick={() =>
-                                      setShowMore((prev) => ({
-                                        ...prev,
-                                        [group.label]: !prev[group.label],
-                                      }))
-                                    }
-                                    aria-expanded={!!showMore[group.label]}
-                                    aria-label={
-                                      showMore[group.label]
-                                        ? `Show less ${group.label}`
-                                        : `Show all ${group.values.length} ${group.label}`
-                                    }
-                                  >
-                                    {showMore[group.label]
-                                      ? "Show less"
-                                      : `Show all (${group.values.length})`}
-                                  </Button>
-                                </li>
-                              )}
-                            </ul>
-                          </AccordionContent>
-                        </AccordionItem>
-                      ))}
-                    </Accordion>
                   </>
                 )}
-              </ScrollArea>
+              </div>
+              {/* Filter groups section (no scroll area) */}
+              {!loading && (
+                <div className="px-4 pb-4" aria-label="Filter groups">
+                  <div
+                    aria-live="polite"
+                    aria-atomic="true"
+                    className="sr-only"
+                  >
+                    {ariaMessage}
+                  </div>
+                  <Accordion
+                    type="multiple"
+                    className="w-full"
+                    value={openGroups}
+                    onValueChange={setOpenGroups}
+                  >
+                    {visibleGroups.map((group) => (
+                      <AccordionItem value={group.label} key={group.label}>
+                        <AccordionTrigger className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
+                          {group.label}
+                        </AccordionTrigger>
+                        <AccordionContent>
+                          <ul className="space-y-1">
+                            {(showMore[group.label]
+                              ? group.values
+                              : group.values.slice(0, 8)
+                            ).map((v) => (
+                              <li key={v.value}>
+                                <label
+                                  className={cn(
+                                    "flex items-center gap-2 w-full cursor-pointer rounded-md px-2 py-2 transition-colors",
+                                    "hover:bg-accent",
+                                    "focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+                                    isFilterSelected(group.label, v.value) &&
+                                      "bg-accent/60 font-semibold"
+                                  )}
+                                >
+                                  <Checkbox
+                                    checked={isFilterSelected(
+                                      group.label,
+                                      v.value
+                                    )}
+                                    onCheckedChange={() =>
+                                      toggleFilter(group.label, v.value)
+                                    }
+                                    aria-label={v.value}
+                                    className="shrink-0"
+                                  />
+                                  <span className="flex-1 text-sm">
+                                    {highlightMatch(v.value, search)}
+                                  </span>
+                                  <Badge
+                                    variant="secondary"
+                                    className="ml-2 min-w-[2rem] justify-center"
+                                  >
+                                    {v.count}
+                                  </Badge>
+                                </label>
+                              </li>
+                            ))}
+                            {group.values.length > 8 && (
+                              <li>
+                                <Button
+                                  variant="link"
+                                  size="sm"
+                                  className="w-full justify-start px-2 py-1 text-xs mt-1"
+                                  onClick={() =>
+                                    setShowMore((prev) => ({
+                                      ...prev,
+                                      [group.label]: !prev[group.label],
+                                    }))
+                                  }
+                                  aria-expanded={!!showMore[group.label]}
+                                  aria-label={
+                                    showMore[group.label]
+                                      ? `Show less ${group.label}`
+                                      : `Show all ${group.values.length} ${group.label}`
+                                  }
+                                >
+                                  {showMore[group.label]
+                                    ? "Show less"
+                                    : `Show all (${group.values.length})`}
+                                </Button>
+                              </li>
+                            )}
+                          </ul>
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </div>
+              )}
             </CardContent>
           </Card>
         </aside>
