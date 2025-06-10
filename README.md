@@ -109,6 +109,32 @@ yarn dev
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint
 
+## Vercel Build
+
+This project is deployed on Vercel with the following configuration:
+
+### Main Branch Deployments
+- Production deployments are automatically triggered when changes are pushed to the `main` branch
+- Each deployment creates a new production build
+- Build logs and deployment status can be viewed in the Vercel dashboard
+
+### Feature Branch Deployments
+- Preview deployments are automatically created for all feature branches
+- Each feature branch gets its own unique preview URL
+- Preview deployments are automatically removed when the feature branch is deleted
+- Preview URLs can be found in the Vercel dashboard or in pull request comments
+
+### Environment Variables
+- Production environment variables are managed in the Vercel dashboard
+- Preview deployments inherit from production variables by default
+- Additional preview-specific variables can be set in the Vercel dashboard
+
+### Build Settings
+- Framework Preset: Next.js
+- Build Command: `next build`
+- Output Directory: `.next`
+- Install Command: `npm install` or `yarn install`
+
 ## Project Structure
 
 ```
@@ -146,6 +172,71 @@ git push origin feature/your-feature-name
 - Follow the [TypeScript style guide](https://google.github.io/styleguide/tsguide.html)
 - Write meaningful commit messages following [Conventional Commits](https://www.conventionalcommits.org/)
 - Update documentation for any new features
+
+
+## Troubleshooting
+
+### Common Issues and Solutions
+
+#### Development Environment
+- **Node Version Issues**
+  - Ensure you're using Node.js v18.x or later
+  - Use `nvm` to switch Node versions if needed
+  - Check version with `node -v`
+
+- **Dependency Problems**
+  - Clear package manager cache:
+    ```bash
+    npm cache clean --force
+    # or
+    yarn cache clean
+    ```
+  - Remove node_modules and reinstall:
+    ```bash
+    rm -rf node_modules
+    npm install
+    # or
+    yarn install
+    ```
+
+#### Build and Runtime Issues
+- **Next.js Build Failures**
+  - Clear Next.js cache:
+    ```bash
+    rm -rf .next
+    ```
+  - Check for TypeScript errors:
+    ```bash
+    npm run lint
+    # or
+    yarn lint
+    ```
+
+- **FotoWare API Connection**
+  - Verify API credentials in `.env.local`
+  - Check API endpoint accessibility
+  - Ensure correct permissions are set
+
+
+#### Performance
+- **Slow Build Times**
+  - Check for unnecessary dependencies
+  - Use production mode for testing:
+    ```bash
+    npm run build && npm run start
+    # or
+    yarn build && yarn start
+    ```
+
+- **Runtime Performance**
+  - Analyse bundle size:
+    ```bash
+    npm run build -- --analyze
+    # or
+    yarn build --analyze
+    ```
+  - Check for memory leaks
+  - Monitor API response times
 
 ## License
 

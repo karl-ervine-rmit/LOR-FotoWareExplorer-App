@@ -1,10 +1,11 @@
 // fotoware-client utility for interacting with the FotoWare API
 // TODO: Implement API client logic
 
+import { env } from './env';
 import type { FotoWareArchive, FotoWareAlbum, FotoWareAsset } from '../types/index.d.ts';
 
-const API_URL = process.env.FOTOWARE_API_URL;
-const API_TOKEN = process.env.FOTOWARE_API_TOKEN;
+const API_URL = env.FOTOWARE_API_URL;
+const API_TOKEN = env.FOTOWARE_API_TOKEN;
 
 function isApiReady() {
   return Boolean(API_URL && API_TOKEN);
@@ -13,34 +14,74 @@ function isApiReady() {
 async function fetchFromFotoWare<T>(endpoint: string): Promise<T> {
   if (!isApiReady()) {
     console.warn('FotoWare API URL or token not set. Returning empty data for development.');
-    // @ts-expect-error: Return empty array/object for dev
-    return Array.isArray([]) ? [] : {};
+    // Return appropriate empty value based on expected type
+    if (endpoint.includes('/archives')) {
+      return [] as T;
+    }
+    if (endpoint.includes('/assets/')) {
+      return null as T;
+    }
+    return {} as T;
   }
-  const res = await fetch(`${API_URL}${endpoint}`, {
-    headers: {
-      Authorization: `Bearer ${API_TOKEN}`,
-      'Content-Type': 'application/json',
-    },
-    cache: 'no-store',
-  });
-  if (!res.ok) {
-    throw new Error(`FotoWare API error: ${res.status} ${res.statusText}`);
+
+  try {
+    const res = await fetch(`${API_URL}${endpoint}`, {
+      headers: {
+        Authorization: `Bearer ${API_TOKEN}`,
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      cache: 'no-store',
+    });
+
+    if (!res.ok) {
+      console.error(`FotoWare API error: ${res.status} ${res.statusText}`);
+      // Return appropriate empty value based on expected type
+      if (endpoint.includes('/archives')) {
+        return [] as T;
+      }
+      if (endpoint.includes('/assets/')) {
+        return null as T;
+      }
+      return {} as T;
+    }
+
+    const contentType = res.headers.get('content-type');
+    if (!contentType || !contentType.includes('application/json')) {
+      console.error('Invalid response type from FotoWare API:', contentType);
+      // Return appropriate empty value based on expected type
+      if (endpoint.includes('/archives')) {
+        return [] as T;
+      }
+      if (endpoint.includes('/assets/')) {
+        return null as T;
+      }
+      return {} as T;
+    }
+
+    return res.json();
+  } catch (error) {
+    console.error('Error fetching from FotoWare:', error);
+    // Return appropriate empty value based on expected type
+    if (endpoint.includes('/archives')) {
+      return [] as T;
+    }
+    if (endpoint.includes('/assets/')) {
+      return null as T;
+    }
+    return {} as T;
   }
-  return res.json();
 }
 
 export async function getArchives(): Promise<FotoWareArchive[]> {
-  if (!isApiReady()) return [];
   return fetchFromFotoWare<FotoWareArchive[]>('/archives');
 }
 
 export async function getAlbums(archiveId: string): Promise<FotoWareAlbum[]> {
-  if (!isApiReady()) return [];
   return fetchFromFotoWare<FotoWareAlbum[]>(`/archives/${archiveId}/albums`);
 }
 
 export async function getAssets(archiveId: string, albumId?: string): Promise<FotoWareAsset[]> {
-  if (!isApiReady()) return [];
   const path = albumId
     ? `/archives/${archiveId}/albums/${albumId}/assets`
     : `/archives/${archiveId}/assets`;
@@ -48,6 +89,5 @@ export async function getAssets(archiveId: string, albumId?: string): Promise<Fo
 }
 
 export async function getAsset(archiveId: string, assetId: string): Promise<FotoWareAsset | null> {
-  if (!isApiReady()) return null;
-  return fetchFromFotoWare<FotoWareAsset>(`/archives/${archiveId}/assets/${assetId}`);
+  return fetchFromFotoWare<FotoWareAsset | null>(`/archives/${archiveId}/assets/${assetId}`);
 }

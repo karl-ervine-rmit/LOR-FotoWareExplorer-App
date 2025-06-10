@@ -166,27 +166,108 @@ This approach ensures the site is accessible, user-friendly, and meets Australia
 - Vercel Environment Variables: https://vercel.com/docs/projects/environment-variables
 - Australian English: https://www.macquariedictionary.com.au/
 
-## shadcn/ui Component Import Path
+## shadcn/ui Component Guidelines
 
-When using shadcn/ui components, always import from the correct path:
+### Configuration
+The project uses the following shadcn/ui configuration:
+```json
+{
+  "style": "new-york",
+  "rsc": false,
+  "tsx": true,
+  "tailwind": {
+    "config": "tailwind.config.ts",
+    "css": "src/app/globals.css",
+    "baseColor": "neutral",
+    "cssVariables": true
+  },
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils",
+    "ui": "@/components/ui",
+    "lib": "@/lib",
+    "hooks": "@/hooks"
+  }
+}
+```
 
-- For example, the breadcrumb component should be imported from:
-  ```ts
-  import {
-    Breadcrumb,
-    BreadcrumbItem,
-    BreadcrumbLink,
-    BreadcrumbList,
-    BreadcrumbPage,
-    BreadcrumbSeparator,
-  } from '@/components/ui/breadcrumb'
+### Import Paths
+- **Components**: Always import from `@/components/ui/`
+  ```tsx
+  // Correct
+  import { Button } from '@/components/ui/button'
+  import { Card, CardContent } from '@/components/ui/card'
+
+  // Incorrect
+  import { Button } from 'lucide-react'  // Don't import from lucide-react
+  import { Button } from '../ui/button'  // Don't use relative paths
   ```
 
-- Do not import from 'lucide-react' unless you are using Lucide icons directly.
+- **Icons**: Import directly from `lucide-react` only when using them standalone
+  ```tsx
+  // Correct
+  import { Settings, Moon, Sun } from 'lucide-react'
 
-This ensures all shadcn/ui components are used consistently and avoids module not found errors.
+  // Incorrect
+  import { Settings } from '@/components/ui/icons'  // Don't create icon components
+  ```
 
----
+### Component Structure
+- **Base Components**: Located in `src/components/ui/`
+  - These are the core shadcn/ui components
+  - Don't modify these directly
+  - Use composition to extend functionality
+
+- **Custom Components**: Located in `src/components/common/`
+  - These extend or compose shadcn/ui components
+  - Follow the same naming conventions
+  - Example: `AccessibilityToolbar.tsx`, `UniversalEmbed.tsx`
+
+### Best Practices
+1. **Component Composition**
+   - Use shadcn/ui components as building blocks
+   - Compose them in custom components rather than modifying the base components
+   - Example:
+     ```tsx
+     // Good
+     function CustomCard({ children, ...props }) {
+       return (
+         <Card className="custom-styles">
+           <CardContent>{children}</CardContent>
+         </Card>
+       )
+     }
+     ```
+
+2. **Styling**
+   - Use the `cn()` utility for class merging
+   - Follow the shadcn/ui theming system
+   - Use CSS variables for theming
+   ```tsx
+   import { cn } from '@/lib/utils'
+
+   function MyComponent({ className, ...props }) {
+     return (
+       <div className={cn("base-styles", className)} {...props} />
+     )
+   }
+   ```
+
+3. **Accessibility**
+   - All shadcn/ui components are built with accessibility in mind
+   - Maintain ARIA attributes when extending components
+   - Test with screen readers and keyboard navigation
+
+### Common Issues
+- **Missing Components**: Run `npx shadcn-ui@latest add [component-name]` to add new components
+- **Type Errors**: Ensure you're importing all necessary types from the component
+- **Styling Issues**: Check that you're using the correct CSS variables and Tailwind classes
+
+### Resources
+- [shadcn/ui Documentation](https://ui.shadcn.com)
+- [Radix UI Primitives](https://www.radix-ui.com/primitives)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+
 
 ## Future Enhancements & Improvements
 

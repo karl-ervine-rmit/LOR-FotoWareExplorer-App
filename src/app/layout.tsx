@@ -8,6 +8,9 @@ import Navbar from "../components/common/Navbar";
 import AccessibilityToolbar from "../components/common/AccessibilityToolbar";
 import SkipLink from "../components/common/SkipLink";
 import Footer from "../components/common/Footer";
+import { ReactNode } from 'react';
+import Script from 'next/script';
+import { env } from '@/lib/env';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -57,6 +60,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+          <>
+            {/* Global Site Tag (gtag.js) - Google Analytics */}
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="gtag-init" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${env.NEXT_PUBLIC_GA_MEASUREMENT_ID}', {
+                  page_path: window.location.pathname,
+                });
+              `}
+            </Script>
+          </>
+        )}
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

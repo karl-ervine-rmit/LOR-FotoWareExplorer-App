@@ -1,4 +1,6 @@
-export const SITE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'https://your-site.com';
+import { env } from './env';
+
+export const SITE_URL = env.NEXT_PUBLIC_BASE_URL;
 
 export const SEO_DEFAULTS = {
   siteName: 'Learning Objects Repository | RMIT University Library',
