@@ -1,0 +1,9 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+   **Style Guide for This Workspace**
+    1. **Australian English** for all user-facing content (website copy, documentation, comments).
+    2. **American English** spelling **only** inside code snippets, variable names, comments in code, etc. (e.g. `color` not `colour`).
+    3. Double-check that any generated website content adheres to Australian spelling conventions.

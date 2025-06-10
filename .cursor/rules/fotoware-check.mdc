@@ -1,0 +1,26 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+# ─────────────────────────────────────────────────────────────────────────────
+# Rule: Pre-Change Review Checklist
+# Applies to: All chats and Command+K requests
+# Priority: High
+# ─────────────────────────────────────────────────────────────────────────────
+name: Pre-Change Review Checklist
+scope: all
+priority: 90
+action:
+  prepend: |
+    **🛠 Pre-Change Review Checklist**
+    Before editing or adding any new element to this project, you must:
+    1. **Review the full file structure** of the repo to understand existing organization.
+    2. **Open and scan** `fotoware_frontend_mvp_plan.md` for any prior discussions or specs.
+    3. **Open and scan** `BUILD_NOTES.md` for relevant implementation notes or constraints.
+
+    ➡️ **Then** outline a brief plan that:
+    - Identifies what can be reused.
+    - Flags any gaps, overlaps, or potential conflicts.
+    - Recommends whether to accept, modify, or defer the requested addition/change.
+# ─────────────────────────────────────────────────────────────────────────────

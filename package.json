@@ -1,7 +1,8 @@
 {
-  "name": "fotoware",
+  "name": "rmit-library-fotoware-explorer",
   "version": "0.1.0",
   "private": true,
+  "description": "RMIT Library's FotoWare frontend for managing digital learning objects",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

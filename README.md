@@ -1,44 +1,167 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# RMIT Library FotoWare Explorer
 
-## Getting Started
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Next.js](https://img.shields.io/badge/Next.js-15.3-black)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19.1-blue)](https://reactjs.org/)
 
-First, run the development server:
+A modern web application for exploring and managing digital learning objects through the FotoWare Digital Asset Management System. Built with Next.js and TypeScript, this application provides an intuitive interface for RMIT Library staff to manage and access digital learning resources.
 
+#### © RMIT University Library
+
+###### Developed by RMIT Library Digital Learning
+
+## Table of Contents
+
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Development](#development)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Resources](#resources)
+
+## Features
+
+- 🔍 Basic search functionality for archives and assets
+- 🖼️ Asset preview with metadata display
+- 🌓 Dark/Light theme support
+- 📱 Responsive design for all devices
+- 🎨 Modern UI with Shadcn components
+- 📊 Basic metadata management
+- 📚 Archive organisation and browsing
+- 🎯 Basic filtering capabilities
+- 🔒 Cultural sensitivity controls
+
+## Tech Stack
+
+- **Framework:** Next.js 15.3
+- **Language:** TypeScript
+- **Styling:** TailwindCSS 4.1.8
+- **UI Components:** Radix UI & Shadcn
+- **State Management:** Zustand
+- **Data Fetching:** TanStack Query
+- **Animations:** Framer Motion
+- **Search:** Fuse.js
+- **Image Processing:** Sharp
+- **3D Viewing:** Google Model Viewer
+
+## Prerequisites
+
+- Node.js (v18.x or later)
+- npm (v9.x or later) or yarn (v1.22.x or later)
+- Git
+- FotoWare DAM System access
+- FotoWare API credentials
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone [repository-url]
+cd LOR-FotoWareExplorer-App
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+## Configuration
+
+1. Create a `.env.local` file in the root directory:
+```bash
+cp .env.example .env.local
+```
+
+2. Configure the following environment variables:
+```env
+# FotoWare Configuration
+NEXT_PUBLIC_FOTOWARE_API_URL=your_fotoware_api_url
+NEXT_PUBLIC_FOTOWARE_CLIENT_ID=your_client_id
+NEXT_PUBLIC_FOTOWARE_CLIENT_SECRET=your_client_secret
+
+# Application Configuration
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+NEXT_PUBLIC_API_URL=http://localhost:3000/api
+```
+
+## Development
+
+1. Start the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/          # Next.js app router pages and routes
+├── components/   # Reusable UI components
+├── lib/          # Utility functions and shared logic
+├── hooks/        # Custom React hooks
+├── types/        # TypeScript type definitions
+├── styles/       # Global styles and Tailwind configuration
+└── scripts/      # Build and utility scripts
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Create a new branch for your feature:
+```bash
+git checkout -b feature/your-feature-name
+```
 
-## Deploy on Vercel
+2. Make your changes and commit:
+```bash
+git commit -m "feat: your feature description"
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Push to your branch:
+```bash
+git push origin feature/your-feature-name
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. Submit a pull request
 
-## Low-Res Blur Preview Generation
+### Development Guidelines
 
-Before each build, a script automatically generates 16x16px low-res versions of all images in `public/images/` and saves them to `public/images/blur/`. These are used for culturally sensitive asset previews (`blurPreviewUrl`).
+- Follow the [TypeScript style guide](https://google.github.io/styleguide/tsguide.html)
+- Write meaningful commit messages following [Conventional Commits](https://www.conventionalcommits.org/)
+- Update documentation for any new features
 
-- Script: `npm run generate-blur-previews`
-- Output: `public/images/blur/filename_blur.jpg`
-- Runs automatically before `next build`.
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Contact
+
+- Project Contact: Dr Lisa Cianci ([lisa.cianci@rmit.edu.au](mailto:lisa.cianci@rmit.edu.au))
+- Developer Contact: Karl Ervine ([karl.ervine@rmit.edu.au](mailto:karl.ervine@rmit.edu.au))
+- Repo Admin: Jack Dunstan ([jack.dunstan@rmit.edu.au](mailto:jack.dunstan@rmit.edu.au))
+- Additional Contact: [digital.learning.library@rmit.edu.au](mailto:digital.learning.library@rmit.edu.au)
+
+## Resources
+
+- [Active RMIT Library GitHub](https://github.com/RMITLibrary)
+- [Archived RMIT Library GitHub](https://github.com/RMITLibrary-Archived)
+- [FotoWare API Documentation](https://learn.fotoware.com/02_FotoWare_APIs)
+- [Next.js Documentation](https://nextjs.org/docs)
+- [TypeScript Documentation](https://www.typescriptlang.org/docs/)
