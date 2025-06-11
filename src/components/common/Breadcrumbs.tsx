@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
   Breadcrumb,
   BreadcrumbEllipsis,
@@ -29,6 +29,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { Skeleton } from '@/components/ui/skeleton';
 import React from 'react';
 
 const ITEMS_TO_DISPLAY = 2;
@@ -36,9 +37,53 @@ const ITEMS_TO_DISPLAY = 2;
 export function Breadcrumbs() {
   const pathname = usePathname();
   const segments = pathname.split('/').filter(Boolean);
+  const [archiveName, setArchiveName] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+
+  // Reset states when pathname changes
+  useEffect(() => {
+    setArchiveName(null);
+    setIsLoading(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    const archiveIndex = segments.findIndex(segment => segment === 'archives');
+    const archiveId = archiveIndex !== -1 ? segments[archiveIndex + 1] : null;
+
+    const fetchArchiveName = async () => {
+      if (!archiveId || isLoading || archiveName) return;
+
+      setIsLoading(true);
+      try {
+        const response = await fetch(`/api/archives/${archiveId}`);
+        if (response.ok) {
+          const archive = await response.json();
+          setArchiveName(archive.name);
+        }
+      } catch (error) {
+        console.error('Error fetching archive:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchArchiveName();
+  }, [pathname, segments, isLoading, archiveName]);
+
   const crumbs = segments.map((segment, index) => {
     const href = '/' + segments.slice(0, index + 1).join('/');
-    const label = segment.replace(/-/g, ' ');
+    let label = segment.replace(/-/g, ' ');
+
+    // Replace archive ID with archive name if available, or show loading state
+    if (segment === segments[segments.findIndex(s => s === 'archives') + 1]) {
+      if (isLoading) {
+        return { label: <Skeleton className="h-4 w-24" />, href };
+      }
+      if (archiveName) {
+        label = archiveName;
+      }
+    }
+
     return { label, href };
   });
 
@@ -75,7 +120,9 @@ export function Breadcrumbs() {
                           className="py-1 text-sm"
                           onClick={() => setOpen(false)}
                         >
-                          {crumb.label.charAt(0).toUpperCase() + crumb.label.slice(1)}
+                          {typeof crumb.label === 'string'
+                            ? crumb.label.charAt(0).toUpperCase() + crumb.label.slice(1)
+                            : crumb.label}
                         </Link>
                       ))}
                     </div>
@@ -96,7 +143,9 @@ export function Breadcrumbs() {
                     {crumbs.slice(0, -ITEMS_TO_DISPLAY + 1).map((crumb, index) => (
                       <DropdownMenuItem key={index} asChild>
                         <Link href={crumb.href}>
-                          {crumb.label.charAt(0).toUpperCase() + crumb.label.slice(1)}
+                          {typeof crumb.label === 'string'
+                            ? crumb.label.charAt(0).toUpperCase() + crumb.label.slice(1)
+                            : crumb.label}
                         </Link>
                       </DropdownMenuItem>
                     ))}
@@ -113,12 +162,16 @@ export function Breadcrumbs() {
               {index < arr.length - 1 ? (
                 <BreadcrumbLink asChild>
                   <Link href={crumb.href}>
-                    {crumb.label.charAt(0).toUpperCase() + crumb.label.slice(1)}
+                    {typeof crumb.label === 'string'
+                      ? crumb.label.charAt(0).toUpperCase() + crumb.label.slice(1)
+                      : crumb.label}
                   </Link>
                 </BreadcrumbLink>
               ) : (
                 <BreadcrumbPage>
-                  {crumb.label.charAt(0).toUpperCase() + crumb.label.slice(1)}
+                  {typeof crumb.label === 'string'
+                    ? crumb.label.charAt(0).toUpperCase() + crumb.label.slice(1)
+                    : crumb.label}
                 </BreadcrumbPage>
               )}
             </BreadcrumbItem>

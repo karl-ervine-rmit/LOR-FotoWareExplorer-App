@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import Breadcrumbs from '../../components/common/Breadcrumbs';
+import { Breadcrumbs } from '../../components/common/Breadcrumbs';
 
 export default function ArchivesLayout({ children }: { children: ReactNode }) {
   return (

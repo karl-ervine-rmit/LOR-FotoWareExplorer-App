@@ -7,16 +7,18 @@ import StatsCards from '@/components/common/StatsCards';
 import ArchiveCard from '@/components/common/ArchiveCard';
 import SearchBar from '@/components/common/SearchBar';
 import { env } from '@/lib/env';
-import type { FotoWareArchive } from '@/types';
+import type { Archive } from '@/lib/data';
 
 interface HomeClientProps {
-  archives: FotoWareArchive[];
+  archives: Archive[];
+  stats: {
+    totalArchives: number;
+    totalAssets: number;
+    lastUpdated: string;
+  };
 }
 
-export default function HomeClient({ archives }: HomeClientProps) {
-  const totalCount = archives.reduce((sum, archive) => sum + (archive.assetCount || 0), 0);
-  const recentCount = 0; // TODO: Implement recent assets count
-
+export default function HomeClient({ archives, stats }: HomeClientProps) {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="mb-8">
@@ -41,9 +43,9 @@ export default function HomeClient({ archives }: HomeClientProps) {
       )}
 
       <StatsCards
-        archivesCount={archives.length}
-        assetsCount={totalCount}
-        recentCount={recentCount}
+        archivesCount={stats.totalArchives}
+        assetsCount={stats.totalAssets}
+        recentCount={0} // TODO: Implement recent assets count
       />
 
       <section className="mt-12">
@@ -65,7 +67,9 @@ export default function HomeClient({ archives }: HomeClientProps) {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {archives.map((archive) => (
-              <ArchiveCard key={archive.href} archive={archive} />
+              <div key={archive.id} className="h-full">
+                <ArchiveCard archive={archive} />
+              </div>
             ))}
           </div>
         )}

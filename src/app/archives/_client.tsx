@@ -3,17 +3,14 @@
 "use client";
 import { useState } from "react";
 import {
-  Archive,
   ArchiveIcon,
   Grid3X3,
   List,
   Search,
-  ArrowRight,
   ArrowDownWideNarrow,
   ArrowUpNarrowWide,
 } from "lucide-react";
-import Link from "next/link";
-import { Card, CardHeader, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -23,44 +20,47 @@ import {
   SelectItem,
   SelectValue,
 } from "@/components/ui/select";
+import ArchiveCard from "@/components/common/ArchiveCard";
 
-function ArchiveCard({
-  archive,
-}: {
-  archive: { id: string; name: string; description?: string };
-}) {
-  return (
-    <Card className="flex flex-col h-full shadow-sm transition-shadow hover:shadow-md border border-border bg-background">
-      <CardHeader className="pb-2">
-        <h2 className="text-xl font-bold flex items-center gap-2">
-          <Archive className="h-5 w-5 text-primary" />
-          {archive.name}
-        </h2>
-      </CardHeader>
-      <CardContent className="flex flex-col flex-1 w-full">
-        <p className="text-muted-foreground mb-4 min-h-[2.5rem]">
-          {archive.description || "No description available."}
-        </p>
-        <div className="mt-auto">
-          <Link
-            href={`/archives/${archive.id}`}
-            className="inline-flex items-center gap-1 text-primary underline font-medium hover:text-primary/80 transition"
-          >
-            View archive
-            <ArrowRight className="h-4 w-4" />
-          </Link>
-        </div>
-      </CardContent>
-    </Card>
-  );
+interface Archive {
+  id: string;
+  name: string;
+  description?: string;
+  assetCount: number;
+  assets: string[];
 }
 
 export default function ArchivesPageClient({
   archives,
 }: {
-  archives: { id: string; name: string; description?: string }[];
+  archives: Archive[];
 }) {
   const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc");
+  const [sortBy, setSortBy] = useState<"name" | "assetCount" | "lastUpdated">("name");
+  const [searchQuery, setSearchQuery] = useState("");
+
+  // Filter and sort archives
+  const filteredArchives = archives
+    .filter((archive) =>
+      archive.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      archive.description?.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+    .sort((a, b) => {
+      const direction = sortDirection === "asc" ? 1 : -1;
+      switch (sortBy) {
+        case "name":
+          return direction * a.name.localeCompare(b.name);
+        case "assetCount":
+          return direction * (a.assetCount - b.assetCount);
+        case "lastUpdated":
+          // TODO: Implement lastUpdated sorting when available
+          return 0;
+        default:
+          return 0;
+      }
+    });
+
+  const totalAssets = archives.reduce((sum, archive) => sum + archive.assetCount, 0);
 
   return (
     <div className="space-y-8">
@@ -101,17 +101,19 @@ export default function ArchivesPageClient({
               className="pl-10 h-[3rem] w-full text-base"
               placeholder="Search archives..."
               aria-label="Search archives"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
           <div className="flex gap-2 w-full sm:flex-row sm:gap-2 sm:w-auto">
-            <Select>
+            <Select value={sortBy} onValueChange={(value) => setSortBy(value as typeof sortBy)}>
               <SelectTrigger className="flex-1 h-[3rem] min-h-[3rem] !py-0 flex items-center text-base sm:w-40">
                 <SelectValue placeholder="Sort by" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="name">Name</SelectItem>
                 <SelectItem value="assetCount">Asset Count</SelectItem>
-                <SelectItem value="lastSynced">Last Updated</SelectItem>
+                <SelectItem value="lastUpdated">Last Updated</SelectItem>
               </SelectContent>
             </Select>
             <Button
@@ -137,12 +139,11 @@ export default function ArchivesPageClient({
         </CardContent>
       </Card>
       <div className="flex items-center justify-between text-sm text-muted-foreground mt-2">
-        <span>{archives.length} archives</span>
-        <span>Total: {archives.length * 10} assets</span>{" "}
-        {/* Placeholder asset count */}
+        <span>{filteredArchives.length} archives</span>
+        <span>Total: {totalAssets} assets</span>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {archives.map((archive) => (
+        {filteredArchives.map((archive) => (
           <div key={archive.id} className="h-full">
             <ArchiveCard archive={archive} />
           </div>
