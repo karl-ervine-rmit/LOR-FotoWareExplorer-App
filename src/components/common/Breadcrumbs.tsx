@@ -32,7 +32,7 @@ import {
 import { Skeleton } from '@/components/ui/skeleton';
 import React from 'react';
 
-const ITEMS_TO_DISPLAY = 2;
+const ITEMS_TO_DISPLAY = 3;
 
 export function Breadcrumbs() {
   const pathname = usePathname();

@@ -5,7 +5,8 @@ export async function GET(
   request: Request,
   context: { params: { archiveId: string } }
 ) {
-  const { archiveId } = context.params;
+  const params = await context.params;
+  const archiveId = params.archiveId;
   console.log('API route called with archiveId:', archiveId);
 
   try {
