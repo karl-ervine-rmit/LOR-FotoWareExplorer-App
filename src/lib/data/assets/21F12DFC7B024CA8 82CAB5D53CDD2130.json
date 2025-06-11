@@ -1,0 +1,232 @@
+{
+  "href": "/fotoweb/archives/5009-All-Learning-Objects/Folder%20112/Fotoware%20archive%20image%20dimensions.png.info",
+  "archiveHREF": "/fotoweb/archives/5009-All-Learning-Objects/",
+  "archiveId": 5009,
+  "linkstance": "/fotoweb/archives/5009-All-Learning-Objects/Folder%20112/Fotoware%20archive%20image%20dimensions.png.info",
+  "isVersioningEnabled": false,
+  "created": "2025-03-20T04:38:11.809000Z",
+  "modified": "2025-03-20T04:38:15Z",
+  "modifiedBy": "system",
+  "createdBy": "system",
+  "filename": "Fotoware archive image dimensions.png",
+  "filesize": 9216,
+  "uniqueid": "",
+  "permissions": [
+    "View",
+    "Preview",
+    "Download"
+  ],
+  "pincount": 0,
+  "previewcount": 12,
+  "downloadcount": 0,
+  "workflowcount": 0,
+  "metadataeditcount": 0,
+  "revisioncount": 0,
+  "doctype": "image",
+  "capabilities": {
+    "crop": true,
+    "print": true,
+    "printWithAnnotations": true
+  },
+  "previews": [
+    {
+      "size": 800,
+      "width": 800,
+      "height": 451,
+      "href": "/fotoweb/cache/v2/y/M/Folder%20112/Fotoware%20archive%20image%20dimensions.png.kSf5kvLyMW-zYd9jQA0A.XtEHhbDq3O.jpg",
+      "square": false
+    },
+    {
+      "size": 1200,
+      "width": 1200,
+      "height": 676,
+      "href": "/fotoweb/cache/v2/F/X/Folder%20112/Fotoware%20archive%20image%20dimensions.png.kSf5kvLyMW-zYd9jYBMA.mdXgI9B6us.jpg",
+      "square": false
+    },
+    {
+      "size": 1600,
+      "width": 1600,
+      "height": 901,
+      "href": "/fotoweb/cache/v2/q/U/Folder%20112/Fotoware%20archive%20image%20dimensions.png.kSf5kvLyMW-zYd9jgBkA.C-xn167tlD.jpg",
+      "square": false
+    },
+    {
+      "size": 2400,
+      "width": 2400,
+      "height": 1352,
+      "href": "/fotoweb/cache/v2/_/V/Folder%20112/Fotoware%20archive%20image%20dimensions.png.kSf5kvLyMW-zYd9jwCUA.08Rtv0ybLk.jpg",
+      "square": false
+    },
+    {
+      "size": 200,
+      "width": 200,
+      "height": 113,
+      "href": "/fotoweb/cache/v2/b/H/Folder%20112/Fotoware%20archive%20image%20dimensions.png.kSf5kvLyMW-zYd9jkAMA.8PPJ-D7rsN.jpg",
+      "square": false
+    },
+    {
+      "size": 300,
+      "width": 300,
+      "height": 169,
+      "href": "/fotoweb/cache/v2/d/h/Folder%20112/Fotoware%20archive%20image%20dimensions.png.kSf5kvLyMW-zYd9jWAUA.R9_F7ecUA9.jpg",
+      "square": false
+    },
+    {
+      "size": 400,
+      "width": 400,
+      "height": 225,
+      "href": "/fotoweb/cache/v2/5/A/Folder%20112/Fotoware%20archive%20image%20dimensions.png.kSf5kvLyMW-zYd9jIAcA.Q32FFveVDA.jpg",
+      "square": false
+    },
+    {
+      "size": 600,
+      "width": 600,
+      "height": 338,
+      "href": "/fotoweb/cache/v2/N/i/Folder%20112/Fotoware%20archive%20image%20dimensions.png.kSf5kvLyMW-zYd9jsAkA.UtHKcvaW5P.jpg",
+      "square": false
+    },
+    {
+      "size": 100,
+      "width": 100,
+      "height": 100,
+      "href": "/fotoweb/cache/v2/G/U/Folder%20112/Fotoware%20archive%20image%20dimensions.png.kSf5kvLyMW-zYd9jyAQ.9dbwZ_zQaB.jpg",
+      "square": true
+    },
+    {
+      "size": 200,
+      "width": 200,
+      "height": 200,
+      "href": "/fotoweb/cache/v2/q/R/Folder%20112/Fotoware%20archive%20image%20dimensions.png.kSf5kvLyMW-zYd9jkAME.23RuUMTEuY.jpg",
+      "square": true
+    },
+    {
+      "size": 200,
+      "width": 200,
+      "height": 200,
+      "href": "/fotoweb/cache/v2/q/R/Folder%20112/Fotoware%20archive%20image%20dimensions.png.kSf5kvLyMW-zYd9jkAME.23RuUMTEuY.jpg",
+      "square": true
+    },
+    {
+      "size": 400,
+      "width": 400,
+      "height": 400,
+      "href": "/fotoweb/cache/v2/R/W/Folder%20112/Fotoware%20archive%20image%20dimensions.png.kSf5kvLyMW-zYd9jIAcE.qh9Wlh2lIK.jpg",
+      "square": true
+    }
+  ],
+  "quickRenditions": [],
+  "metadataEditor": {
+    "name": "RMIT",
+    "href": "/fotoweb/editors/e1241645-f5eb-41b8-a211-43556e1584df"
+  },
+  "renditions": [
+    {
+      "display_name": "Original File",
+      "description": "Original File",
+      "width": 600,
+      "height": 338,
+      "href": "/fotoweb/archives/5009-All-Learning-Objects/Folder%20112/Fotoware%20archive%20image%20dimensions.png.info/__renditions/ORIGINAL",
+      "default": true,
+      "original": true,
+      "sizeFixed": false,
+      "profile": "2af4914d-6c11-4b15-a7ee-a4260efc8309"
+    }
+  ],
+  "previewToken": null,
+  "attributes": {
+    "imageattributes": {
+      "pixelwidth": 600,
+      "pixelheight": 338,
+      "resolution": 72,
+      "flipmirror": 0,
+      "rotation": 0,
+      "colorspace": "rgb"
+    }
+  },
+  "physicalFileId": "67d2f0a7d65ff3dc918b275b/Folder 112/Fotoware archive image dimensions.png",
+  "metadata": {
+    "187": {
+      "value": "21F12DFC7B024CA8 82CAB5D53CDD2130"
+    },
+    "360": {
+      "value": "karl.ervine@rmit.edu.au"
+    },
+    "361": {
+      "value": "Karl Ervine"
+    },
+    "362": {
+      "value": "2025-03-19T00:00:00+11:00"
+    },
+    "611": {
+      "value": "Restricted"
+    },
+    "855": {
+      "value": [
+        "https://rmit.fotoware.cloud/fotoweb/archives/5015-My-Moderation/Folder%20112/Fotoware%20archive%20image%20dimensions-2.png.info"
+      ]
+    },
+    "858": {
+      "value": [
+        "5cc3d215-415c-4fba-a5d1-c58fc39eb2cf"
+      ]
+    }
+  },
+  "thumbnailFields": {
+    "label": {
+      "value": ""
+    },
+    "firstLine": {
+      "value": ""
+    },
+    "secondLine": {
+      "value": ""
+    },
+    "additionalFields": [
+      {
+        "value": [],
+        "views": []
+      }
+    ]
+  },
+  "builtinFields": [
+    {
+      "field": "title",
+      "required": false,
+      "value": ""
+    },
+    {
+      "field": "description",
+      "required": false,
+      "value": ""
+    },
+    {
+      "field": "tags",
+      "required": false,
+      "value": []
+    }
+  ],
+  "ancestors": [
+    {
+      "name": "All Learning Objects",
+      "href": "/fotoweb/archives/5009-All-Learning-Objects/",
+      "data": "/fotoweb/archives/5009-All-Learning-Objects/"
+    }
+  ],
+  "props": {
+    "owner": null,
+    "shares": {
+      "enabled": false
+    },
+    "comments": {
+      "enabled": false
+    },
+    "annotations": {
+      "enabled": false
+    },
+    "tags": []
+  },
+  "uniqueId": "21F12DFC7B024CA8 82CAB5D53CDD2130",
+  "archives": [
+    "5009"
+  ]
+}

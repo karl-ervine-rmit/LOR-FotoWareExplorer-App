@@ -1,0 +1,1868 @@
+{
+  "name": "Recently Added",
+  "description": "Last 30 days - Needs 'Date Added' field to be updated",
+  "href": "/fotoweb/archives/5018-Recently-Added/",
+  "id": null,
+  "data": "/fotoweb/archives/5018-Recently-Added/",
+  "dataTemplate": "/fotoweb/archives/5018-Recently-Added/{;o}",
+  "orderRootHref": "/fotoweb/archives/5018-Recently-Added/",
+  "matchingHref": "/fotoweb/archives/5018-Recently-Added/",
+  "uploadHref": null,
+  "propertyValidations": [
+    {
+      "name": "childUrlFragment",
+      "min": 1,
+      "max": 255,
+      "regex": "^[a-z0-9\\-]+$"
+    }
+  ],
+  "urlComponents": [],
+  "type": "archive",
+  "created": "",
+  "modified": "2025-06-10T17:28:39Z",
+  "deleted": null,
+  "archived": null,
+  "metadataEditor": {
+    "name": "RMIT",
+    "href": "/fotoweb/editors/e1241645-f5eb-41b8-a211-43556e1584df"
+  },
+  "searchURL": "/fotoweb/archives/5018-Recently-Added/{?q}",
+  "originalURL": "/fotoweb/archives/5018-Recently-Added/",
+  "clearSearch": {
+    "href": "/fotoweb/archives/5018-Recently-Added/",
+    "data": "/fotoweb/archives/5018-Recently-Added/"
+  },
+  "searchString": "",
+  "searchQuery": "",
+  "alertHref": null,
+  "alt_orders": [
+    {
+      "name": "Last Modified",
+      "key": "mt",
+      "asc": {
+        "href": "/fotoweb/archives/5018-Recently-Added/;o=+",
+        "data": "/fotoweb/archives/5018-Recently-Added/;o=+",
+        "urlComponents": [
+          {
+            "key": "o",
+            "value": "+"
+          }
+        ]
+      },
+      "desc": {
+        "href": "/fotoweb/archives/5018-Recently-Added/",
+        "data": "/fotoweb/archives/5018-Recently-Added/",
+        "default": true,
+        "urlComponents": [
+          {
+            "key": "o",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "name": "Filename",
+      "key": "fn",
+      "asc": {
+        "href": "/fotoweb/archives/5018-Recently-Added/;o=fn",
+        "data": "/fotoweb/archives/5018-Recently-Added/;o=fn",
+        "urlComponents": [
+          {
+            "key": "o",
+            "value": "fn"
+          }
+        ]
+      },
+      "desc": {
+        "href": "/fotoweb/archives/5018-Recently-Added/;o=-fn",
+        "data": "/fotoweb/archives/5018-Recently-Added/;o=-fn",
+        "urlComponents": [
+          {
+            "key": "o",
+            "value": "-fn"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Date Created",
+      "key": "350",
+      "asc": {
+        "href": "/fotoweb/archives/5018-Recently-Added/;o=350",
+        "data": "/fotoweb/archives/5018-Recently-Added/;o=350",
+        "urlComponents": [
+          {
+            "key": "o",
+            "value": "350"
+          }
+        ]
+      },
+      "desc": {
+        "href": "/fotoweb/archives/5018-Recently-Added/;o=-350",
+        "data": "/fotoweb/archives/5018-Recently-Added/;o=-350",
+        "urlComponents": [
+          {
+            "key": "o",
+            "value": "-350"
+          }
+        ]
+      }
+    }
+  ],
+  "taxonomies": [],
+  "canHaveChildren": true,
+  "isSearchable": true,
+  "isSelectable": true,
+  "isLinkCollection": false,
+  "hasChildren": true,
+  "canCopyTo": false,
+  "canMoveTo": false,
+  "canUploadTo": false,
+  "canCreateFolders": false,
+  "canIngestToChildren": false,
+  "canBeDeleted": false,
+  "canBeArchived": false,
+  "isFolderNavigationEnabled": false,
+  "isSmartFolderNavigationEnabled": false,
+  "canSelect": false,
+  "isConsentManagementEnabled": false,
+  "isConsentStatusFilterEnabled": false,
+  "create": [],
+  "isVersioningEnabled": false,
+  "permissions": [
+    "View",
+    "Preview"
+  ],
+  "smartFolderHeader": "SmartFolders",
+  "posterImages": [],
+  "posterAsset": null,
+  "pin": null,
+  "assetCount": 7,
+  "assets": {
+    "data": [
+      {
+        "href": "/fotoweb/archives/5018-Recently-Added/Folder%20112/Landscape_Arnisee-region.jpg.info",
+        "archiveHREF": "/fotoweb/archives/5018-Recently-Added/",
+        "archiveId": 5018,
+        "linkstance": "/fotoweb/archives/5018-Recently-Added/Folder%20112/Landscape_Arnisee-region.jpg.info",
+        "isVersioningEnabled": false,
+        "created": "2025-06-04T09:20:43.633000Z",
+        "modified": "2025-06-04T09:20:43Z",
+        "modifiedBy": "system",
+        "createdBy": "system",
+        "filename": "Landscape_Arnisee-region.jpg",
+        "filesize": 217088,
+        "uniqueid": "",
+        "permissions": [
+          "View",
+          "Preview"
+        ],
+        "pincount": 0,
+        "previewcount": 12,
+        "downloadcount": 0,
+        "workflowcount": 0,
+        "metadataeditcount": 0,
+        "revisioncount": 0,
+        "doctype": "image",
+        "capabilities": {
+          "crop": true,
+          "print": true,
+          "printWithAnnotations": true
+        },
+        "previews": [
+          {
+            "size": 800,
+            "width": 800,
+            "height": 532,
+            "href": "/fotoweb/cache/v2/G/I/Folder%20112/Landscape_Arnisee-region.jpg.miefn-3yMdeDheVjQA0A.9yTjYyTOYY.jpg",
+            "square": false
+          },
+          {
+            "size": 1200,
+            "width": 1200,
+            "height": 798,
+            "href": "/fotoweb/cache/v2/0/3/Folder%20112/Landscape_Arnisee-region.jpg.miefn-3yMdeDheVjYBMA.C-rs0LC92A.jpg",
+            "square": false
+          },
+          {
+            "size": 1600,
+            "width": 1600,
+            "height": 1063,
+            "href": "/fotoweb/cache/v2/M/W/Folder%20112/Landscape_Arnisee-region.jpg.miefn-3yMdeDheVjgBkA.npqk8ujIrU.jpg",
+            "square": false
+          },
+          {
+            "size": 2400,
+            "width": 2400,
+            "height": 1595,
+            "href": "/fotoweb/cache/v2/C/O/Folder%20112/Landscape_Arnisee-region.jpg.miefn-3yMdeDheVjwCUA.dgbMkymGMV.jpg",
+            "square": false
+          },
+          {
+            "size": 200,
+            "width": 200,
+            "height": 133,
+            "href": "/fotoweb/cache/v2/2/H/Folder%20112/Landscape_Arnisee-region.jpg.miefn-3yMdeDheVjkAMA.3AZSerhye6.jpg",
+            "square": false
+          },
+          {
+            "size": 300,
+            "width": 300,
+            "height": 199,
+            "href": "/fotoweb/cache/v2/M/Y/Folder%20112/Landscape_Arnisee-region.jpg.miefn-3yMdeDheVjWAUA.q4AGnsPX-r.jpg",
+            "square": false
+          },
+          {
+            "size": 400,
+            "width": 400,
+            "height": 266,
+            "href": "/fotoweb/cache/v2/l/s/Folder%20112/Landscape_Arnisee-region.jpg.miefn-3yMdeDheVjIAcA.d00YfdfUxl.jpg",
+            "square": false
+          },
+          {
+            "size": 600,
+            "width": 600,
+            "height": 399,
+            "href": "/fotoweb/cache/v2/n/l/Folder%20112/Landscape_Arnisee-region.jpg.miefn-3yMdeDheVjsAkA.dk8ajjA4HV.jpg",
+            "square": false
+          },
+          {
+            "size": 100,
+            "width": 100,
+            "height": 100,
+            "href": "/fotoweb/cache/v2/f/P/Folder%20112/Landscape_Arnisee-region.jpg.miefn-3yMdeDheVjyAQ.-Aqze54j12.jpg",
+            "square": true
+          },
+          {
+            "size": 200,
+            "width": 200,
+            "height": 200,
+            "href": "/fotoweb/cache/v2/l/G/Folder%20112/Landscape_Arnisee-region.jpg.miefn-3yMdeDheVjkAME.P9rtHgArsA.jpg",
+            "square": true
+          },
+          {
+            "size": 200,
+            "width": 200,
+            "height": 200,
+            "href": "/fotoweb/cache/v2/l/G/Folder%20112/Landscape_Arnisee-region.jpg.miefn-3yMdeDheVjkAME.P9rtHgArsA.jpg",
+            "square": true
+          },
+          {
+            "size": 400,
+            "width": 400,
+            "height": 400,
+            "href": "/fotoweb/cache/v2/B/8/Folder%20112/Landscape_Arnisee-region.jpg.miefn-3yMdeDheVjIAcE.BgPr4UxrIx.jpg",
+            "square": true
+          }
+        ],
+        "quickRenditions": [],
+        "metadataEditor": {
+          "name": "RMIT",
+          "href": "/fotoweb/editors/e1241645-f5eb-41b8-a211-43556e1584df"
+        },
+        "renditions": [
+          {
+            "display_name": "Original File",
+            "description": "Original File",
+            "width": 960,
+            "height": 638,
+            "href": "/fotoweb/archives/5018-Recently-Added/Folder%20112/Landscape_Arnisee-region.jpg.info/__renditions/ORIGINAL",
+            "default": true,
+            "original": true,
+            "sizeFixed": false,
+            "profile": "2af4914d-6c11-4b15-a7ee-a4260efc8309"
+          }
+        ],
+        "previewToken": null,
+        "attributes": {
+          "imageattributes": {
+            "pixelwidth": 960,
+            "pixelheight": 638,
+            "resolution": 72,
+            "flipmirror": 0,
+            "rotation": 0,
+            "colorspace": "rgb"
+          }
+        },
+        "physicalFileId": "67d2f0a7d65ff3dc918b275b/Folder 112/Landscape_Arnisee-region.jpg",
+        "metadata": {
+          "187": {
+            "value": "31DE2061EAE7464E B748425AEBE2AE69"
+          },
+          "360": {
+            "value": "karl.ervine@rmit.edu.au"
+          },
+          "361": {
+            "value": "Karl Ervine"
+          },
+          "362": {
+            "value": "2025-06-04T19:20:41.379448"
+          },
+          "602": {
+            "value": "Current"
+          },
+          "830": {
+            "value": "2025-06-07T00:00:00+10:00"
+          }
+        },
+        "thumbnailFields": {
+          "label": {
+            "value": ""
+          },
+          "firstLine": {
+            "value": ""
+          },
+          "secondLine": {
+            "value": ""
+          },
+          "additionalFields": [
+            {
+              "value": [],
+              "views": []
+            }
+          ]
+        },
+        "builtinFields": [
+          {
+            "field": "title",
+            "required": false,
+            "value": ""
+          },
+          {
+            "field": "description",
+            "required": false,
+            "value": ""
+          },
+          {
+            "field": "tags",
+            "required": false,
+            "value": []
+          }
+        ],
+        "props": {
+          "owner": null,
+          "shares": {
+            "enabled": false
+          },
+          "comments": {
+            "enabled": false
+          },
+          "annotations": {
+            "enabled": false
+          },
+          "tags": []
+        }
+      },
+      {
+        "href": "/fotoweb/archives/5018-Recently-Added/Folder%20112/Man_enjoying_ketchup_chips.jpg.info",
+        "archiveHREF": "/fotoweb/archives/5018-Recently-Added/",
+        "archiveId": 5018,
+        "linkstance": "/fotoweb/archives/5018-Recently-Added/Folder%20112/Man_enjoying_ketchup_chips.jpg.info",
+        "isVersioningEnabled": false,
+        "created": "2025-06-04T09:14:24.359000Z",
+        "modified": "2025-06-04T09:14:25Z",
+        "modifiedBy": "system",
+        "createdBy": "system",
+        "filename": "Man_enjoying_ketchup_chips.jpg",
+        "filesize": 54272,
+        "uniqueid": "",
+        "permissions": [
+          "View",
+          "Preview"
+        ],
+        "pincount": 0,
+        "previewcount": 12,
+        "downloadcount": 0,
+        "workflowcount": 0,
+        "metadataeditcount": 0,
+        "revisioncount": 0,
+        "doctype": "image",
+        "capabilities": {
+          "crop": true,
+          "print": true,
+          "printWithAnnotations": true
+        },
+        "previews": [
+          {
+            "size": 800,
+            "width": 570,
+            "height": 800,
+            "href": "/fotoweb/cache/v2/X/g/Folder%20112/Man_enjoying_ketchup_chips.jpg.mif2rvLyMeN9heVjQA0A.VOKWdD8uBW.jpg",
+            "square": false
+          },
+          {
+            "size": 1200,
+            "width": 855,
+            "height": 1200,
+            "href": "/fotoweb/cache/v2/e/B/Folder%20112/Man_enjoying_ketchup_chips.jpg.mif2rvLyMeN9heVjYBMA.cMoj_4QN8s.jpg",
+            "square": false
+          },
+          {
+            "size": 1600,
+            "width": 1140,
+            "height": 1600,
+            "href": "/fotoweb/cache/v2/k/V/Folder%20112/Man_enjoying_ketchup_chips.jpg.mif2rvLyMeN9heVjgBkA.7-CaH_dyyn.jpg",
+            "square": false
+          },
+          {
+            "size": 2400,
+            "width": 1709,
+            "height": 2400,
+            "href": "/fotoweb/cache/v2/z/9/Folder%20112/Man_enjoying_ketchup_chips.jpg.mif2rvLyMeN9heVjwCUA.XoZCJVlzZM.jpg",
+            "square": false
+          },
+          {
+            "size": 200,
+            "width": 142,
+            "height": 200,
+            "href": "/fotoweb/cache/v2/C/D/Folder%20112/Man_enjoying_ketchup_chips.jpg.mif2rvLyMeN9heVjkAMA.rxUnnodt7h.jpg",
+            "square": false
+          },
+          {
+            "size": 300,
+            "width": 214,
+            "height": 300,
+            "href": "/fotoweb/cache/v2/G/S/Folder%20112/Man_enjoying_ketchup_chips.jpg.mif2rvLyMeN9heVjWAUA.s_0-X6Xvw8.jpg",
+            "square": false
+          },
+          {
+            "size": 400,
+            "width": 285,
+            "height": 400,
+            "href": "/fotoweb/cache/v2/Y/3/Folder%20112/Man_enjoying_ketchup_chips.jpg.mif2rvLyMeN9heVjIAcA.eF-nSj_WN5.jpg",
+            "square": false
+          },
+          {
+            "size": 600,
+            "width": 427,
+            "height": 600,
+            "href": "/fotoweb/cache/v2/e/1/Folder%20112/Man_enjoying_ketchup_chips.jpg.mif2rvLyMeN9heVjsAkA.lk8rICRSa9.jpg",
+            "square": false
+          },
+          {
+            "size": 100,
+            "width": 100,
+            "height": 100,
+            "href": "/fotoweb/cache/v2/2/r/Folder%20112/Man_enjoying_ketchup_chips.jpg.mif2rvLyMeN9heVjyAQ.nJvz_FQiwg.jpg",
+            "square": true
+          },
+          {
+            "size": 200,
+            "width": 200,
+            "height": 200,
+            "href": "/fotoweb/cache/v2/s/7/Folder%20112/Man_enjoying_ketchup_chips.jpg.mif2rvLyMeN9heVjkAME.eLBPCX2kca.jpg",
+            "square": true
+          },
+          {
+            "size": 200,
+            "width": 200,
+            "height": 200,
+            "href": "/fotoweb/cache/v2/s/7/Folder%20112/Man_enjoying_ketchup_chips.jpg.mif2rvLyMeN9heVjkAME.eLBPCX2kca.jpg",
+            "square": true
+          },
+          {
+            "size": 400,
+            "width": 400,
+            "height": 400,
+            "href": "/fotoweb/cache/v2/a/J/Folder%20112/Man_enjoying_ketchup_chips.jpg.mif2rvLyMeN9heVjIAcE.vs0BVD5MHg.jpg",
+            "square": true
+          }
+        ],
+        "quickRenditions": [],
+        "metadataEditor": {
+          "name": "RMIT",
+          "href": "/fotoweb/editors/e1241645-f5eb-41b8-a211-43556e1584df"
+        },
+        "renditions": [
+          {
+            "display_name": "Original File",
+            "description": "Original File",
+            "width": 250,
+            "height": 351,
+            "href": "/fotoweb/archives/5018-Recently-Added/Folder%20112/Man_enjoying_ketchup_chips.jpg.info/__renditions/ORIGINAL",
+            "default": true,
+            "original": true,
+            "sizeFixed": false,
+            "profile": "2af4914d-6c11-4b15-a7ee-a4260efc8309"
+          }
+        ],
+        "previewToken": null,
+        "attributes": {
+          "imageattributes": {
+            "pixelwidth": 250,
+            "pixelheight": 351,
+            "resolution": 72,
+            "flipmirror": 0,
+            "rotation": 0,
+            "colorspace": "rgb"
+          }
+        },
+        "physicalFileId": "67d2f0a7d65ff3dc918b275b/Folder 112/Man_enjoying_ketchup_chips.jpg",
+        "metadata": {
+          "187": {
+            "value": "0A41429EB20B401A 8300AB914EAEC7CC"
+          },
+          "360": {
+            "value": "karl.ervine@rmit.edu.au"
+          },
+          "361": {
+            "value": "Karl Ervine"
+          },
+          "362": {
+            "value": "2025-06-04T19:14:23.060656"
+          },
+          "602": {
+            "value": "Current"
+          },
+          "830": {
+            "value": "2025-06-15T00:00:00+10:00"
+          }
+        },
+        "thumbnailFields": {
+          "label": {
+            "value": ""
+          },
+          "firstLine": {
+            "value": ""
+          },
+          "secondLine": {
+            "value": ""
+          },
+          "additionalFields": [
+            {
+              "value": [],
+              "views": []
+            }
+          ]
+        },
+        "builtinFields": [
+          {
+            "field": "title",
+            "required": false,
+            "value": ""
+          },
+          {
+            "field": "description",
+            "required": false,
+            "value": ""
+          },
+          {
+            "field": "tags",
+            "required": false,
+            "value": []
+          }
+        ],
+        "props": {
+          "owner": null,
+          "shares": {
+            "enabled": false
+          },
+          "comments": {
+            "enabled": false
+          },
+          "annotations": {
+            "enabled": false
+          },
+          "tags": []
+        }
+      },
+      {
+        "href": "/fotoweb/archives/5018-Recently-Added/Folder%20112/llab12%20(2)%20(2)%20(2).png.info",
+        "archiveHREF": "/fotoweb/archives/5018-Recently-Added/",
+        "archiveId": 5018,
+        "linkstance": "/fotoweb/archives/5018-Recently-Added/Folder%20112/llab12%20(2)%20(2)%20(2).png.info",
+        "isVersioningEnabled": false,
+        "created": "2025-06-11T02:29:35.351000Z",
+        "modified": "2025-05-30T07:44:15Z",
+        "modifiedBy": "system",
+        "createdBy": "system",
+        "filename": "llab12 (2) (2) (2).png",
+        "filesize": 161792,
+        "uniqueid": "",
+        "permissions": [
+          "View",
+          "Preview"
+        ],
+        "pincount": 0,
+        "previewcount": 12,
+        "downloadcount": 0,
+        "workflowcount": 0,
+        "metadataeditcount": 0,
+        "revisioncount": 0,
+        "doctype": "image",
+        "capabilities": {
+          "crop": true,
+          "print": true,
+          "printWithAnnotations": true
+        },
+        "previews": [
+          {
+            "size": 800,
+            "width": 800,
+            "height": 800,
+            "href": "/fotoweb/cache/v2/l/q/Folder%20112/llab12%20(2)%20(2)%20(2).png.mie5m-7yMZ_LT-VjQA0A.34b-PvWB-p.jpg",
+            "square": false
+          },
+          {
+            "size": 1200,
+            "width": 1200,
+            "height": 1200,
+            "href": "/fotoweb/cache/v2/T/R/Folder%20112/llab12%20(2)%20(2)%20(2).png.mie5m-7yMZ_LT-VjYBMA.hxCGenZ-ak.jpg",
+            "square": false
+          },
+          {
+            "size": 1600,
+            "width": 1600,
+            "height": 1600,
+            "href": "/fotoweb/cache/v2/h/2/Folder%20112/llab12%20(2)%20(2)%20(2).png.mie5m-7yMZ_LT-VjgBkA.LQt3JG4JIs.jpg",
+            "square": false
+          },
+          {
+            "size": 2400,
+            "width": 2400,
+            "height": 2400,
+            "href": "/fotoweb/cache/v2/9/E/Folder%20112/llab12%20(2)%20(2)%20(2).png.mie5m-7yMZ_LT-VjwCUA.XOoceCe6-W.jpg",
+            "square": false
+          },
+          {
+            "size": 200,
+            "width": 200,
+            "height": 200,
+            "href": "/fotoweb/cache/v2/_/x/Folder%20112/llab12%20(2)%20(2)%20(2).png.mie5m-7yMZ_LT-VjkAMA.nIIOfKrhFf.jpg",
+            "square": false
+          },
+          {
+            "size": 300,
+            "width": 300,
+            "height": 300,
+            "href": "/fotoweb/cache/v2/H/G/Folder%20112/llab12%20(2)%20(2)%20(2).png.mie5m-7yMZ_LT-VjWAUA.D_b53G4FV7.jpg",
+            "square": false
+          },
+          {
+            "size": 400,
+            "width": 400,
+            "height": 400,
+            "href": "/fotoweb/cache/v2/f/X/Folder%20112/llab12%20(2)%20(2)%20(2).png.mie5m-7yMZ_LT-VjIAcA.7K39xKt9sd.jpg",
+            "square": false
+          },
+          {
+            "size": 600,
+            "width": 600,
+            "height": 600,
+            "href": "/fotoweb/cache/v2/m/N/Folder%20112/llab12%20(2)%20(2)%20(2).png.mie5m-7yMZ_LT-VjsAkA.QE6v77PHlU.jpg",
+            "square": false
+          },
+          {
+            "size": 100,
+            "width": 100,
+            "height": 100,
+            "href": "/fotoweb/cache/v2/4/f/Folder%20112/llab12%20(2)%20(2)%20(2).png.mie5m-7yMZ_LT-VjyAQ.4AYkGmSQb4.jpg",
+            "square": true
+          },
+          {
+            "size": 200,
+            "width": 200,
+            "height": 200,
+            "href": "/fotoweb/cache/v2/R/E/Folder%20112/llab12%20(2)%20(2)%20(2).png.mie5m-7yMZ_LT-VjkAME.Qm98IgyOCG.jpg",
+            "square": true
+          },
+          {
+            "size": 200,
+            "width": 200,
+            "height": 200,
+            "href": "/fotoweb/cache/v2/R/E/Folder%20112/llab12%20(2)%20(2)%20(2).png.mie5m-7yMZ_LT-VjkAME.Qm98IgyOCG.jpg",
+            "square": true
+          },
+          {
+            "size": 400,
+            "width": 400,
+            "height": 400,
+            "href": "/fotoweb/cache/v2/q/E/Folder%20112/llab12%20(2)%20(2)%20(2).png.mie5m-7yMZ_LT-VjIAcE.L2PDi4tNZz.jpg",
+            "square": true
+          }
+        ],
+        "quickRenditions": [],
+        "metadataEditor": {
+          "name": "RMIT",
+          "href": "/fotoweb/editors/e1241645-f5eb-41b8-a211-43556e1584df"
+        },
+        "renditions": [
+          {
+            "display_name": "Original File",
+            "description": "Original File",
+            "width": 1180,
+            "height": 1180,
+            "href": "/fotoweb/archives/5018-Recently-Added/Folder%20112/llab12%20(2)%20(2)%20(2).png.info/__renditions/ORIGINAL",
+            "default": true,
+            "original": true,
+            "sizeFixed": false,
+            "profile": "2af4914d-6c11-4b15-a7ee-a4260efc8309"
+          }
+        ],
+        "previewToken": null,
+        "attributes": {
+          "imageattributes": {
+            "pixelwidth": 1180,
+            "pixelheight": 1180,
+            "resolution": 72,
+            "flipmirror": 0,
+            "rotation": 0,
+            "colorspace": "rgb"
+          }
+        },
+        "physicalFileId": "67d2f0a7d65ff3dc918b275b/Folder 112/llab12 (2) (2) (2).png",
+        "metadata": {
+          "5": {
+            "value": "Learning Lab - Art and design"
+          },
+          "25": {
+            "value": [
+              "Art",
+              "Design",
+              "Creative practice",
+              "Creative writing",
+              "Colour Theory",
+              "Essay writing",
+              "Critical writing",
+              "Propositional writing",
+              "Sustainability",
+              "Creative practice",
+              "Professional writing",
+              "Assignments",
+              "Mind mapping",
+              "Editing",
+              "Academic writing",
+              "Essays"
+            ]
+          },
+          "116": {
+            "value": "Copyright © RMIT University"
+          },
+          "120": {
+            "value": "** Learning Lab website is a foundation skills resource for students.**\n\n## [Art and Design](https://learninglab.rmit.edu.au/art-and-design/)\n\nResources to help you with critical and reflective writing, artist statements, essays and more\n\n### [Artist statement](https://learninglab.rmit.edu.au/art-and-design/artist-statement/)\n\nUnderstand the purpose of an Artist statement, identify various types, analyse real examples and practice writing in your own words. This skill helps communicate your creative practice, develop writing skills, and find your 'voice'.\n\n### [Critical writing](https://learninglab.rmit.edu.au/art-and-design/critical-writing/)\n\nCritical writing involves analysis and review, supported by evidence. In design, it may take the form of an essay, visual analysis or journal article.\n\n### [Reflective writing in design](https://learninglab.rmit.edu.au/art-and-design/reflective-writing-design/)\n\nReflecting on practice is an important means of developing expertise in design. Structured reflection involves identifying significant events that lead to learning, identifying their value and considering how they will contribute to your future projects and your practice as a whole.\n\n\n### [Propositional writing](https://learninglab.rmit.edu.au/art-and-design/propositional-writing/)\n\nPropositional writing sets out a plan of action or design intent. It presents clearly what the project or idea is, outlines why certain actions or design elements are significant (the reasoning behind the project) and how they can be achieved.\n\n### Other related Learning Lab resources\n\n#### Digital portfolios \n\n#### [Colour Theory](https://learninglab.rmit.edu.au/art-and-design/colour-theory/)\n\n#### [Sustainable creative practice](https://learninglab.rmit.edu.au/university-essentials/sustainability/sdgs-your-life/sustainable-creative-practice/)"
+          },
+          "187": {
+            "value": "4B92004A68B34C6C A3F6037C089AFB32"
+          },
+          "201": {
+            "value": "https://learninglab.rmit.edu.au/art-and-design/"
+          },
+          "300": {
+            "value": "Australia"
+          },
+          "302": {
+            "value": [
+              "Learning Lab"
+            ]
+          },
+          "350": {
+            "value": "c. 2012"
+          },
+          "360": {
+            "value": "lisa.cianci@rmit.edu.au"
+          },
+          "361": {
+            "value": "Lisa Cianci"
+          },
+          "362": {
+            "value": "2025-05-30T17:43:45.081922"
+          },
+          "427": {
+            "value": [
+              "Learning object",
+              "Website",
+              "Text",
+              "Image",
+              "Video"
+            ]
+          },
+          "429": {
+            "value": "Open"
+          },
+          "432": {
+            "value": [
+              "Art (Creative Arts, Fine Arts, Visual Art)",
+              "Design"
+            ]
+          },
+          "602": {
+            "value": "Current"
+          },
+          "604": {
+            "value": [
+              "Learning Lab"
+            ]
+          },
+          "605": {
+            "value": [
+              "Student",
+              "Staff"
+            ]
+          },
+          "611": {
+            "value": "Public"
+          },
+          "821": {
+            "value": [
+              "All education levels"
+            ]
+          },
+          "822": {
+            "value": [
+              "English"
+            ]
+          },
+          "823": {
+            "value": [
+              "Keyboard accessible",
+              "Screen reader accessible",
+              "Dark mode",
+              "Skip to text",
+              "ARIA labels",
+              "Alt text for images",
+              "Transcripts",
+              "Accessible colours",
+              "Navigation options"
+            ]
+          },
+          "830": {
+            "value": "2027-06-30T00:00:00+10:00"
+          },
+          "840": {
+            "value": "RMIT University Library"
+          },
+          "841": {
+            "value": "Contributors to the Learning Lab website include but are not limited to these individuals:\nAJ Penrose, Alina Lam, Belinda Bold, , Cate O'Dwyer, Christine Ruddy, Christopher O'Connor, Colleen Boyle,  Danielle Archer, Jack Dunstan, Jacqueline Shadforth, Karen Dellar, Kelly Ann Smith, Lisa Cianci, Lyn Bond, Mare Maticevski, Matthew Millis, Meg Ivory, Peter Kennedy, Sandy Houston, Simon Evans, Sharyn Meade, Teryn Attwell, Tim O'Connor, Mike Brooks, Wol Pidriz\n\nSee humans.txt file for all contributors: https://learninglab.rmit.edu.au/humans.txt"
+          },
+          "842": {
+            "value": "See Learning Lab pages for specific embed codes which are at the bottom of each page"
+          },
+          "844": {
+            "value": "dev site is located here: <https://lab.bitma.app> but will move to a future location on WP engine\nThis website has over 500 pages in total, but is being documented at a section level of granularity for ease of access & discoverability. Handling should include markdown descriptions with links to subsections for this content."
+          },
+          "846": {
+            "value": "General review for currency of information and technological issues. Consider updating information, or digital media embedded content"
+          },
+          "847": {
+            "value": "Digital Learning Team email: digital.learning.library@rmit.edu.au"
+          },
+          "858": {
+            "value": [
+              "a9a9935d-4fb6-4f4d-b4e6-0211c11c20c5"
+            ]
+          },
+          "859": {
+            "value": [
+              "RMIT University Library"
+            ]
+          },
+          "860": {
+            "value": [
+              "RMIT Library, Digital Learning Team"
+            ]
+          },
+          "862": {
+            "value": [
+              "Open Education Resource (OER)",
+              "Learning activity",
+              "Quiz"
+            ]
+          },
+          "863": {
+            "value": [
+              "CC BY-NC 4.0"
+            ]
+          },
+          "864": {
+            "value": [
+              "RMIT Library, Digital Learning"
+            ]
+          }
+        },
+        "thumbnailFields": {
+          "label": {
+            "value": "Learning Lab - Art and design"
+          },
+          "firstLine": {
+            "value": "** Learning Lab website is a foundation skills resource for students.**\n\n## [Art and Design](https://learninglab.rmit.edu.au/art-and-design/)\n\nResources to help you with critical and reflective writing, artist statements, essays and more\n\n### [Artist statement](https://learninglab.rmit.edu.au/art-and-design/artist-statement/)\n\nUnderstand the purpose of an Artist statement, identify various types, analyse real examples and practice writing in your own words. This skill helps communicate your creative practice, develop writing skills, and find your 'voice'.\n\n### [Critical writing](https://learninglab.rmit.edu.au/art-and-design/critical-writing/)\n\nCritical writing involves analysis and review, supported by evidence. In design, it may take the form of an essay, visual analysis or journal article.\n\n### [Reflective writing in design](https://learninglab.rmit.edu.au/art-and-design/reflective-writing-design/)\n\nReflecting on practice is an important means of developing expertise in design. Structured reflection involves identifying significant events that lead to learning, identifying their value and considering how they will contribute to your future projects and your practice as a whole.\n\n\n### [Propositional writing](https://learninglab.rmit.edu.au/art-and-design/propositional-writing/)\n\nPropositional writing sets out a plan of action or design intent. It presents clearly what the project or idea is, outlines why certain actions or design elements are significant (the reasoning behind the project) and how they can be achieved.\n\n### Other related Learning Lab resources\n\n#### Digital portfolios \n\n#### [Colour Theory](https://learninglab.rmit.edu.au/art-and-design/colour-theory/)\n\n#### [Sustainable creative practice](https://learninglab.rmit.edu.au/university-essentials/sustainability/sdgs-your-life/sustainable-creative-practice/)"
+          },
+          "secondLine": {
+            "value": ""
+          },
+          "additionalFields": [
+            {
+              "value": [],
+              "views": []
+            }
+          ]
+        },
+        "builtinFields": [
+          {
+            "field": "title",
+            "required": false,
+            "value": "Learning Lab - Art and design"
+          },
+          {
+            "field": "description",
+            "required": false,
+            "value": "** Learning Lab website is a foundation skills resource for students.**\n\n## [Art and Design](https://learninglab.rmit.edu.au/art-and-design/)\n\nResources to help you with critical and reflective writing, artist statements, essays and more\n\n### [Artist statement](https://learninglab.rmit.edu.au/art-and-design/artist-statement/)\n\nUnderstand the purpose of an Artist statement, identify various types, analyse real examples and practice writing in your own words. This skill helps communicate your creative practice, develop writing skills, and find your 'voice'.\n\n### [Critical writing](https://learninglab.rmit.edu.au/art-and-design/critical-writing/)\n\nCritical writing involves analysis and review, supported by evidence. In design, it may take the form of an essay, visual analysis or journal article.\n\n### [Reflective writing in design](https://learninglab.rmit.edu.au/art-and-design/reflective-writing-design/)\n\nReflecting on practice is an important means of developing expertise in design. Structured reflection involves identifying significant events that lead to learning, identifying their value and considering how they will contribute to your future projects and your practice as a whole.\n\n\n### [Propositional writing](https://learninglab.rmit.edu.au/art-and-design/propositional-writing/)\n\nPropositional writing sets out a plan of action or design intent. It presents clearly what the project or idea is, outlines why certain actions or design elements are significant (the reasoning behind the project) and how they can be achieved.\n\n### Other related Learning Lab resources\n\n#### Digital portfolios \n\n#### [Colour Theory](https://learninglab.rmit.edu.au/art-and-design/colour-theory/)\n\n#### [Sustainable creative practice](https://learninglab.rmit.edu.au/university-essentials/sustainability/sdgs-your-life/sustainable-creative-practice/)"
+          },
+          {
+            "field": "tags",
+            "required": false,
+            "value": [
+              "Art",
+              "Design",
+              "Creative practice",
+              "Creative writing",
+              "Colour Theory",
+              "Essay writing",
+              "Critical writing",
+              "Propositional writing",
+              "Sustainability",
+              "Creative practice",
+              "Professional writing",
+              "Assignments",
+              "Mind mapping",
+              "Editing",
+              "Academic writing",
+              "Essays"
+            ]
+          }
+        ],
+        "props": {
+          "owner": null,
+          "shares": {
+            "enabled": false
+          },
+          "comments": {
+            "enabled": false
+          },
+          "annotations": {
+            "enabled": false
+          },
+          "tags": []
+        }
+      },
+      {
+        "href": "/fotoweb/archives/5018-Recently-Added/Folder%20112/ec2.png.info",
+        "archiveHREF": "/fotoweb/archives/5018-Recently-Added/",
+        "archiveId": 5018,
+        "linkstance": "/fotoweb/archives/5018-Recently-Added/Folder%20112/ec2.png.info",
+        "isVersioningEnabled": false,
+        "created": "2025-05-12T04:50:44.325000Z",
+        "modified": "2025-05-12T04:50:47Z",
+        "modifiedBy": "system",
+        "createdBy": "system",
+        "filename": "ec2.png",
+        "filesize": 2666496,
+        "uniqueid": "",
+        "permissions": [
+          "View",
+          "Preview"
+        ],
+        "pincount": 0,
+        "previewcount": 12,
+        "downloadcount": 0,
+        "workflowcount": 0,
+        "metadataeditcount": 0,
+        "revisioncount": 0,
+        "doctype": "image",
+        "capabilities": {
+          "crop": true,
+          "print": true,
+          "printWithAnnotations": true
+        },
+        "previews": [
+          {
+            "size": 800,
+            "width": 800,
+            "height": 800,
+            "href": "/fotoweb/cache/v2/o/O/Folder%20112/ec2.png.mifN4vHyMU89keNjQA0A.zivFBE5rCn.jpg",
+            "square": false
+          },
+          {
+            "size": 1200,
+            "width": 1200,
+            "height": 1200,
+            "href": "/fotoweb/cache/v2/l/V/Folder%20112/ec2.png.mifN4vHyMU89keNjYBMA.bE5eqi8dxF.jpg",
+            "square": false
+          },
+          {
+            "size": 1600,
+            "width": 1600,
+            "height": 1600,
+            "href": "/fotoweb/cache/v2/x/X/Folder%20112/ec2.png.mifN4vHyMU89keNjgBkA.ahZCPSK53i.jpg",
+            "square": false
+          },
+          {
+            "size": 2400,
+            "width": 2400,
+            "height": 2400,
+            "href": "/fotoweb/cache/v2/l/8/Folder%20112/ec2.png.mifN4vHyMU89keNjwCUA.-tq8LxrVQ0.jpg",
+            "square": false
+          },
+          {
+            "size": 200,
+            "width": 200,
+            "height": 200,
+            "href": "/fotoweb/cache/v2/-/r/Folder%20112/ec2.png.mifN4vHyMU89keNjkAMA.OuUmh86592.jpg",
+            "square": false
+          },
+          {
+            "size": 300,
+            "width": 300,
+            "height": 300,
+            "href": "/fotoweb/cache/v2/j/W/Folder%20112/ec2.png.mifN4vHyMU89keNjWAUA.hq_CNTnZQ3.jpg",
+            "square": false
+          },
+          {
+            "size": 400,
+            "width": 400,
+            "height": 400,
+            "href": "/fotoweb/cache/v2/Y/u/Folder%20112/ec2.png.mifN4vHyMU89keNjIAcA.VRof5anxrK.jpg",
+            "square": false
+          },
+          {
+            "size": 600,
+            "width": 600,
+            "height": 600,
+            "href": "/fotoweb/cache/v2/w/N/Folder%20112/ec2.png.mifN4vHyMU89keNjsAkA.IizMwF6jYa.jpg",
+            "square": false
+          },
+          {
+            "size": 100,
+            "width": 100,
+            "height": 100,
+            "href": "/fotoweb/cache/v2/3/M/Folder%20112/ec2.png.mifN4vHyMU89keNjyAQ._cHt9iLR6f.jpg",
+            "square": true
+          },
+          {
+            "size": 200,
+            "width": 200,
+            "height": 200,
+            "href": "/fotoweb/cache/v2/u/9/Folder%20112/ec2.png.mifN4vHyMU89keNjkAME.6A5tX0GzQa.jpg",
+            "square": true
+          },
+          {
+            "size": 200,
+            "width": 200,
+            "height": 200,
+            "href": "/fotoweb/cache/v2/u/9/Folder%20112/ec2.png.mifN4vHyMU89keNjkAME.6A5tX0GzQa.jpg",
+            "square": true
+          },
+          {
+            "size": 400,
+            "width": 400,
+            "height": 400,
+            "href": "/fotoweb/cache/v2/t/c/Folder%20112/ec2.png.mifN4vHyMU89keNjIAcE.h9mfkxexJb.jpg",
+            "square": true
+          }
+        ],
+        "quickRenditions": [],
+        "metadataEditor": {
+          "name": "RMIT",
+          "href": "/fotoweb/editors/e1241645-f5eb-41b8-a211-43556e1584df"
+        },
+        "renditions": [
+          {
+            "display_name": "Original File",
+            "description": "Original File",
+            "width": 1024,
+            "height": 1024,
+            "href": "/fotoweb/archives/5018-Recently-Added/Folder%20112/ec2.png.info/__renditions/ORIGINAL",
+            "default": true,
+            "original": true,
+            "sizeFixed": false,
+            "profile": "2af4914d-6c11-4b15-a7ee-a4260efc8309"
+          }
+        ],
+        "previewToken": null,
+        "attributes": {
+          "imageattributes": {
+            "pixelwidth": 1024,
+            "pixelheight": 1024,
+            "resolution": 72,
+            "flipmirror": 0,
+            "rotation": 0,
+            "colorspace": "rgb"
+          }
+        },
+        "physicalFileId": "67d2f0a7d65ff3dc918b275b/Folder 112/ec2.png",
+        "metadata": {
+          "5": {
+            "value": "Edge Case 2: No Review Date on 'To Be Reviewed' Item"
+          },
+          "187": {
+            "value": "4A0E8D192BD74B69 99F305A92328136A"
+          },
+          "360": {
+            "value": "karl.ervine@rmit.edu.au"
+          },
+          "361": {
+            "value": "Karl Ervine"
+          },
+          "362": {
+            "value": "2025-05-12T14:50:43.898843"
+          },
+          "602": {
+            "value": "Current"
+          }
+        },
+        "thumbnailFields": {
+          "label": {
+            "value": "Edge Case 2: No Review Date on 'To Be Reviewed' Item"
+          },
+          "firstLine": {
+            "value": ""
+          },
+          "secondLine": {
+            "value": ""
+          },
+          "additionalFields": [
+            {
+              "value": [],
+              "views": []
+            }
+          ]
+        },
+        "builtinFields": [
+          {
+            "field": "title",
+            "required": false,
+            "value": "Edge Case 2: No Review Date on 'To Be Reviewed' Item"
+          },
+          {
+            "field": "description",
+            "required": false,
+            "value": ""
+          },
+          {
+            "field": "tags",
+            "required": false,
+            "value": []
+          }
+        ],
+        "props": {
+          "owner": null,
+          "shares": {
+            "enabled": false
+          },
+          "comments": {
+            "enabled": false
+          },
+          "annotations": {
+            "enabled": false
+          },
+          "tags": []
+        }
+      },
+      {
+        "href": "/fotoweb/archives/5018-Recently-Added/Folder%20112/superseded%20(2).png.info",
+        "archiveHREF": "/fotoweb/archives/5018-Recently-Added/",
+        "archiveId": 5018,
+        "linkstance": "/fotoweb/archives/5018-Recently-Added/Folder%20112/superseded%20(2).png.info",
+        "isVersioningEnabled": false,
+        "created": "2025-05-12T03:59:28.369000Z",
+        "modified": "2025-05-12T03:59:35Z",
+        "modifiedBy": "system",
+        "createdBy": "system",
+        "filename": "superseded (2).png",
+        "filesize": 2683904,
+        "uniqueid": "",
+        "permissions": [
+          "View",
+          "Preview"
+        ],
+        "pincount": 0,
+        "previewcount": 12,
+        "downloadcount": 0,
+        "workflowcount": 0,
+        "metadataeditcount": 0,
+        "revisioncount": 0,
+        "doctype": "image",
+        "capabilities": {
+          "crop": true,
+          "print": true,
+          "printWithAnnotations": true
+        },
+        "previews": [
+          {
+            "size": 800,
+            "width": 800,
+            "height": 800,
+            "href": "/fotoweb/cache/v2/_/z/Folder%20112/superseded%20(2).png.mifYrfXyMU8NkeNjQA0A.yTy8jA6x2g.jpg",
+            "square": false
+          },
+          {
+            "size": 1200,
+            "width": 1200,
+            "height": 1200,
+            "href": "/fotoweb/cache/v2/v/J/Folder%20112/superseded%20(2).png.mifYrfXyMU8NkeNjYBMA.8lLVwSq-x4.jpg",
+            "square": false
+          },
+          {
+            "size": 1600,
+            "width": 1600,
+            "height": 1600,
+            "href": "/fotoweb/cache/v2/K/6/Folder%20112/superseded%20(2).png.mifYrfXyMU8NkeNjgBkA.WpfOMxLrpI.jpg",
+            "square": false
+          },
+          {
+            "size": 2400,
+            "width": 2400,
+            "height": 2400,
+            "href": "/fotoweb/cache/v2/G/a/Folder%20112/superseded%20(2).png.mifYrfXyMU8NkeNjwCUA.3u4ybDZAXV.jpg",
+            "square": false
+          },
+          {
+            "size": 200,
+            "width": 200,
+            "height": 200,
+            "href": "/fotoweb/cache/v2/g/1/Folder%20112/superseded%20(2).png.mifYrfXyMU8NkeNjkAMA.UO3pauZp2x.jpg",
+            "square": false
+          },
+          {
+            "size": 300,
+            "width": 300,
+            "height": 300,
+            "href": "/fotoweb/cache/v2/q/i/Folder%20112/superseded%20(2).png.mifYrfXyMU8NkeNjWAUA.q6NLTuzuUu.jpg",
+            "square": false
+          },
+          {
+            "size": 400,
+            "width": 400,
+            "height": 400,
+            "href": "/fotoweb/cache/v2/i/f/Folder%20112/superseded%20(2).png.mifYrfXyMU8NkeNjIAcA.zKjjBYvBb0.jpg",
+            "square": false
+          },
+          {
+            "size": 600,
+            "width": 600,
+            "height": 600,
+            "href": "/fotoweb/cache/v2/x/H/Folder%20112/superseded%20(2).png.mifYrfXyMU8NkeNjsAkA.eqoHeCaq80.jpg",
+            "square": false
+          },
+          {
+            "size": 100,
+            "width": 100,
+            "height": 100,
+            "href": "/fotoweb/cache/v2/c/_/Folder%20112/superseded%20(2).png.mifYrfXyMU8NkeNjyAQ.stkNMF-wDn.jpg",
+            "square": true
+          },
+          {
+            "size": 200,
+            "width": 200,
+            "height": 200,
+            "href": "/fotoweb/cache/v2/a/o/Folder%20112/superseded%20(2).png.mifYrfXyMU8NkeNjkAME.3KXbWT_Zdi.jpg",
+            "square": true
+          },
+          {
+            "size": 200,
+            "width": 200,
+            "height": 200,
+            "href": "/fotoweb/cache/v2/a/o/Folder%20112/superseded%20(2).png.mifYrfXyMU8NkeNjkAME.3KXbWT_Zdi.jpg",
+            "square": true
+          },
+          {
+            "size": 400,
+            "width": 400,
+            "height": 400,
+            "href": "/fotoweb/cache/v2/y/P/Folder%20112/superseded%20(2).png.mifYrfXyMU8NkeNjIAcE.7PIAyBXls0.jpg",
+            "square": true
+          }
+        ],
+        "quickRenditions": [],
+        "metadataEditor": {
+          "name": "RMIT",
+          "href": "/fotoweb/editors/e1241645-f5eb-41b8-a211-43556e1584df"
+        },
+        "renditions": [
+          {
+            "display_name": "Original File",
+            "description": "Original File",
+            "width": 1024,
+            "height": 1024,
+            "href": "/fotoweb/archives/5018-Recently-Added/Folder%20112/superseded%20(2).png.info/__renditions/ORIGINAL",
+            "default": true,
+            "original": true,
+            "sizeFixed": false,
+            "profile": "2af4914d-6c11-4b15-a7ee-a4260efc8309"
+          }
+        ],
+        "previewToken": null,
+        "attributes": {
+          "imageattributes": {
+            "pixelwidth": 1024,
+            "pixelheight": 1024,
+            "resolution": 72,
+            "flipmirror": 0,
+            "rotation": 0,
+            "colorspace": "rgb"
+          }
+        },
+        "physicalFileId": "67d2f0a7d65ff3dc918b275b/Folder 112/superseded (2).png",
+        "metadata": {
+          "5": {
+            "value": "Scenario 10 item replaced"
+          },
+          "187": {
+            "value": "1B3674CEBEB348E5 911C695CD765D694"
+          },
+          "360": {
+            "value": "karl.ervine@rmit.edu.au"
+          },
+          "361": {
+            "value": "Karl Ervine"
+          },
+          "362": {
+            "value": "2025-05-12T13:59:25.476061"
+          },
+          "602": {
+            "value": "Current"
+          },
+          "606": {
+            "value": "2025-05-14T00:00:00+10:00"
+          },
+          "830": {
+            "value": "2025-11-30T00:00:00+10:00"
+          },
+          "846": {
+            "value": "test item"
+          }
+        },
+        "thumbnailFields": {
+          "label": {
+            "value": "Scenario 10 item replaced"
+          },
+          "firstLine": {
+            "value": ""
+          },
+          "secondLine": {
+            "value": ""
+          },
+          "additionalFields": [
+            {
+              "value": [],
+              "views": []
+            }
+          ]
+        },
+        "builtinFields": [
+          {
+            "field": "title",
+            "required": false,
+            "value": "Scenario 10 item replaced"
+          },
+          {
+            "field": "description",
+            "required": false,
+            "value": ""
+          },
+          {
+            "field": "tags",
+            "required": false,
+            "value": []
+          }
+        ],
+        "props": {
+          "owner": null,
+          "shares": {
+            "enabled": false
+          },
+          "comments": {
+            "enabled": false
+          },
+          "annotations": {
+            "enabled": false
+          },
+          "tags": []
+        }
+      },
+      {
+        "href": "/fotoweb/archives/5018-Recently-Added/Folder%20112/review.png.info",
+        "archiveHREF": "/fotoweb/archives/5018-Recently-Added/",
+        "archiveId": 5018,
+        "linkstance": "/fotoweb/archives/5018-Recently-Added/Folder%20112/review.png.info",
+        "isVersioningEnabled": false,
+        "created": "2025-05-12T01:55:52.349000Z",
+        "modified": "2025-05-12T01:55:56Z",
+        "modifiedBy": "system",
+        "createdBy": "system",
+        "filename": "review.png",
+        "filesize": 2565120,
+        "uniqueid": "",
+        "permissions": [
+          "View",
+          "Preview"
+        ],
+        "pincount": 0,
+        "previewcount": 12,
+        "downloadcount": 0,
+        "workflowcount": 0,
+        "metadataeditcount": 0,
+        "revisioncount": 0,
+        "doctype": "image",
+        "capabilities": {
+          "crop": true,
+          "print": true,
+          "printWithAnnotations": true
+        },
+        "previews": [
+          {
+            "size": 800,
+            "width": 800,
+            "height": 800,
+            "href": "/fotoweb/cache/v2/n/W/Folder%20112/review.png.mifP0efyMVmZj-NjQA0A.HZ2DBPd8Cs.jpg",
+            "square": false
+          },
+          {
+            "size": 1200,
+            "width": 1200,
+            "height": 1200,
+            "href": "/fotoweb/cache/v2/r/j/Folder%20112/review.png.mifP0efyMVmZj-NjYBMA.w6BU_26u98.jpg",
+            "square": false
+          },
+          {
+            "size": 1600,
+            "width": 1600,
+            "height": 1600,
+            "href": "/fotoweb/cache/v2/L/D/Folder%20112/review.png.mifP0efyMVmZj-NjgBkA.IDFEfQxVBQ.jpg",
+            "square": false
+          },
+          {
+            "size": 2400,
+            "width": 2400,
+            "height": 2400,
+            "href": "/fotoweb/cache/v2/U/h/Folder%20112/review.png.mifP0efyMVmZj-NjwCUA.ombAq0anQn.jpg",
+            "square": false
+          },
+          {
+            "size": 200,
+            "width": 200,
+            "height": 200,
+            "href": "/fotoweb/cache/v2/D/P/Folder%20112/review.png.mifP0efyMVmZj-NjkAMA.oSOTPy7XSX.jpg",
+            "square": false
+          },
+          {
+            "size": 300,
+            "width": 300,
+            "height": 300,
+            "href": "/fotoweb/cache/v2/S/1/Folder%20112/review.png.mifP0efyMVmZj-NjWAUA.4bXaZuH8J5.jpg",
+            "square": false
+          },
+          {
+            "size": 400,
+            "width": 400,
+            "height": 400,
+            "href": "/fotoweb/cache/v2/8/h/Folder%20112/review.png.mifP0efyMVmZj-NjIAcA.Gfz9q2cGXL.jpg",
+            "square": false
+          },
+          {
+            "size": 600,
+            "width": 600,
+            "height": 600,
+            "href": "/fotoweb/cache/v2/8/e/Folder%20112/review.png.mifP0efyMVmZj-NjsAkA.6qQ5LGsgi4.jpg",
+            "square": false
+          },
+          {
+            "size": 100,
+            "width": 100,
+            "height": 100,
+            "href": "/fotoweb/cache/v2/z/x/Folder%20112/review.png.mifP0efyMVmZj-NjyAQ.D9dWSaYixz.jpg",
+            "square": true
+          },
+          {
+            "size": 200,
+            "width": 200,
+            "height": 200,
+            "href": "/fotoweb/cache/v2/U/T/Folder%20112/review.png.mifP0efyMVmZj-NjkAME.wDdftyD3wJ.jpg",
+            "square": true
+          },
+          {
+            "size": 200,
+            "width": 200,
+            "height": 200,
+            "href": "/fotoweb/cache/v2/U/T/Folder%20112/review.png.mifP0efyMVmZj-NjkAME.wDdftyD3wJ.jpg",
+            "square": true
+          },
+          {
+            "size": 400,
+            "width": 400,
+            "height": 400,
+            "href": "/fotoweb/cache/v2/f/Q/Folder%20112/review.png.mifP0efyMVmZj-NjIAcE.5yY2-lnLxD.jpg",
+            "square": true
+          }
+        ],
+        "quickRenditions": [],
+        "metadataEditor": {
+          "name": "RMIT",
+          "href": "/fotoweb/editors/e1241645-f5eb-41b8-a211-43556e1584df"
+        },
+        "renditions": [
+          {
+            "display_name": "Original File",
+            "description": "Original File",
+            "width": 1024,
+            "height": 1024,
+            "href": "/fotoweb/archives/5018-Recently-Added/Folder%20112/review.png.info/__renditions/ORIGINAL",
+            "default": true,
+            "original": true,
+            "sizeFixed": false,
+            "profile": "2af4914d-6c11-4b15-a7ee-a4260efc8309"
+          }
+        ],
+        "previewToken": null,
+        "attributes": {
+          "imageattributes": {
+            "pixelwidth": 1024,
+            "pixelheight": 1024,
+            "resolution": 72,
+            "flipmirror": 0,
+            "rotation": 0,
+            "colorspace": "rgb"
+          }
+        },
+        "physicalFileId": "67d2f0a7d65ff3dc918b275b/Folder 112/review.png",
+        "metadata": {
+          "5": {
+            "value": "scenario 9"
+          },
+          "120": {
+            "value": "test for pending review"
+          },
+          "187": {
+            "value": "A2E6639894C94847 97BCFC4037381F52"
+          },
+          "360": {
+            "value": "karl.ervine@rmit.edu.au"
+          },
+          "361": {
+            "value": "Karl Ervine"
+          },
+          "362": {
+            "value": "2025-05-12T11:55:50.602086"
+          },
+          "602": {
+            "value": "Current"
+          },
+          "830": {
+            "value": "2025-05-13T00:00:00+10:00"
+          },
+          "846": {
+            "value": "review notes"
+          }
+        },
+        "thumbnailFields": {
+          "label": {
+            "value": "scenario 9"
+          },
+          "firstLine": {
+            "value": "test for pending review"
+          },
+          "secondLine": {
+            "value": ""
+          },
+          "additionalFields": [
+            {
+              "value": [],
+              "views": []
+            }
+          ]
+        },
+        "builtinFields": [
+          {
+            "field": "title",
+            "required": false,
+            "value": "scenario 9"
+          },
+          {
+            "field": "description",
+            "required": false,
+            "value": "test for pending review"
+          },
+          {
+            "field": "tags",
+            "required": false,
+            "value": []
+          }
+        ],
+        "props": {
+          "owner": null,
+          "shares": {
+            "enabled": false
+          },
+          "comments": {
+            "enabled": false
+          },
+          "annotations": {
+            "enabled": false
+          },
+          "tags": []
+        }
+      },
+      {
+        "href": "/fotoweb/archives/5018-Recently-Added/Folder%20112/flagged.png.info",
+        "archiveHREF": "/fotoweb/archives/5018-Recently-Added/",
+        "archiveId": 5018,
+        "linkstance": "/fotoweb/archives/5018-Recently-Added/Folder%20112/flagged.png.info",
+        "isVersioningEnabled": false,
+        "created": "2025-05-12T01:40:12.448000Z",
+        "modified": "2025-05-12T01:40:15Z",
+        "modifiedBy": "system",
+        "createdBy": "system",
+        "filename": "flagged.png",
+        "filesize": 2536448,
+        "uniqueid": "",
+        "permissions": [
+          "View",
+          "Preview"
+        ],
+        "pincount": 0,
+        "previewcount": 12,
+        "downloadcount": 0,
+        "workflowcount": 0,
+        "metadataeditcount": 0,
+        "revisioncount": 0,
+        "doctype": "image",
+        "capabilities": {
+          "crop": true,
+          "print": true,
+          "printWithAnnotations": true
+        },
+        "previews": [
+          {
+            "size": 800,
+            "width": 800,
+            "height": 800,
+            "href": "/fotoweb/cache/v2/A/F/Folder%20112/flagged.png.mie6p_DyMf-Jj-NjQA0A.Ra7HzAhBwT.jpg",
+            "square": false
+          },
+          {
+            "size": 1200,
+            "width": 1200,
+            "height": 1200,
+            "href": "/fotoweb/cache/v2/-/p/Folder%20112/flagged.png.mie6p_DyMf-Jj-NjYBMA.JMfohnsZzz.jpg",
+            "square": false
+          },
+          {
+            "size": 1600,
+            "width": 1600,
+            "height": 1600,
+            "href": "/fotoweb/cache/v2/J/i/Folder%20112/flagged.png.mie6p_DyMf-Jj-NjgBkA.yw_T__g6cu.jpg",
+            "square": false
+          },
+          {
+            "size": 2400,
+            "width": 2400,
+            "height": 2400,
+            "href": "/fotoweb/cache/v2/s/3/Folder%20112/flagged.png.mie6p_DyMf-Jj-NjwCUA.rJ2gdXnlwg.jpg",
+            "square": false
+          },
+          {
+            "size": 200,
+            "width": 200,
+            "height": 200,
+            "href": "/fotoweb/cache/v2/Y/-/Folder%20112/flagged.png.mie6p_DyMf-Jj-NjkAMA.D2v6I0jphc.jpg",
+            "square": false
+          },
+          {
+            "size": 300,
+            "width": 300,
+            "height": 300,
+            "href": "/fotoweb/cache/v2/w/Q/Folder%20112/flagged.png.mie6p_DyMf-Jj-NjWAUA.qJzcLm4sRF.jpg",
+            "square": false
+          },
+          {
+            "size": 400,
+            "width": 400,
+            "height": 400,
+            "href": "/fotoweb/cache/v2/t/P/Folder%20112/flagged.png.mie6p_DyMf-Jj-NjIAcA.BfEd1Ca374.jpg",
+            "square": false
+          },
+          {
+            "size": 600,
+            "width": 600,
+            "height": 600,
+            "href": "/fotoweb/cache/v2/c/T/Folder%20112/flagged.png.mie6p_DyMf-Jj-NjsAkA.N7ofJ0SlCa.jpg",
+            "square": false
+          },
+          {
+            "size": 100,
+            "width": 100,
+            "height": 100,
+            "href": "/fotoweb/cache/v2/w/1/Folder%20112/flagged.png.mie6p_DyMf-Jj-NjyAQ.SsdJFFcbUs.jpg",
+            "square": true
+          },
+          {
+            "size": 200,
+            "width": 200,
+            "height": 200,
+            "href": "/fotoweb/cache/v2/g/g/Folder%20112/flagged.png.mie6p_DyMf-Jj-NjkAME.q6fmG7C9dr.jpg",
+            "square": true
+          },
+          {
+            "size": 200,
+            "width": 200,
+            "height": 200,
+            "href": "/fotoweb/cache/v2/g/g/Folder%20112/flagged.png.mie6p_DyMf-Jj-NjkAME.q6fmG7C9dr.jpg",
+            "square": true
+          },
+          {
+            "size": 400,
+            "width": 400,
+            "height": 400,
+            "href": "/fotoweb/cache/v2/K/W/Folder%20112/flagged.png.mie6p_DyMf-Jj-NjIAcE.ZSzipvt2oT.jpg",
+            "square": true
+          }
+        ],
+        "quickRenditions": [],
+        "metadataEditor": {
+          "name": "RMIT",
+          "href": "/fotoweb/editors/e1241645-f5eb-41b8-a211-43556e1584df"
+        },
+        "renditions": [
+          {
+            "display_name": "Original File",
+            "description": "Original File",
+            "width": 1024,
+            "height": 1024,
+            "href": "/fotoweb/archives/5018-Recently-Added/Folder%20112/flagged.png.info/__renditions/ORIGINAL",
+            "default": true,
+            "original": true,
+            "sizeFixed": false,
+            "profile": "2af4914d-6c11-4b15-a7ee-a4260efc8309"
+          }
+        ],
+        "previewToken": null,
+        "attributes": {
+          "imageattributes": {
+            "pixelwidth": 1024,
+            "pixelheight": 1024,
+            "resolution": 72,
+            "flipmirror": 0,
+            "rotation": 0,
+            "colorspace": "rgb"
+          }
+        },
+        "physicalFileId": "67d2f0a7d65ff3dc918b275b/Folder 112/flagged.png",
+        "metadata": {
+          "5": {
+            "value": "Flagged content"
+          },
+          "120": {
+            "value": "test flagged content workflow"
+          },
+          "187": {
+            "value": "D6BFD19CFDC84F29 9FD9C6507560D3E0"
+          },
+          "360": {
+            "value": "karl.ervine@rmit.edu.au"
+          },
+          "361": {
+            "value": "Karl Ervine"
+          },
+          "362": {
+            "value": "2025-05-12T11:40:11.093349"
+          },
+          "602": {
+            "value": "Current - Flagged"
+          },
+          "830": {
+            "value": "2025-05-12T11:41:20.038413"
+          },
+          "846": {
+            "value": "testing notes for approval\n\n--\n\nthis needs to be flagged and updated"
+          }
+        },
+        "thumbnailFields": {
+          "label": {
+            "value": "Flagged content"
+          },
+          "firstLine": {
+            "value": "test flagged content workflow"
+          },
+          "secondLine": {
+            "value": ""
+          },
+          "additionalFields": [
+            {
+              "value": [],
+              "views": []
+            }
+          ]
+        },
+        "builtinFields": [
+          {
+            "field": "title",
+            "required": false,
+            "value": "Flagged content"
+          },
+          {
+            "field": "description",
+            "required": false,
+            "value": "test flagged content workflow"
+          },
+          {
+            "field": "tags",
+            "required": false,
+            "value": []
+          }
+        ],
+        "props": {
+          "owner": null,
+          "shares": {
+            "enabled": false
+          },
+          "comments": {
+            "enabled": false
+          },
+          "annotations": {
+            "enabled": false
+          },
+          "tags": []
+        }
+      }
+    ],
+    "paging": {
+      "next": "",
+      "prev": "",
+      "first": "/fotoweb/archives/5018-Recently-Added/",
+      "last": "",
+      "index": null,
+      "totalPages": null,
+      "count": null
+    }
+  },
+  "childCount": 0,
+  "children": {
+    "data": [],
+    "paging": {
+      "next": "",
+      "prev": "",
+      "first": "/fotoweb/archives/5018-Recently-Added/",
+      "last": "",
+      "index": null,
+      "totalPages": null,
+      "count": null
+    },
+    "reorder": null,
+    "add": null,
+    "searchURL": null
+  },
+  "ancestors": [],
+  "props": {
+    "owner": null,
+    "shares": {
+      "enabled": false
+    },
+    "comments": {
+      "enabled": false
+    },
+    "annotations": {
+      "enabled": false
+    },
+    "tags": []
+  }
+}

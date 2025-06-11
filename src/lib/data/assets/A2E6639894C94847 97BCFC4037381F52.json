@@ -1,0 +1,234 @@
+{
+  "href": "/fotoweb/archives/5018-Recently-Added/Folder%20112/review.png.info",
+  "archiveHREF": "/fotoweb/archives/5018-Recently-Added/",
+  "archiveId": 5018,
+  "linkstance": "/fotoweb/archives/5018-Recently-Added/Folder%20112/review.png.info",
+  "isVersioningEnabled": false,
+  "created": "2025-05-12T01:55:52.349000Z",
+  "modified": "2025-05-12T01:55:56Z",
+  "modifiedBy": "system",
+  "createdBy": "system",
+  "filename": "review.png",
+  "filesize": 2565120,
+  "uniqueid": "",
+  "permissions": [
+    "View",
+    "Preview"
+  ],
+  "pincount": 0,
+  "previewcount": 12,
+  "downloadcount": 0,
+  "workflowcount": 0,
+  "metadataeditcount": 0,
+  "revisioncount": 0,
+  "doctype": "image",
+  "capabilities": {
+    "crop": true,
+    "print": true,
+    "printWithAnnotations": true
+  },
+  "previews": [
+    {
+      "size": 800,
+      "width": 800,
+      "height": 800,
+      "href": "/fotoweb/cache/v2/n/W/Folder%20112/review.png.mifP0efyMVmZj-NjQA0A.HZ2DBPd8Cs.jpg",
+      "square": false
+    },
+    {
+      "size": 1200,
+      "width": 1200,
+      "height": 1200,
+      "href": "/fotoweb/cache/v2/r/j/Folder%20112/review.png.mifP0efyMVmZj-NjYBMA.w6BU_26u98.jpg",
+      "square": false
+    },
+    {
+      "size": 1600,
+      "width": 1600,
+      "height": 1600,
+      "href": "/fotoweb/cache/v2/L/D/Folder%20112/review.png.mifP0efyMVmZj-NjgBkA.IDFEfQxVBQ.jpg",
+      "square": false
+    },
+    {
+      "size": 2400,
+      "width": 2400,
+      "height": 2400,
+      "href": "/fotoweb/cache/v2/U/h/Folder%20112/review.png.mifP0efyMVmZj-NjwCUA.ombAq0anQn.jpg",
+      "square": false
+    },
+    {
+      "size": 200,
+      "width": 200,
+      "height": 200,
+      "href": "/fotoweb/cache/v2/D/P/Folder%20112/review.png.mifP0efyMVmZj-NjkAMA.oSOTPy7XSX.jpg",
+      "square": false
+    },
+    {
+      "size": 300,
+      "width": 300,
+      "height": 300,
+      "href": "/fotoweb/cache/v2/S/1/Folder%20112/review.png.mifP0efyMVmZj-NjWAUA.4bXaZuH8J5.jpg",
+      "square": false
+    },
+    {
+      "size": 400,
+      "width": 400,
+      "height": 400,
+      "href": "/fotoweb/cache/v2/8/h/Folder%20112/review.png.mifP0efyMVmZj-NjIAcA.Gfz9q2cGXL.jpg",
+      "square": false
+    },
+    {
+      "size": 600,
+      "width": 600,
+      "height": 600,
+      "href": "/fotoweb/cache/v2/8/e/Folder%20112/review.png.mifP0efyMVmZj-NjsAkA.6qQ5LGsgi4.jpg",
+      "square": false
+    },
+    {
+      "size": 100,
+      "width": 100,
+      "height": 100,
+      "href": "/fotoweb/cache/v2/z/x/Folder%20112/review.png.mifP0efyMVmZj-NjyAQ.D9dWSaYixz.jpg",
+      "square": true
+    },
+    {
+      "size": 200,
+      "width": 200,
+      "height": 200,
+      "href": "/fotoweb/cache/v2/U/T/Folder%20112/review.png.mifP0efyMVmZj-NjkAME.wDdftyD3wJ.jpg",
+      "square": true
+    },
+    {
+      "size": 200,
+      "width": 200,
+      "height": 200,
+      "href": "/fotoweb/cache/v2/U/T/Folder%20112/review.png.mifP0efyMVmZj-NjkAME.wDdftyD3wJ.jpg",
+      "square": true
+    },
+    {
+      "size": 400,
+      "width": 400,
+      "height": 400,
+      "href": "/fotoweb/cache/v2/f/Q/Folder%20112/review.png.mifP0efyMVmZj-NjIAcE.5yY2-lnLxD.jpg",
+      "square": true
+    }
+  ],
+  "quickRenditions": [],
+  "metadataEditor": {
+    "name": "RMIT",
+    "href": "/fotoweb/editors/e1241645-f5eb-41b8-a211-43556e1584df"
+  },
+  "renditions": [
+    {
+      "display_name": "Original File",
+      "description": "Original File",
+      "width": 1024,
+      "height": 1024,
+      "href": "/fotoweb/archives/5018-Recently-Added/Folder%20112/review.png.info/__renditions/ORIGINAL",
+      "default": true,
+      "original": true,
+      "sizeFixed": false,
+      "profile": "2af4914d-6c11-4b15-a7ee-a4260efc8309"
+    }
+  ],
+  "previewToken": null,
+  "attributes": {
+    "imageattributes": {
+      "pixelwidth": 1024,
+      "pixelheight": 1024,
+      "resolution": 72,
+      "flipmirror": 0,
+      "rotation": 0,
+      "colorspace": "rgb"
+    }
+  },
+  "physicalFileId": "67d2f0a7d65ff3dc918b275b/Folder 112/review.png",
+  "metadata": {
+    "5": {
+      "value": "scenario 9"
+    },
+    "120": {
+      "value": "test for pending review"
+    },
+    "187": {
+      "value": "A2E6639894C94847 97BCFC4037381F52"
+    },
+    "360": {
+      "value": "karl.ervine@rmit.edu.au"
+    },
+    "361": {
+      "value": "Karl Ervine"
+    },
+    "362": {
+      "value": "2025-05-12T11:55:50.602086"
+    },
+    "602": {
+      "value": "Current"
+    },
+    "830": {
+      "value": "2025-05-13T00:00:00+10:00"
+    },
+    "846": {
+      "value": "review notes"
+    }
+  },
+  "thumbnailFields": {
+    "label": {
+      "value": "scenario 9"
+    },
+    "firstLine": {
+      "value": "test for pending review"
+    },
+    "secondLine": {
+      "value": ""
+    },
+    "additionalFields": [
+      {
+        "value": [],
+        "views": []
+      }
+    ]
+  },
+  "builtinFields": [
+    {
+      "field": "title",
+      "required": false,
+      "value": "scenario 9"
+    },
+    {
+      "field": "description",
+      "required": false,
+      "value": "test for pending review"
+    },
+    {
+      "field": "tags",
+      "required": false,
+      "value": []
+    }
+  ],
+  "ancestors": [
+    {
+      "name": "Recently Added",
+      "href": "/fotoweb/archives/5018-Recently-Added/",
+      "data": "/fotoweb/archives/5018-Recently-Added/"
+    }
+  ],
+  "props": {
+    "owner": null,
+    "shares": {
+      "enabled": false
+    },
+    "comments": {
+      "enabled": false
+    },
+    "annotations": {
+      "enabled": false
+    },
+    "tags": []
+  },
+  "uniqueId": "A2E6639894C94847 97BCFC4037381F52",
+  "archives": [
+    "5018",
+    "5009"
+  ]
+}

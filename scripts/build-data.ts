@@ -58,12 +58,13 @@ interface AssetDetails {
   id: string;
   filename: string;
   href: string;
-  metadata?: {
+  metadata: {
     [key: string]: {
-      value: string;
+      value: string | string[];
     };
   };
-  archives: string[]; // Track which archives this asset belongs to
+  archives: string[];
+  uniqueId: string; // This will be the metadata field 187 value
 }
 
 interface Archive {
@@ -222,18 +223,13 @@ async function buildData() {
         description: string;
         href: string;
         assetCount: number;
-        assets: string[]; // Array of asset IDs in this archive
-      }>,
-      assets: {} as Record<string, {
-        id: string;
-        filename: string;
-        href: string;
-        archives: string[]; // List of archive IDs this asset belongs to
+        assets: string[]; // Array of asset IDs (metadata field 187 values)
       }>
     };
 
-    // Keep track of unique assets
+    // Keep track of unique assets with a size limit
     const uniqueAssets = new Map<string, AssetDetails>();
+    const MAX_MEMORY_ASSETS = 100; // Process in chunks to manage memory
 
     // Fetch all archives
     const archives = await fetchArchives();
@@ -248,6 +244,16 @@ async function buildData() {
       try {
         const archiveDetails = await fetchArchiveDetails(archiveId);
 
+        // Initialize archive in index
+        index.archives[archiveId] = {
+          id: archiveId,
+          name: archive.name,
+          description: archive.description || '',
+          href: archive.href,
+          assetCount: 0,
+          assets: []
+        };
+
         // Write archive file
         fs.writeFileSync(
           path.join(ARCHIVES_DIR, `archive-${archiveId}.json`),
@@ -255,41 +261,46 @@ async function buildData() {
         );
         console.log(`Wrote archive data to archive-${archiveId}.json`);
 
-        // Update index with archive info
-        index.archives[archiveId] = {
-          id: archiveId,
-          name: archive.name,
-          description: archive.description || '',
-          href: archive.href,
-          assetCount: 0,
-          assets: [] // Initialize empty array for asset IDs
-        };
-
         // Process assets
         if (archiveDetails.assets?.data) {
           const assetCount = archiveDetails.assets.data.length;
           console.log(`Found ${assetCount} assets in archive ${archive.name}`);
           index.archives[archiveId].assetCount = assetCount;
 
+          let processedCount = 0;
+          // Process assets sequentially
           for (const asset of archiveDetails.assets.data) {
             try {
               const assetData = await fetchAssetDetails(archiveId, asset);
-
               if (assetData) {
                 const uniqueId = assetData.uniqueId;
+
+                // Update unique assets map
                 if (!uniqueAssets.has(uniqueId)) {
                   uniqueAssets.set(uniqueId, assetData);
                 } else {
-                  // Add this archive to the list of archives containing this asset
                   const existingAsset = uniqueAssets.get(uniqueId)!;
                   if (!existingAsset.archives.includes(archive.id)) {
                     existingAsset.archives.push(archive.id);
                   }
                 }
 
-                // Add asset ID to archive's assets list
+                // Update index - only store asset ID in archive
                 index.archives[archiveId].assets.push(uniqueId);
                 index.metadata.totalAssets = uniqueAssets.size;
+
+                // Write asset file immediately if we have too many in memory
+                if (uniqueAssets.size >= MAX_MEMORY_ASSETS) {
+                  const assetToWrite = uniqueAssets.get(uniqueId)!;
+                  const assetPath = path.join(ASSETS_DIR, `${uniqueId}.json`);
+                  ensureDirectoryExists(assetPath);
+                  fs.writeFileSync(assetPath, JSON.stringify(assetToWrite, null, 2));
+                  uniqueAssets.delete(uniqueId);
+                }
+              }
+              processedCount++;
+              if (processedCount % 50 === 0) {
+                console.log(`Processed ${processedCount}/${assetCount} assets in archive ${archive.name}`);
               }
             } catch (error) {
               console.error(`Error processing asset in archive ${archiveId}:`, error);
@@ -299,7 +310,7 @@ async function buildData() {
           console.warn(`No assets found in archive ${archiveId}`);
         }
 
-        // Write index file after each archive is processed
+        // Write index file after each archive
         fs.writeFileSync(
           path.join(INDEX_DIR, 'index.json'),
           JSON.stringify(index, null, 2)
@@ -310,17 +321,12 @@ async function buildData() {
       }
     }
 
-    // Write unique asset files
-    console.log('\nWriting unique asset files...');
+    // Write any remaining unique asset files
+    console.log('\nWriting remaining unique asset files...');
     for (const [assetId, asset] of uniqueAssets.entries()) {
       try {
-        // Create the asset file path
         const assetPath = path.join(ASSETS_DIR, `${assetId}.json`);
-
-        // Ensure the directory exists
         ensureDirectoryExists(assetPath);
-
-        // Write the asset data
         fs.writeFileSync(assetPath, JSON.stringify(asset, null, 2));
       } catch (error) {
         console.error(`Error writing asset file for ${assetId}:`, error);

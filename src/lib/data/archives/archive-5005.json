@@ -1,0 +1,227 @@
+{
+  "name": "STEM College",
+  "description": "The STEM College incorporates the fields of sciences, engineering, computing technologies and health and medical sciences.",
+  "href": "/fotoweb/archives/5005-STEM-College/",
+  "id": null,
+  "data": "/fotoweb/archives/5005-STEM-College/",
+  "dataTemplate": "/fotoweb/archives/5005-STEM-College/{;o}",
+  "orderRootHref": "/fotoweb/archives/5005-STEM-College/",
+  "matchingHref": "/fotoweb/archives/5005-STEM-College/",
+  "uploadHref": null,
+  "propertyValidations": [
+    {
+      "name": "childUrlFragment",
+      "min": 1,
+      "max": 255,
+      "regex": "^[a-z0-9\\-]+$"
+    }
+  ],
+  "urlComponents": [],
+  "type": "archive",
+  "created": "",
+  "modified": "2025-06-10T17:28:39Z",
+  "deleted": null,
+  "archived": null,
+  "metadataEditor": {
+    "name": "RMIT",
+    "href": "/fotoweb/editors/e1241645-f5eb-41b8-a211-43556e1584df"
+  },
+  "searchURL": "/fotoweb/archives/5005-STEM-College/{?q}",
+  "originalURL": "/fotoweb/archives/5005-STEM-College/",
+  "clearSearch": {
+    "href": "/fotoweb/archives/5005-STEM-College/",
+    "data": "/fotoweb/archives/5005-STEM-College/"
+  },
+  "searchString": "",
+  "searchQuery": "",
+  "alertHref": null,
+  "alt_orders": [
+    {
+      "name": "Last Modified",
+      "key": "mt",
+      "asc": {
+        "href": "/fotoweb/archives/5005-STEM-College/;o=+",
+        "data": "/fotoweb/archives/5005-STEM-College/;o=+",
+        "urlComponents": [
+          {
+            "key": "o",
+            "value": "+"
+          }
+        ]
+      },
+      "desc": {
+        "href": "/fotoweb/archives/5005-STEM-College/",
+        "data": "/fotoweb/archives/5005-STEM-College/",
+        "default": true,
+        "urlComponents": [
+          {
+            "key": "o",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "name": "Filename",
+      "key": "fn",
+      "asc": {
+        "href": "/fotoweb/archives/5005-STEM-College/;o=fn",
+        "data": "/fotoweb/archives/5005-STEM-College/;o=fn",
+        "urlComponents": [
+          {
+            "key": "o",
+            "value": "fn"
+          }
+        ]
+      },
+      "desc": {
+        "href": "/fotoweb/archives/5005-STEM-College/;o=-fn",
+        "data": "/fotoweb/archives/5005-STEM-College/;o=-fn",
+        "urlComponents": [
+          {
+            "key": "o",
+            "value": "-fn"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Date Created",
+      "key": "350",
+      "asc": {
+        "href": "/fotoweb/archives/5005-STEM-College/;o=350",
+        "data": "/fotoweb/archives/5005-STEM-College/;o=350",
+        "urlComponents": [
+          {
+            "key": "o",
+            "value": "350"
+          }
+        ]
+      },
+      "desc": {
+        "href": "/fotoweb/archives/5005-STEM-College/;o=-350",
+        "data": "/fotoweb/archives/5005-STEM-College/;o=-350",
+        "urlComponents": [
+          {
+            "key": "o",
+            "value": "-350"
+          }
+        ]
+      }
+    }
+  ],
+  "taxonomies": [],
+  "canHaveChildren": true,
+  "isSearchable": true,
+  "isSelectable": true,
+  "isLinkCollection": false,
+  "hasChildren": true,
+  "canCopyTo": false,
+  "canMoveTo": false,
+  "canUploadTo": false,
+  "canCreateFolders": false,
+  "canIngestToChildren": false,
+  "canBeDeleted": false,
+  "canBeArchived": false,
+  "isFolderNavigationEnabled": false,
+  "isSmartFolderNavigationEnabled": false,
+  "canSelect": false,
+  "isConsentManagementEnabled": false,
+  "isConsentStatusFilterEnabled": false,
+  "create": [],
+  "isVersioningEnabled": false,
+  "permissions": [
+    "View",
+    "Preview"
+  ],
+  "smartFolderHeader": "SmartFolders",
+  "posterImages": [
+    {
+      "size": 300,
+      "width": 300,
+      "height": 169,
+      "href": "/fotoweb/cache/posters/archives/5005/.s300_169.t684001d0.x2XxCOZFq1mYp.jpg",
+      "square": false
+    },
+    {
+      "size": 600,
+      "width": 600,
+      "height": 338,
+      "href": "/fotoweb/cache/posters/archives/5005/.s600_338.t684001d0.xUgRkntVISYBu.jpg",
+      "square": false
+    },
+    {
+      "size": 200,
+      "width": 200,
+      "height": 113,
+      "href": "/fotoweb/cache/posters/archives/5005/.s200_113.t684001d0.xdko4Lp4duWvH.jpg",
+      "square": false
+    },
+    {
+      "size": 400,
+      "width": 400,
+      "height": 226,
+      "href": "/fotoweb/cache/posters/archives/5005/.s400_226.t684001d0.x0eXrmmfDDwdP.jpg",
+      "square": false
+    },
+    {
+      "size": 50,
+      "width": 50,
+      "height": 50,
+      "href": "/fotoweb/cache/posters/archives/5005/.s50_50.t684001d0.xWNtW1Cqe5bJy.jpg",
+      "square": true
+    },
+    {
+      "size": 100,
+      "width": 100,
+      "height": 100,
+      "href": "/fotoweb/cache/posters/archives/5005/.s100_100.t684001d0.xz_mAvLROGfCP.jpg",
+      "square": true
+    }
+  ],
+  "posterAsset": "/fotoweb/archives/5000-STEM-College/Folder%20112/Fotoware%20archive%20image%20dimensions-2.png.info",
+  "pin": null,
+  "assetCount": 0,
+  "assets": {
+    "data": [],
+    "paging": {
+      "next": "",
+      "prev": "",
+      "first": "/fotoweb/archives/5005-STEM-College/",
+      "last": "",
+      "index": null,
+      "totalPages": null,
+      "count": null
+    }
+  },
+  "childCount": 0,
+  "children": {
+    "data": [],
+    "paging": {
+      "next": "",
+      "prev": "",
+      "first": "/fotoweb/archives/5005-STEM-College/",
+      "last": "",
+      "index": null,
+      "totalPages": null,
+      "count": null
+    },
+    "reorder": null,
+    "add": null,
+    "searchURL": null
+  },
+  "ancestors": [],
+  "props": {
+    "owner": null,
+    "shares": {
+      "enabled": false
+    },
+    "comments": {
+      "enabled": false
+    },
+    "annotations": {
+      "enabled": false
+    },
+    "tags": []
+  }
+}

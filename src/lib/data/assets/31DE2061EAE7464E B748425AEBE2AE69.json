@@ -1,0 +1,225 @@
+{
+  "href": "/fotoweb/archives/5018-Recently-Added/Folder%20112/Landscape_Arnisee-region.jpg.info",
+  "archiveHREF": "/fotoweb/archives/5018-Recently-Added/",
+  "archiveId": 5018,
+  "linkstance": "/fotoweb/archives/5018-Recently-Added/Folder%20112/Landscape_Arnisee-region.jpg.info",
+  "isVersioningEnabled": false,
+  "created": "2025-06-04T09:20:43.633000Z",
+  "modified": "2025-06-04T09:20:43Z",
+  "modifiedBy": "system",
+  "createdBy": "system",
+  "filename": "Landscape_Arnisee-region.jpg",
+  "filesize": 217088,
+  "uniqueid": "",
+  "permissions": [
+    "View",
+    "Preview"
+  ],
+  "pincount": 0,
+  "previewcount": 12,
+  "downloadcount": 0,
+  "workflowcount": 0,
+  "metadataeditcount": 0,
+  "revisioncount": 0,
+  "doctype": "image",
+  "capabilities": {
+    "crop": true,
+    "print": true,
+    "printWithAnnotations": true
+  },
+  "previews": [
+    {
+      "size": 800,
+      "width": 800,
+      "height": 532,
+      "href": "/fotoweb/cache/v2/G/I/Folder%20112/Landscape_Arnisee-region.jpg.miefn-3yMdeDheVjQA0A.9yTjYyTOYY.jpg",
+      "square": false
+    },
+    {
+      "size": 1200,
+      "width": 1200,
+      "height": 798,
+      "href": "/fotoweb/cache/v2/0/3/Folder%20112/Landscape_Arnisee-region.jpg.miefn-3yMdeDheVjYBMA.C-rs0LC92A.jpg",
+      "square": false
+    },
+    {
+      "size": 1600,
+      "width": 1600,
+      "height": 1063,
+      "href": "/fotoweb/cache/v2/M/W/Folder%20112/Landscape_Arnisee-region.jpg.miefn-3yMdeDheVjgBkA.npqk8ujIrU.jpg",
+      "square": false
+    },
+    {
+      "size": 2400,
+      "width": 2400,
+      "height": 1595,
+      "href": "/fotoweb/cache/v2/C/O/Folder%20112/Landscape_Arnisee-region.jpg.miefn-3yMdeDheVjwCUA.dgbMkymGMV.jpg",
+      "square": false
+    },
+    {
+      "size": 200,
+      "width": 200,
+      "height": 133,
+      "href": "/fotoweb/cache/v2/2/H/Folder%20112/Landscape_Arnisee-region.jpg.miefn-3yMdeDheVjkAMA.3AZSerhye6.jpg",
+      "square": false
+    },
+    {
+      "size": 300,
+      "width": 300,
+      "height": 199,
+      "href": "/fotoweb/cache/v2/M/Y/Folder%20112/Landscape_Arnisee-region.jpg.miefn-3yMdeDheVjWAUA.q4AGnsPX-r.jpg",
+      "square": false
+    },
+    {
+      "size": 400,
+      "width": 400,
+      "height": 266,
+      "href": "/fotoweb/cache/v2/l/s/Folder%20112/Landscape_Arnisee-region.jpg.miefn-3yMdeDheVjIAcA.d00YfdfUxl.jpg",
+      "square": false
+    },
+    {
+      "size": 600,
+      "width": 600,
+      "height": 399,
+      "href": "/fotoweb/cache/v2/n/l/Folder%20112/Landscape_Arnisee-region.jpg.miefn-3yMdeDheVjsAkA.dk8ajjA4HV.jpg",
+      "square": false
+    },
+    {
+      "size": 100,
+      "width": 100,
+      "height": 100,
+      "href": "/fotoweb/cache/v2/f/P/Folder%20112/Landscape_Arnisee-region.jpg.miefn-3yMdeDheVjyAQ.-Aqze54j12.jpg",
+      "square": true
+    },
+    {
+      "size": 200,
+      "width": 200,
+      "height": 200,
+      "href": "/fotoweb/cache/v2/l/G/Folder%20112/Landscape_Arnisee-region.jpg.miefn-3yMdeDheVjkAME.P9rtHgArsA.jpg",
+      "square": true
+    },
+    {
+      "size": 200,
+      "width": 200,
+      "height": 200,
+      "href": "/fotoweb/cache/v2/l/G/Folder%20112/Landscape_Arnisee-region.jpg.miefn-3yMdeDheVjkAME.P9rtHgArsA.jpg",
+      "square": true
+    },
+    {
+      "size": 400,
+      "width": 400,
+      "height": 400,
+      "href": "/fotoweb/cache/v2/B/8/Folder%20112/Landscape_Arnisee-region.jpg.miefn-3yMdeDheVjIAcE.BgPr4UxrIx.jpg",
+      "square": true
+    }
+  ],
+  "quickRenditions": [],
+  "metadataEditor": {
+    "name": "RMIT",
+    "href": "/fotoweb/editors/e1241645-f5eb-41b8-a211-43556e1584df"
+  },
+  "renditions": [
+    {
+      "display_name": "Original File",
+      "description": "Original File",
+      "width": 960,
+      "height": 638,
+      "href": "/fotoweb/archives/5018-Recently-Added/Folder%20112/Landscape_Arnisee-region.jpg.info/__renditions/ORIGINAL",
+      "default": true,
+      "original": true,
+      "sizeFixed": false,
+      "profile": "2af4914d-6c11-4b15-a7ee-a4260efc8309"
+    }
+  ],
+  "previewToken": null,
+  "attributes": {
+    "imageattributes": {
+      "pixelwidth": 960,
+      "pixelheight": 638,
+      "resolution": 72,
+      "flipmirror": 0,
+      "rotation": 0,
+      "colorspace": "rgb"
+    }
+  },
+  "physicalFileId": "67d2f0a7d65ff3dc918b275b/Folder 112/Landscape_Arnisee-region.jpg",
+  "metadata": {
+    "187": {
+      "value": "31DE2061EAE7464E B748425AEBE2AE69"
+    },
+    "360": {
+      "value": "karl.ervine@rmit.edu.au"
+    },
+    "361": {
+      "value": "Karl Ervine"
+    },
+    "362": {
+      "value": "2025-06-04T19:20:41.379448"
+    },
+    "602": {
+      "value": "Current"
+    },
+    "830": {
+      "value": "2025-06-07T00:00:00+10:00"
+    }
+  },
+  "thumbnailFields": {
+    "label": {
+      "value": ""
+    },
+    "firstLine": {
+      "value": ""
+    },
+    "secondLine": {
+      "value": ""
+    },
+    "additionalFields": [
+      {
+        "value": [],
+        "views": []
+      }
+    ]
+  },
+  "builtinFields": [
+    {
+      "field": "title",
+      "required": false,
+      "value": ""
+    },
+    {
+      "field": "description",
+      "required": false,
+      "value": ""
+    },
+    {
+      "field": "tags",
+      "required": false,
+      "value": []
+    }
+  ],
+  "ancestors": [
+    {
+      "name": "Recently Added",
+      "href": "/fotoweb/archives/5018-Recently-Added/",
+      "data": "/fotoweb/archives/5018-Recently-Added/"
+    }
+  ],
+  "props": {
+    "owner": null,
+    "shares": {
+      "enabled": false
+    },
+    "comments": {
+      "enabled": false
+    },
+    "annotations": {
+      "enabled": false
+    },
+    "tags": []
+  },
+  "uniqueId": "31DE2061EAE7464E B748425AEBE2AE69",
+  "archives": [
+    "5018",
+    "5009"
+  ]
+}

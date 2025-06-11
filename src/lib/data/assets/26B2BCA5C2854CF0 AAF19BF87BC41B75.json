@@ -1,0 +1,232 @@
+{
+  "href": "/fotoweb/archives/5009-All-Learning-Objects/Folder%20112/ec-2.0.6.png.info",
+  "archiveHREF": "/fotoweb/archives/5009-All-Learning-Objects/",
+  "archiveId": 5009,
+  "linkstance": "/fotoweb/archives/5009-All-Learning-Objects/Folder%20112/ec-2.0.6.png.info",
+  "isVersioningEnabled": false,
+  "created": "2025-03-24T22:50:36.692000Z",
+  "modified": "2025-03-24T22:50:47Z",
+  "modifiedBy": "system",
+  "createdBy": "system",
+  "filename": "ec-2.0.6.png",
+  "filesize": 40960,
+  "uniqueid": "",
+  "permissions": [
+    "View",
+    "Preview",
+    "Download"
+  ],
+  "pincount": 0,
+  "previewcount": 12,
+  "downloadcount": 0,
+  "workflowcount": 0,
+  "metadataeditcount": 0,
+  "revisioncount": 0,
+  "doctype": "image",
+  "capabilities": {
+    "crop": true,
+    "print": true,
+    "printWithAnnotations": true
+  },
+  "previews": [
+    {
+      "size": 800,
+      "width": 800,
+      "height": 454,
+      "href": "/fotoweb/cache/v2/K/0/Folder%20112/ec-2.0.6.png.kSeEnObyMY_Lk99jQA0A.N9vH-lvzkl.jpg",
+      "square": false
+    },
+    {
+      "size": 1200,
+      "width": 1200,
+      "height": 680,
+      "href": "/fotoweb/cache/v2/z/o/Folder%20112/ec-2.0.6.png.kSeEnObyMY_Lk99jYBMA.bqO1w1XQFU.jpg",
+      "square": false
+    },
+    {
+      "size": 1600,
+      "width": 1600,
+      "height": 907,
+      "href": "/fotoweb/cache/v2/T/2/Folder%20112/ec-2.0.6.png.kSeEnObyMY_Lk99jgBkA.ybn5uho2iz.jpg",
+      "square": false
+    },
+    {
+      "size": 2400,
+      "width": 2400,
+      "height": 1361,
+      "href": "/fotoweb/cache/v2/V/I/Folder%20112/ec-2.0.6.png.kSeEnObyMY_Lk99jwCUA.Kcj05M2FD7.jpg",
+      "square": false
+    },
+    {
+      "size": 200,
+      "width": 200,
+      "height": 113,
+      "href": "/fotoweb/cache/v2/Y/z/Folder%20112/ec-2.0.6.png.kSeEnObyMY_Lk99jkAMA.9KiYIsEG-3.jpg",
+      "square": false
+    },
+    {
+      "size": 300,
+      "width": 300,
+      "height": 170,
+      "href": "/fotoweb/cache/v2/Y/6/Folder%20112/ec-2.0.6.png.kSeEnObyMY_Lk99jWAUA.WFs8_Ldzms.jpg",
+      "square": false
+    },
+    {
+      "size": 400,
+      "width": 400,
+      "height": 227,
+      "href": "/fotoweb/cache/v2/P/B/Folder%20112/ec-2.0.6.png.kSeEnObyMY_Lk99jIAcA.zv2Sj6JQCl.jpg",
+      "square": false
+    },
+    {
+      "size": 600,
+      "width": 600,
+      "height": 340,
+      "href": "/fotoweb/cache/v2/I/M/Folder%20112/ec-2.0.6.png.kSeEnObyMY_Lk99jsAkA.XM-UIaiI_j.jpg",
+      "square": false
+    },
+    {
+      "size": 100,
+      "width": 100,
+      "height": 100,
+      "href": "/fotoweb/cache/v2/G/V/Folder%20112/ec-2.0.6.png.kSeEnObyMY_Lk99jyAQ.T24mYvmodT.jpg",
+      "square": true
+    },
+    {
+      "size": 200,
+      "width": 200,
+      "height": 200,
+      "href": "/fotoweb/cache/v2/f/-/Folder%20112/ec-2.0.6.png.kSeEnObyMY_Lk99jkAME.MRIDUbFfXp.jpg",
+      "square": true
+    },
+    {
+      "size": 200,
+      "width": 200,
+      "height": 200,
+      "href": "/fotoweb/cache/v2/f/-/Folder%20112/ec-2.0.6.png.kSeEnObyMY_Lk99jkAME.MRIDUbFfXp.jpg",
+      "square": true
+    },
+    {
+      "size": 400,
+      "width": 400,
+      "height": 400,
+      "href": "/fotoweb/cache/v2/i/j/Folder%20112/ec-2.0.6.png.kSeEnObyMY_Lk99jIAcE.eSPNvVEQqv.jpg",
+      "square": true
+    }
+  ],
+  "quickRenditions": [],
+  "metadataEditor": {
+    "name": "RMIT",
+    "href": "/fotoweb/editors/e1241645-f5eb-41b8-a211-43556e1584df"
+  },
+  "renditions": [
+    {
+      "display_name": "Original File",
+      "description": "Original File",
+      "width": 582,
+      "height": 330,
+      "href": "/fotoweb/archives/5009-All-Learning-Objects/Folder%20112/ec-2.0.6.png.info/__renditions/ORIGINAL",
+      "default": true,
+      "original": true,
+      "sizeFixed": false,
+      "profile": "2af4914d-6c11-4b15-a7ee-a4260efc8309"
+    }
+  ],
+  "previewToken": null,
+  "attributes": {
+    "imageattributes": {
+      "pixelwidth": 582,
+      "pixelheight": 330,
+      "resolution": 72,
+      "flipmirror": 0,
+      "rotation": 0,
+      "colorspace": "rgb"
+    }
+  },
+  "physicalFileId": "67d2f0a7d65ff3dc918b275b/Folder 112/ec-2.0.6.png",
+  "metadata": {
+    "187": {
+      "value": "26B2BCA5C2854CF0 AAF19BF87BC41B75"
+    },
+    "360": {
+      "value": "karl.ervine@rmit.edu.au"
+    },
+    "361": {
+      "value": "Karl Ervine"
+    },
+    "602": {
+      "value": "Current"
+    },
+    "830": {
+      "value": "2025-06-30T00:00:00+10:00"
+    },
+    "858": {
+      "value": [
+        "5cc3d215-415c-4fba-a5d1-c58fc39eb2cf"
+      ]
+    },
+    "860": {
+      "value": [
+        "Lisa Cianci > Manager, Digital Learning > Quality and Engagement > RMIT University Library"
+      ]
+    }
+  },
+  "thumbnailFields": {
+    "label": {
+      "value": ""
+    },
+    "firstLine": {
+      "value": ""
+    },
+    "secondLine": {
+      "value": ""
+    },
+    "additionalFields": [
+      {
+        "value": [],
+        "views": []
+      }
+    ]
+  },
+  "builtinFields": [
+    {
+      "field": "title",
+      "required": false,
+      "value": ""
+    },
+    {
+      "field": "description",
+      "required": false,
+      "value": ""
+    },
+    {
+      "field": "tags",
+      "required": false,
+      "value": []
+    }
+  ],
+  "ancestors": [
+    {
+      "name": "All Learning Objects",
+      "href": "/fotoweb/archives/5009-All-Learning-Objects/",
+      "data": "/fotoweb/archives/5009-All-Learning-Objects/"
+    }
+  ],
+  "props": {
+    "owner": null,
+    "shares": {
+      "enabled": false
+    },
+    "comments": {
+      "enabled": false
+    },
+    "annotations": {
+      "enabled": false
+    },
+    "tags": []
+  },
+  "uniqueId": "26B2BCA5C2854CF0 AAF19BF87BC41B75",
+  "archives": [
+    "5009"
+  ]
+}

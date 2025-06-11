@@ -1,0 +1,224 @@
+{
+  "href": "/fotoweb/archives/5009-All-Learning-Objects/Folder%20112/Fotoware.png.info",
+  "archiveHREF": "/fotoweb/archives/5009-All-Learning-Objects/",
+  "archiveId": 5009,
+  "linkstance": "/fotoweb/archives/5009-All-Learning-Objects/Folder%20112/Fotoware.png.info",
+  "isVersioningEnabled": false,
+  "created": "2025-03-20T04:34:05.405000Z",
+  "modified": "2025-03-20T04:34:05Z",
+  "modifiedBy": "system",
+  "createdBy": "system",
+  "filename": "Fotoware.png",
+  "filesize": 5120,
+  "uniqueid": "",
+  "permissions": [
+    "View",
+    "Preview",
+    "Download"
+  ],
+  "pincount": 0,
+  "previewcount": 12,
+  "downloadcount": 0,
+  "workflowcount": 0,
+  "metadataeditcount": 0,
+  "revisioncount": 0,
+  "doctype": "image",
+  "capabilities": {
+    "crop": true,
+    "print": true,
+    "printWithAnnotations": true
+  },
+  "previews": [
+    {
+      "size": 800,
+      "width": 800,
+      "height": 451,
+      "href": "/fotoweb/cache/v2/9/u/Folder%20112/Fotoware.png.kSfLnvXyMXuvYd9jQA0A.POS1kzWR1J.jpg",
+      "square": false
+    },
+    {
+      "size": 1200,
+      "width": 1200,
+      "height": 676,
+      "href": "/fotoweb/cache/v2/T/F/Folder%20112/Fotoware.png.kSfLnvXyMXuvYd9jYBMA.Y_de7kZ516.jpg",
+      "square": false
+    },
+    {
+      "size": 1600,
+      "width": 1600,
+      "height": 901,
+      "href": "/fotoweb/cache/v2/u/X/Folder%20112/Fotoware.png.kSfLnvXyMXuvYd9jgBkA.lWQ-92BD6e.jpg",
+      "square": false
+    },
+    {
+      "size": 2400,
+      "width": 2400,
+      "height": 1352,
+      "href": "/fotoweb/cache/v2/D/F/Folder%20112/Fotoware.png.kSfLnvXyMXuvYd9jwCUA.DSn-XuQX8Y.jpg",
+      "square": false
+    },
+    {
+      "size": 200,
+      "width": 200,
+      "height": 113,
+      "href": "/fotoweb/cache/v2/n/O/Folder%20112/Fotoware.png.kSfLnvXyMXuvYd9jkAMA.ivgBT-r1Da.jpg",
+      "square": false
+    },
+    {
+      "size": 300,
+      "width": 300,
+      "height": 169,
+      "href": "/fotoweb/cache/v2/X/S/Folder%20112/Fotoware.png.kSfLnvXyMXuvYd9jWAUA.Xahvq9J4Jd.jpg",
+      "square": false
+    },
+    {
+      "size": 400,
+      "width": 400,
+      "height": 225,
+      "href": "/fotoweb/cache/v2/g/r/Folder%20112/Fotoware.png.kSfLnvXyMXuvYd9jIAcA.heJTObB5HE.jpg",
+      "square": false
+    },
+    {
+      "size": 600,
+      "width": 600,
+      "height": 338,
+      "href": "/fotoweb/cache/v2/J/1/Folder%20112/Fotoware.png.kSfLnvXyMXuvYd9jsAkA.m2FFH7Q5Dc.jpg",
+      "square": false
+    },
+    {
+      "size": 100,
+      "width": 100,
+      "height": 100,
+      "href": "/fotoweb/cache/v2/e/C/Folder%20112/Fotoware.png.kSfLnvXyMXuvYd9jyAQ.n2DRigbr5G.jpg",
+      "square": true
+    },
+    {
+      "size": 200,
+      "width": 200,
+      "height": 200,
+      "href": "/fotoweb/cache/v2/f/q/Folder%20112/Fotoware.png.kSfLnvXyMXuvYd9jkAME.aw1vac9vvZ.jpg",
+      "square": true
+    },
+    {
+      "size": 200,
+      "width": 200,
+      "height": 200,
+      "href": "/fotoweb/cache/v2/f/q/Folder%20112/Fotoware.png.kSfLnvXyMXuvYd9jkAME.aw1vac9vvZ.jpg",
+      "square": true
+    },
+    {
+      "size": 400,
+      "width": 400,
+      "height": 400,
+      "href": "/fotoweb/cache/v2/C/l/Folder%20112/Fotoware.png.kSfLnvXyMXuvYd9jIAcE.d4drV61Pk8.jpg",
+      "square": true
+    }
+  ],
+  "quickRenditions": [],
+  "metadataEditor": {
+    "name": "RMIT",
+    "href": "/fotoweb/editors/e1241645-f5eb-41b8-a211-43556e1584df"
+  },
+  "renditions": [
+    {
+      "display_name": "Original File",
+      "description": "Original File",
+      "width": 600,
+      "height": 338,
+      "href": "/fotoweb/archives/5009-All-Learning-Objects/Folder%20112/Fotoware.png.info/__renditions/ORIGINAL",
+      "default": true,
+      "original": true,
+      "sizeFixed": false,
+      "profile": "2af4914d-6c11-4b15-a7ee-a4260efc8309"
+    }
+  ],
+  "previewToken": null,
+  "attributes": {
+    "imageattributes": {
+      "pixelwidth": 600,
+      "pixelheight": 338,
+      "resolution": 72,
+      "flipmirror": 0,
+      "rotation": 0,
+      "colorspace": "rgb"
+    }
+  },
+  "physicalFileId": "67d2f0a7d65ff3dc918b275b/Folder 112/Fotoware.png",
+  "metadata": {
+    "187": {
+      "value": "D317431E0DFE4D86 9B337A6A2D1422A0"
+    },
+    "360": {
+      "value": "karl.ervine@rmit.edu.au"
+    },
+    "361": {
+      "value": "Karl Ervine"
+    },
+    "611": {
+      "value": "Restricted"
+    },
+    "858": {
+      "value": [
+        "5cc3d215-415c-4fba-a5d1-c58fc39eb2cf"
+      ]
+    }
+  },
+  "thumbnailFields": {
+    "label": {
+      "value": ""
+    },
+    "firstLine": {
+      "value": ""
+    },
+    "secondLine": {
+      "value": ""
+    },
+    "additionalFields": [
+      {
+        "value": [],
+        "views": []
+      }
+    ]
+  },
+  "builtinFields": [
+    {
+      "field": "title",
+      "required": false,
+      "value": ""
+    },
+    {
+      "field": "description",
+      "required": false,
+      "value": ""
+    },
+    {
+      "field": "tags",
+      "required": false,
+      "value": []
+    }
+  ],
+  "ancestors": [
+    {
+      "name": "All Learning Objects",
+      "href": "/fotoweb/archives/5009-All-Learning-Objects/",
+      "data": "/fotoweb/archives/5009-All-Learning-Objects/"
+    }
+  ],
+  "props": {
+    "owner": null,
+    "shares": {
+      "enabled": false
+    },
+    "comments": {
+      "enabled": false
+    },
+    "annotations": {
+      "enabled": false
+    },
+    "tags": []
+  },
+  "uniqueId": "D317431E0DFE4D86 9B337A6A2D1422A0",
+  "archives": [
+    "5009"
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "name": "Featured Learning Objects",
+  "description": "",
+  "href": "/fotoweb/archives/5017-Featured-Learning-Objects/",
+  "id": null,
+  "data": "/fotoweb/archives/5017-Featured-Learning-Objects/",
+  "dataTemplate": "/fotoweb/archives/5017-Featured-Learning-Objects/{;o}",
+  "orderRootHref": "/fotoweb/archives/5017-Featured-Learning-Objects/",
+  "matchingHref": "/fotoweb/archives/5017-Featured-Learning-Objects/",
+  "uploadHref": null,
+  "propertyValidations": [
+    {
+      "name": "childUrlFragment",
+      "min": 1,
+      "max": 255,
+      "regex": "^[a-z0-9\\-]+$"
+    }
+  ],
+  "urlComponents": [],
+  "type": "archive",
+  "created": "",
+  "modified": "2025-06-10T17:28:39Z",
+  "deleted": null,
+  "archived": null,
+  "metadataEditor": {
+    "name": "RMIT",
+    "href": "/fotoweb/editors/e1241645-f5eb-41b8-a211-43556e1584df"
+  },
+  "searchURL": "/fotoweb/archives/5017-Featured-Learning-Objects/{?q}",
+  "originalURL": "/fotoweb/archives/5017-Featured-Learning-Objects/",
+  "clearSearch": {
+    "href": "/fotoweb/archives/5017-Featured-Learning-Objects/",
+    "data": "/fotoweb/archives/5017-Featured-Learning-Objects/"
+  },
+  "searchString": "",
+  "searchQuery": "",
+  "alertHref": null,
+  "alt_orders": [
+    {
+      "name": "Last Modified",
+      "key": "mt",
+      "asc": {
+        "href": "/fotoweb/archives/5017-Featured-Learning-Objects/;o=+",
+        "data": "/fotoweb/archives/5017-Featured-Learning-Objects/;o=+",
+        "urlComponents": [
+          {
+            "key": "o",
+            "value": "+"
+          }
+        ]
+      },
+      "desc": {
+        "href": "/fotoweb/archives/5017-Featured-Learning-Objects/",
+        "data": "/fotoweb/archives/5017-Featured-Learning-Objects/",
+        "default": true,
+        "urlComponents": [
+          {
+            "key": "o",
+            "value": ""
+          }
+        ]
+      }
+    },
+    {
+      "name": "Filename",
+      "key": "fn",
+      "asc": {
+        "href": "/fotoweb/archives/5017-Featured-Learning-Objects/;o=fn",
+        "data": "/fotoweb/archives/5017-Featured-Learning-Objects/;o=fn",
+        "urlComponents": [
+          {
+            "key": "o",
+            "value": "fn"
+          }
+        ]
+      },
+      "desc": {
+        "href": "/fotoweb/archives/5017-Featured-Learning-Objects/;o=-fn",
+        "data": "/fotoweb/archives/5017-Featured-Learning-Objects/;o=-fn",
+        "urlComponents": [
+          {
+            "key": "o",
+            "value": "-fn"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Date Created",
+      "key": "350",
+      "asc": {
+        "href": "/fotoweb/archives/5017-Featured-Learning-Objects/;o=350",
+        "data": "/fotoweb/archives/5017-Featured-Learning-Objects/;o=350",
+        "urlComponents": [
+          {
+            "key": "o",
+            "value": "350"
+          }
+        ]
+      },
+      "desc": {
+        "href": "/fotoweb/archives/5017-Featured-Learning-Objects/;o=-350",
+        "data": "/fotoweb/archives/5017-Featured-Learning-Objects/;o=-350",
+        "urlComponents": [
+          {
+            "key": "o",
+            "value": "-350"
+          }
+        ]
+      }
+    }
+  ],
+  "taxonomies": [],
+  "canHaveChildren": true,
+  "isSearchable": true,
+  "isSelectable": true,
+  "isLinkCollection": false,
+  "hasChildren": true,
+  "canCopyTo": false,
+  "canMoveTo": false,
+  "canUploadTo": false,
+  "canCreateFolders": false,
+  "canIngestToChildren": false,
+  "canBeDeleted": false,
+  "canBeArchived": false,
+  "isFolderNavigationEnabled": false,
+  "isSmartFolderNavigationEnabled": false,
+  "canSelect": false,
+  "isConsentManagementEnabled": false,
+  "isConsentStatusFilterEnabled": false,
+  "create": [],
+  "isVersioningEnabled": false,
+  "permissions": [
+    "View",
+    "Preview"
+  ],
+  "smartFolderHeader": "SmartFolders",
+  "posterImages": [],
+  "posterAsset": null,
+  "pin": null,
+  "assetCount": 0,
+  "assets": {
+    "data": [],
+    "paging": {
+      "next": "",
+      "prev": "",
+      "first": "/fotoweb/archives/5017-Featured-Learning-Objects/",
+      "last": "",
+      "index": null,
+      "totalPages": null,
+      "count": null
+    }
+  },
+  "childCount": 0,
+  "children": {
+    "data": [],
+    "paging": {
+      "next": "",
+      "prev": "",
+      "first": "/fotoweb/archives/5017-Featured-Learning-Objects/",
+      "last": "",
+      "index": null,
+      "totalPages": null,
+      "count": null
+    },
+    "reorder": null,
+    "add": null,
+    "searchURL": null
+  },
+  "ancestors": [],
+  "props": {
+    "owner": null,
+    "shares": {
+      "enabled": false
+    },
+    "comments": {
+      "enabled": false
+    },
+    "annotations": {
+      "enabled": false
+    },
+    "tags": []
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "metadata": {
+    "lastUpdated": "2025-06-11T02:57:23.923Z",
+    "totalArchives": 9,
+    "totalAssets": 14,
+    "buildTime": 1937
+  },
+  "archives": {
+    "5005": {
+      "id": "5005",
+      "name": "STEM College",
+      "description": "The STEM College incorporates the fields of sciences, engineering, computing technologies and health and medical sciences.",
+      "href": "/fotoweb/archives/5005-STEM-College/",
+      "assetCount": 0,
+      "assets": []
+    },
+    "5006": {
+      "id": "5006",
+      "name": "DSC (Design and Social Context)",
+      "description": "RMIT's College of Design & Social Context brings together creative and practical study in the fields of design, technology and society.",
+      "href": "/fotoweb/archives/5006-DSC-(Design-and-Social-Context)/",
+      "assetCount": 0,
+      "assets": []
+    },
+    "5007": {
+      "id": "5007",
+      "name": "CoBL (College of Business and Law)",
+      "description": "CoBL provides programs in business, management, law, and related areas, catering to students aiming for careers in business practices and legal professions.",
+      "href": "/fotoweb/archives/5007-CoBL-(College-of-Business-and-Law)/",
+      "assetCount": 0,
+      "assets": []
+    },
+    "5008": {
+      "id": "5008",
+      "name": "CoVE (College of Vocational Education)",
+      "description": "CoVE offers a wide range of vocational courses, from certificates to diplomas, preparing students for practical careers with hands-on experience.",
+      "href": "/fotoweb/archives/5008-CoVE-(College-of-Vocational-Education)/",
+      "assetCount": 0,
+      "assets": []
+    },
+    "5009": {
+      "id": "5009",
+      "name": "All Learning Objects",
+      "description": "View all Learning Objects",
+      "href": "/fotoweb/archives/5009-All-Learning-Objects/",
+      "assetCount": 13,
+      "assets": [
+        "31DE2061EAE7464E B748425AEBE2AE69",
+        "0A41429EB20B401A 8300AB914EAEC7CC",
+        "4B92004A68B34C6C A3F6037C089AFB32",
+        "4A0E8D192BD74B69 99F305A92328136A",
+        "FAD6429E42C14623 90D0C0BC289278A9",
+        "A2E6639894C94847 97BCFC4037381F52",
+        "D6BFD19CFDC84F29 9FD9C6507560D3E0",
+        "007001D530534618 BF4809AD01286D14",
+        "26B2BCA5C2854CF0 AAF19BF87BC41B75",
+        "C4AA1B89BED34A6A B1D21E909266A3F0",
+        "21F12DFC7B024CA8 82CAB5D53CDD2130",
+        "40031D65FE334AC5 B2B5AD6DF6979305",
+        "D317431E0DFE4D86 9B337A6A2D1422A0"
+      ]
+    },
+    "5010": {
+      "id": "5010",
+      "name": "RMIT Vietnam",
+      "description": "",
+      "href": "/fotoweb/archives/5010-RMIT-Vietnam/",
+      "assetCount": 0,
+      "assets": []
+    },
+    "5011": {
+      "id": "5011",
+      "name": "RMIT University Library",
+      "description": "",
+      "href": "/fotoweb/archives/5011-RMIT-University-Library/",
+      "assetCount": 1,
+      "assets": [
+        "4B92004A68B34C6C A3F6037C089AFB32"
+      ]
+    },
+    "5017": {
+      "id": "5017",
+      "name": "Featured Learning Objects",
+      "description": "",
+      "href": "/fotoweb/archives/5017-Featured-Learning-Objects/",
+      "assetCount": 0,
+      "assets": []
+    },
+    "5018": {
+      "id": "5018",
+      "name": "Recently Added",
+      "description": "Last 30 days - Needs 'Date Added' field to be updated",
+      "href": "/fotoweb/archives/5018-Recently-Added/",
+      "assetCount": 7,
+      "assets": [
+        "31DE2061EAE7464E B748425AEBE2AE69",
+        "0A41429EB20B401A 8300AB914EAEC7CC",
+        "4B92004A68B34C6C A3F6037C089AFB32",
+        "4A0E8D192BD74B69 99F305A92328136A",
+        "1B3674CEBEB348E5 911C695CD765D694",
+        "A2E6639894C94847 97BCFC4037381F52",
+        "D6BFD19CFDC84F29 9FD9C6507560D3E0"
+      ]
+    }
+  }
+}

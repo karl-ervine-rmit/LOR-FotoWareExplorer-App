@@ -1,0 +1,225 @@
+{
+  "href": "/fotoweb/archives/5018-Recently-Added/Folder%20112/Man_enjoying_ketchup_chips.jpg.info",
+  "archiveHREF": "/fotoweb/archives/5018-Recently-Added/",
+  "archiveId": 5018,
+  "linkstance": "/fotoweb/archives/5018-Recently-Added/Folder%20112/Man_enjoying_ketchup_chips.jpg.info",
+  "isVersioningEnabled": false,
+  "created": "2025-06-04T09:14:24.359000Z",
+  "modified": "2025-06-04T09:14:25Z",
+  "modifiedBy": "system",
+  "createdBy": "system",
+  "filename": "Man_enjoying_ketchup_chips.jpg",
+  "filesize": 54272,
+  "uniqueid": "",
+  "permissions": [
+    "View",
+    "Preview"
+  ],
+  "pincount": 0,
+  "previewcount": 12,
+  "downloadcount": 0,
+  "workflowcount": 0,
+  "metadataeditcount": 0,
+  "revisioncount": 0,
+  "doctype": "image",
+  "capabilities": {
+    "crop": true,
+    "print": true,
+    "printWithAnnotations": true
+  },
+  "previews": [
+    {
+      "size": 800,
+      "width": 570,
+      "height": 800,
+      "href": "/fotoweb/cache/v2/X/g/Folder%20112/Man_enjoying_ketchup_chips.jpg.mif2rvLyMeN9heVjQA0A.VOKWdD8uBW.jpg",
+      "square": false
+    },
+    {
+      "size": 1200,
+      "width": 855,
+      "height": 1200,
+      "href": "/fotoweb/cache/v2/e/B/Folder%20112/Man_enjoying_ketchup_chips.jpg.mif2rvLyMeN9heVjYBMA.cMoj_4QN8s.jpg",
+      "square": false
+    },
+    {
+      "size": 1600,
+      "width": 1140,
+      "height": 1600,
+      "href": "/fotoweb/cache/v2/k/V/Folder%20112/Man_enjoying_ketchup_chips.jpg.mif2rvLyMeN9heVjgBkA.7-CaH_dyyn.jpg",
+      "square": false
+    },
+    {
+      "size": 2400,
+      "width": 1709,
+      "height": 2400,
+      "href": "/fotoweb/cache/v2/z/9/Folder%20112/Man_enjoying_ketchup_chips.jpg.mif2rvLyMeN9heVjwCUA.XoZCJVlzZM.jpg",
+      "square": false
+    },
+    {
+      "size": 200,
+      "width": 142,
+      "height": 200,
+      "href": "/fotoweb/cache/v2/C/D/Folder%20112/Man_enjoying_ketchup_chips.jpg.mif2rvLyMeN9heVjkAMA.rxUnnodt7h.jpg",
+      "square": false
+    },
+    {
+      "size": 300,
+      "width": 214,
+      "height": 300,
+      "href": "/fotoweb/cache/v2/G/S/Folder%20112/Man_enjoying_ketchup_chips.jpg.mif2rvLyMeN9heVjWAUA.s_0-X6Xvw8.jpg",
+      "square": false
+    },
+    {
+      "size": 400,
+      "width": 285,
+      "height": 400,
+      "href": "/fotoweb/cache/v2/Y/3/Folder%20112/Man_enjoying_ketchup_chips.jpg.mif2rvLyMeN9heVjIAcA.eF-nSj_WN5.jpg",
+      "square": false
+    },
+    {
+      "size": 600,
+      "width": 427,
+      "height": 600,
+      "href": "/fotoweb/cache/v2/e/1/Folder%20112/Man_enjoying_ketchup_chips.jpg.mif2rvLyMeN9heVjsAkA.lk8rICRSa9.jpg",
+      "square": false
+    },
+    {
+      "size": 100,
+      "width": 100,
+      "height": 100,
+      "href": "/fotoweb/cache/v2/2/r/Folder%20112/Man_enjoying_ketchup_chips.jpg.mif2rvLyMeN9heVjyAQ.nJvz_FQiwg.jpg",
+      "square": true
+    },
+    {
+      "size": 200,
+      "width": 200,
+      "height": 200,
+      "href": "/fotoweb/cache/v2/s/7/Folder%20112/Man_enjoying_ketchup_chips.jpg.mif2rvLyMeN9heVjkAME.eLBPCX2kca.jpg",
+      "square": true
+    },
+    {
+      "size": 200,
+      "width": 200,
+      "height": 200,
+      "href": "/fotoweb/cache/v2/s/7/Folder%20112/Man_enjoying_ketchup_chips.jpg.mif2rvLyMeN9heVjkAME.eLBPCX2kca.jpg",
+      "square": true
+    },
+    {
+      "size": 400,
+      "width": 400,
+      "height": 400,
+      "href": "/fotoweb/cache/v2/a/J/Folder%20112/Man_enjoying_ketchup_chips.jpg.mif2rvLyMeN9heVjIAcE.vs0BVD5MHg.jpg",
+      "square": true
+    }
+  ],
+  "quickRenditions": [],
+  "metadataEditor": {
+    "name": "RMIT",
+    "href": "/fotoweb/editors/e1241645-f5eb-41b8-a211-43556e1584df"
+  },
+  "renditions": [
+    {
+      "display_name": "Original File",
+      "description": "Original File",
+      "width": 250,
+      "height": 351,
+      "href": "/fotoweb/archives/5018-Recently-Added/Folder%20112/Man_enjoying_ketchup_chips.jpg.info/__renditions/ORIGINAL",
+      "default": true,
+      "original": true,
+      "sizeFixed": false,
+      "profile": "2af4914d-6c11-4b15-a7ee-a4260efc8309"
+    }
+  ],
+  "previewToken": null,
+  "attributes": {
+    "imageattributes": {
+      "pixelwidth": 250,
+      "pixelheight": 351,
+      "resolution": 72,
+      "flipmirror": 0,
+      "rotation": 0,
+      "colorspace": "rgb"
+    }
+  },
+  "physicalFileId": "67d2f0a7d65ff3dc918b275b/Folder 112/Man_enjoying_ketchup_chips.jpg",
+  "metadata": {
+    "187": {
+      "value": "0A41429EB20B401A 8300AB914EAEC7CC"
+    },
+    "360": {
+      "value": "karl.ervine@rmit.edu.au"
+    },
+    "361": {
+      "value": "Karl Ervine"
+    },
+    "362": {
+      "value": "2025-06-04T19:14:23.060656"
+    },
+    "602": {
+      "value": "Current"
+    },
+    "830": {
+      "value": "2025-06-15T00:00:00+10:00"
+    }
+  },
+  "thumbnailFields": {
+    "label": {
+      "value": ""
+    },
+    "firstLine": {
+      "value": ""
+    },
+    "secondLine": {
+      "value": ""
+    },
+    "additionalFields": [
+      {
+        "value": [],
+        "views": []
+      }
+    ]
+  },
+  "builtinFields": [
+    {
+      "field": "title",
+      "required": false,
+      "value": ""
+    },
+    {
+      "field": "description",
+      "required": false,
+      "value": ""
+    },
+    {
+      "field": "tags",
+      "required": false,
+      "value": []
+    }
+  ],
+  "ancestors": [
+    {
+      "name": "Recently Added",
+      "href": "/fotoweb/archives/5018-Recently-Added/",
+      "data": "/fotoweb/archives/5018-Recently-Added/"
+    }
+  ],
+  "props": {
+    "owner": null,
+    "shares": {
+      "enabled": false
+    },
+    "comments": {
+      "enabled": false
+    },
+    "annotations": {
+      "enabled": false
+    },
+    "tags": []
+  },
+  "uniqueId": "0A41429EB20B401A 8300AB914EAEC7CC",
+  "archives": [
+    "5018",
+    "5009"
+  ]
+}

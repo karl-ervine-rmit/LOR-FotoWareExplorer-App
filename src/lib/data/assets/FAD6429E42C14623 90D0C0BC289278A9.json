@@ -1,0 +1,236 @@
+{
+  "href": "/fotoweb/archives/5009-All-Learning-Objects/Folder%20112/superseded.png.info",
+  "archiveHREF": "/fotoweb/archives/5009-All-Learning-Objects/",
+  "archiveId": 5009,
+  "linkstance": "/fotoweb/archives/5009-All-Learning-Objects/Folder%20112/superseded.png.info",
+  "isVersioningEnabled": false,
+  "created": "2025-05-12T03:58:14.287000Z",
+  "modified": "2025-05-12T03:58:19Z",
+  "modifiedBy": "system",
+  "createdBy": "system",
+  "filename": "superseded.png",
+  "filesize": 2683904,
+  "uniqueid": "",
+  "permissions": [
+    "View",
+    "Preview",
+    "Download"
+  ],
+  "pincount": 0,
+  "previewcount": 12,
+  "downloadcount": 0,
+  "workflowcount": 0,
+  "metadataeditcount": 0,
+  "revisioncount": 0,
+  "doctype": "image",
+  "capabilities": {
+    "crop": true,
+    "print": true,
+    "printWithAnnotations": true
+  },
+  "previews": [
+    {
+      "size": 800,
+      "width": 800,
+      "height": 800,
+      "href": "/fotoweb/cache/v2/U/P/Folder%20112/superseded.png.kSfI6fLyMbcLkeNjQA0A.EdARzOYYyz.jpg",
+      "square": false
+    },
+    {
+      "size": 1200,
+      "width": 1200,
+      "height": 1200,
+      "href": "/fotoweb/cache/v2/W/-/Folder%20112/superseded.png.kSfI6fLyMbcLkeNjYBMA.mDmMKssusS.jpg",
+      "square": false
+    },
+    {
+      "size": 1600,
+      "width": 1600,
+      "height": 1600,
+      "href": "/fotoweb/cache/v2/q/W/Folder%20112/superseded.png.kSfI6fLyMbcLkeNjgBkA.WqneLQU-o6.jpg",
+      "square": false
+    },
+    {
+      "size": 2400,
+      "width": 2400,
+      "height": 2400,
+      "href": "/fotoweb/cache/v2/a/I/Folder%20112/superseded.png.kSfI6fLyMbcLkeNjwCUA.BW6pRvnGe-.jpg",
+      "square": false
+    },
+    {
+      "size": 200,
+      "width": 200,
+      "height": 200,
+      "href": "/fotoweb/cache/v2/x/y/Folder%20112/superseded.png.kSfI6fLyMbcLkeNjkAMA.gpkinf3FPb.jpg",
+      "square": false
+    },
+    {
+      "size": 300,
+      "width": 300,
+      "height": 300,
+      "href": "/fotoweb/cache/v2/J/c/Folder%20112/superseded.png.kSfI6fLyMbcLkeNjWAUA.svswTqc4Dd.jpg",
+      "square": false
+    },
+    {
+      "size": 400,
+      "width": 400,
+      "height": 400,
+      "href": "/fotoweb/cache/v2/O/o/Folder%20112/superseded.png.kSfI6fLyMbcLkeNjIAcA.Y9a-8WhklI.jpg",
+      "square": false
+    },
+    {
+      "size": 600,
+      "width": 600,
+      "height": 600,
+      "href": "/fotoweb/cache/v2/n/T/Folder%20112/superseded.png.kSfI6fLyMbcLkeNjsAkA.lRsaZ_E5u3.jpg",
+      "square": false
+    },
+    {
+      "size": 100,
+      "width": 100,
+      "height": 100,
+      "href": "/fotoweb/cache/v2/1/F/Folder%20112/superseded.png.kSfI6fLyMbcLkeNjyAQ.s2aPB7QMqu.jpg",
+      "square": true
+    },
+    {
+      "size": 200,
+      "width": 200,
+      "height": 200,
+      "href": "/fotoweb/cache/v2/Q/8/Folder%20112/superseded.png.kSfI6fLyMbcLkeNjkAME.qj5isUaZpP.jpg",
+      "square": true
+    },
+    {
+      "size": 200,
+      "width": 200,
+      "height": 200,
+      "href": "/fotoweb/cache/v2/Q/8/Folder%20112/superseded.png.kSfI6fLyMbcLkeNjkAME.qj5isUaZpP.jpg",
+      "square": true
+    },
+    {
+      "size": 400,
+      "width": 400,
+      "height": 400,
+      "href": "/fotoweb/cache/v2/P/k/Folder%20112/superseded.png.kSfI6fLyMbcLkeNjIAcE.N9zOAcrA0f.jpg",
+      "square": true
+    }
+  ],
+  "quickRenditions": [],
+  "metadataEditor": {
+    "name": "RMIT",
+    "href": "/fotoweb/editors/e1241645-f5eb-41b8-a211-43556e1584df"
+  },
+  "renditions": [
+    {
+      "display_name": "Original File",
+      "description": "Original File",
+      "width": 1024,
+      "height": 1024,
+      "href": "/fotoweb/archives/5009-All-Learning-Objects/Folder%20112/superseded.png.info/__renditions/ORIGINAL",
+      "default": true,
+      "original": true,
+      "sizeFixed": false,
+      "profile": "2af4914d-6c11-4b15-a7ee-a4260efc8309"
+    }
+  ],
+  "previewToken": null,
+  "attributes": {
+    "imageattributes": {
+      "pixelwidth": 1024,
+      "pixelheight": 1024,
+      "resolution": 72,
+      "flipmirror": 0,
+      "rotation": 0,
+      "colorspace": "rgb"
+    }
+  },
+  "physicalFileId": "67d2f0a7d65ff3dc918b275b/Folder 112/superseded.png",
+  "metadata": {
+    "5": {
+      "value": "Scenario 10"
+    },
+    "187": {
+      "value": "FAD6429E42C14623 90D0C0BC289278A9"
+    },
+    "360": {
+      "value": "karl.ervine@rmit.edu.au"
+    },
+    "361": {
+      "value": "Karl Ervine"
+    },
+    "362": {
+      "value": "2025-05-12T13:58:13.254925"
+    },
+    "602": {
+      "value": "Superseded"
+    },
+    "830": {
+      "value": "2025-05-15T00:00:00+10:00"
+    },
+    "846": {
+      "value": "superseded test"
+    },
+    "855": {
+      "value": [
+        "https://rmit.fotoware.cloud/fotoweb/archives/5013-Pre-Appraisal/Folder%20112/superseded%20(2).png.info"
+      ]
+    }
+  },
+  "thumbnailFields": {
+    "label": {
+      "value": "Scenario 10"
+    },
+    "firstLine": {
+      "value": ""
+    },
+    "secondLine": {
+      "value": ""
+    },
+    "additionalFields": [
+      {
+        "value": [],
+        "views": []
+      }
+    ]
+  },
+  "builtinFields": [
+    {
+      "field": "title",
+      "required": false,
+      "value": "Scenario 10"
+    },
+    {
+      "field": "description",
+      "required": false,
+      "value": ""
+    },
+    {
+      "field": "tags",
+      "required": false,
+      "value": []
+    }
+  ],
+  "ancestors": [
+    {
+      "name": "All Learning Objects",
+      "href": "/fotoweb/archives/5009-All-Learning-Objects/",
+      "data": "/fotoweb/archives/5009-All-Learning-Objects/"
+    }
+  ],
+  "props": {
+    "owner": null,
+    "shares": {
+      "enabled": false
+    },
+    "comments": {
+      "enabled": false
+    },
+    "annotations": {
+      "enabled": false
+    },
+    "tags": []
+  },
+  "uniqueId": "FAD6429E42C14623 90D0C0BC289278A9",
+  "archives": [
+    "5009"
+  ]
+}
