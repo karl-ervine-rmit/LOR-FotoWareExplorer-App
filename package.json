@@ -5,7 +5,7 @@
   "description": "RMIT Library's FotoWare frontend for managing digital learning objects",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run build-data && next build",
     "start": "next start",
     "lint": "next lint",
     "build-data": "npx tsx scripts/build-data.ts"
@@ -40,6 +40,8 @@
     "@radix-ui/react-toggle-group": "^1.1.10",
     "@radix-ui/react-tooltip": "^1.2.7",
     "@tanstack/react-query": "^5.80.2",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
     "axios": "^1.9.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -73,6 +75,7 @@
     "eslint-config-next": "15.3.3",
     "postcss": "^8.5.4",
     "tailwindcss": "^4.1.8",
+    "tsx": "^4.7.1",
     "tw-animate-css": "^1.3.3",
     "typescript": "^5.8.3"
   }

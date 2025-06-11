@@ -3,26 +3,29 @@
 // TODO: Implement archive detail UI and data fetching
 
 import type { Metadata } from "next";
-import { SITE_URL, SEO_DEFAULTS } from '@/lib/seo';
-import ArchiveDetailClient from './_client';
-import { getArchive, getArchiveAssets } from '@/lib/data';
+import { SITE_URL, SEO_DEFAULTS } from "@/lib/seo";
+import ArchiveDetailClient from "./_client";
+import { getArchive, getArchiveAssets } from "@/lib/data";
 
 interface PageProps {
-  params: {
+  params: Promise<{
     archiveId: string;
-  };
+  }>;
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const resolvedParams = await params;
   const archive = await getArchive(resolvedParams.archiveId);
 
+  const title = archive?.name || 'Archive';
+  const description = archive?.description || SEO_DEFAULTS.description;
+
   return {
-    title: `${archive?.name || 'Archive'} | ${SEO_DEFAULTS.siteName}`,
-    description: archive?.description || SEO_DEFAULTS.description,
+    title: `${title} | ${SEO_DEFAULTS.siteName}`,
+    description,
     openGraph: {
-      title: `${archive?.name || 'Archive'} | ${SEO_DEFAULTS.siteName}`,
-      description: archive?.description || SEO_DEFAULTS.description,
+      title: `${title} | ${SEO_DEFAULTS.siteName}`,
+      description,
       url: `${SITE_URL}/archives/${resolvedParams.archiveId}`,
       siteName: SEO_DEFAULTS.siteName,
       images: [
@@ -30,35 +33,36 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           url: SEO_DEFAULTS.image,
           width: 1200,
           height: 630,
-          alt: "FotoWare Explorer archive share image"
-        }
+          alt: title,
+        },
       ],
       locale: SEO_DEFAULTS.locale,
-      type: "website"
+      type: "article",
     },
     twitter: {
       card: "summary_large_image",
-      title: `${archive?.name || 'Archive'} | ${SEO_DEFAULTS.siteName}`,
-      description: archive?.description || SEO_DEFAULTS.description,
+      title: `${title} | ${SEO_DEFAULTS.siteName}`,
+      description,
       images: [SEO_DEFAULTS.image],
-      creator: SEO_DEFAULTS.twitterHandle
+      creator: SEO_DEFAULTS.twitterHandle,
     },
     alternates: {
-      canonical: `${SITE_URL}/archives/${resolvedParams.archiveId}`
-    }
+      canonical: `${SITE_URL}/archives/${resolvedParams.archiveId}`,
+    },
   };
 }
 
-export default async function ArchiveDetailPage({ params }: PageProps) {
+export default async function ArchivePage({ params }: PageProps) {
   const resolvedParams = await params;
   const archive = await getArchive(resolvedParams.archiveId);
   const assets = await getArchiveAssets(resolvedParams.archiveId);
 
   if (!archive) {
     return (
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-2xl font-bold text-red-600">Archive not found</h1>
-        <p className="mt-2">The requested archive could not be found.</p>
+      <div className="container mx-auto p-4">
+        <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded">
+          Archive not found
+        </div>
       </div>
     );
   }

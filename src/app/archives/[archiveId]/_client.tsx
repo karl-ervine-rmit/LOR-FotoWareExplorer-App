@@ -1,7 +1,10 @@
 // src/app/archives/[archiveId]/_client.tsx
 
 "use client";
-import { useState } from "react";
+import { useState } from 'react';
+import { AssetCard } from '@/components/common/AssetCard';
+import { Archive } from '@/lib/data/types';
+import { Asset } from '@/lib/data/types';
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Accordion,
@@ -10,11 +13,8 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Checkbox } from "@/components/ui/checkbox";
-import { AssetCard, AssetFlag } from "@/components/common/AssetCard";
-import { EyeOff, Info, Star } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 import Script from "next/script";
-import type { Archive, Asset } from "@/lib/data";
 import { SITE_URL, SEO_DEFAULTS } from '@/lib/seo';
 
 interface ArchiveDetailClientProps {
@@ -63,20 +63,6 @@ export default function ArchiveDetailClient({
     .sort((a, b) => {
       return (getStringValue(a.metadata?.['5']) || a.name).localeCompare(getStringValue(b.metadata?.['5']) || b.name);
     });
-
-  // Format metadata for AssetCard
-  const formatMetadataForCard = (metadata: Record<string, unknown> | undefined): Record<string, string> => {
-    if (!metadata) return {};
-    return Object.entries(metadata).reduce((acc, [key, value]) => {
-      const stringValue = getStringValue(value);
-      if (stringValue) {
-        // Map field IDs to their display names
-        if (key === '5') acc.title = stringValue;
-        if (key === 'doctype') acc.type = stringValue;
-      }
-      return acc;
-    }, {} as Record<string, string>);
-  };
 
   return (
     <>
@@ -168,32 +154,12 @@ export default function ArchiveDetailClient({
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-3 gap-y-6 gap-x-6">
-                  {filteredAssets.map((asset) => {
-                    const flags: AssetFlag[] = [
-                      asset.isCulturallySensitive && {
-                        type: "cultural",
-                        label: "Culturally sensitive content",
-                        icon: <EyeOff className="h-4 w-4 text-yellow-500" />,
-                      },
-                      asset.isSuperseded && {
-                        type: "superseded",
-                        label: "This asset has been superseded",
-                        icon: <Info className="h-4 w-4 text-red-500" />,
-                      },
-                      asset.isFeatured && {
-                        type: "featured",
-                        label: "Featured asset",
-                        icon: <Star className="h-4 w-4 text-blue-500" />,
-                      },
-                    ].filter(Boolean) as AssetFlag[];
-
-                    return (
-                      <AssetCard
-                        key={asset.id}
-                        asset={asset}
-                      />
-                    );
-                  })}
+                  {filteredAssets.map((asset) => (
+                    <AssetCard
+                      key={asset.id}
+                      asset={asset}
+                    />
+                  ))}
                 </div>
               </CardContent>
             </Card>

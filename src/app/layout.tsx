@@ -1,6 +1,6 @@
 // Root layout for the application, includes global styles and accessibility helpers
 import './globals.css';
-import type { Metadata } from "next";
+import { Metadata } from 'next';
 import { Geist, Geist_Mono } from "next/font/google";
 import { AppProviders } from "./providers";
 import { ThemeProvider } from "../components/common/ThemeProvider";
@@ -8,9 +8,11 @@ import Navbar from "../components/common/Navbar";
 import AccessibilityToolbar from "../components/common/AccessibilityToolbar";
 import SkipLink from "../components/common/SkipLink";
 import Footer from "../components/common/Footer";
-import { ReactNode } from 'react';
 import Script from 'next/script';
 import { env } from '@/lib/env';
+import { Toaster } from '@/components/ui/sonner';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -93,6 +95,9 @@ export default function RootLayout({
             </main>
             <Footer />
             <AccessibilityToolbar />
+            <Toaster />
+            <Analytics />
+            <SpeedInsights />
           </AppProviders>
         </ThemeProvider>
       </body>

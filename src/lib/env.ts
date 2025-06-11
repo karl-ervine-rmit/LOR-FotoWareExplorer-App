@@ -1,30 +1,17 @@
 import { z } from 'zod';
 
 /**
- * Helper function to check if we're in development mode
- */
-const isDevelopment = process.env.NODE_ENV === 'development';
-
-/**
  * Environment variable schema for runtime validation
  */
 const envSchema = z.object({
   // FotoWare Configuration
-  FOTOWARE_API_URL: isDevelopment
-    ? z.string().url('FOTOWARE_API_URL must be a valid URL').optional()
-    : z.string().url('FOTOWARE_API_URL must be a valid URL'),
+  FOTOWARE_API_URL: z.string().url('FOTOWARE_API_URL must be a valid URL'),
   FOTOWARE_API_TOKEN: z.string().optional(),
 
   // Application Configuration
-  NEXT_PUBLIC_APP_URL: isDevelopment
-    ? z.string().url('NEXT_PUBLIC_APP_URL must be a valid URL').optional()
-    : z.string().url('NEXT_PUBLIC_APP_URL must be a valid URL'),
-  NEXT_PUBLIC_API_URL: isDevelopment
-    ? z.string().url('NEXT_PUBLIC_API_URL must be a valid URL').optional()
-    : z.string().url('NEXT_PUBLIC_API_URL must be a valid URL'),
-  NEXT_PUBLIC_BASE_URL: isDevelopment
-    ? z.string().url('NEXT_PUBLIC_BASE_URL must be a valid URL').optional()
-    : z.string().url('NEXT_PUBLIC_BASE_URL must be a valid URL'),
+  NEXT_PUBLIC_APP_URL: z.string().url('NEXT_PUBLIC_APP_URL must be a valid URL'),
+  NEXT_PUBLIC_API_URL: z.string().url('NEXT_PUBLIC_API_URL must be a valid URL'),
+  NEXT_PUBLIC_BASE_URL: z.string().url('NEXT_PUBLIC_BASE_URL must be a valid URL'),
 
   // Optional Configuration
   NEXT_PUBLIC_GA_MEASUREMENT_ID: z.string().optional(),
@@ -42,21 +29,16 @@ function validateEnv() {
     const errors = parsed.error.format();
     console.error('❌ Invalid environment variables:', JSON.stringify(errors, null, 2));
 
-    if (isDevelopment) {
-      console.warn('⚠️ Running in development mode with missing environment variables');
-      // Return default values for development
-      return {
-        FOTOWARE_API_URL: 'http://localhost:3000',
-        FOTOWARE_API_TOKEN: undefined,
-        NEXT_PUBLIC_APP_URL: 'http://localhost:3000',
-        NEXT_PUBLIC_API_URL: 'http://localhost:3000/api',
-        NEXT_PUBLIC_BASE_URL: 'http://localhost:3000',
-        NEXT_PUBLIC_GA_MEASUREMENT_ID: undefined,
-        REVALIDATE_SECRET: undefined,
-      };
-    }
-
-    throw new Error('Invalid environment variables');
+    // Return default values for both development and production
+    return {
+      FOTOWARE_API_URL: process.env.FOTOWARE_API_URL || 'https://rmit.fotoware.cloud/fotoweb',
+      FOTOWARE_API_TOKEN: process.env.FOTOWARE_API_TOKEN,
+      NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
+      NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api',
+      NEXT_PUBLIC_BASE_URL: process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000',
+      NEXT_PUBLIC_GA_MEASUREMENT_ID: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID,
+      REVALIDATE_SECRET: process.env.REVALIDATE_SECRET,
+    };
   }
 
   return parsed.data;

@@ -2,7 +2,7 @@
 // TODO: Implement API client logic
 
 import { env } from './env';
-import type { FotoWareArchive, FotoWareAlbum, FotoWareAsset } from '../types/index.d.ts';
+import type { FotoWareArchive, FotoWareAlbum, FotoWareAsset } from '../types';
 
 const API_URL = env.FOTOWARE_API_URL;
 const API_TOKEN = env.FOTOWARE_API_TOKEN;

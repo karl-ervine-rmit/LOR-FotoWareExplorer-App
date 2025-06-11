@@ -33,6 +33,39 @@ export interface FotoWareArchive {
   isConsentStatusFilterEnabled: boolean;
 }
 
+export interface FotoWareAlbum {
+  id: string;
+  name: string;
+  description?: string;
+  href: string;
+  archiveId: string;
+  created: string;
+  modified: string;
+  data: Record<string, unknown>;
+  links: Record<string, unknown>;
+  archiveHREF: string;
+  linkstance: string;
+  isVersioningEnabled: boolean;
+  permissions: string[];
+  canHaveChildren: boolean;
+  isSearchable: boolean;
+  isSelectable: boolean;
+  isLinkCollection: boolean;
+  hasChildren: boolean;
+  canCopyTo: boolean;
+  canMoveTo: boolean;
+  canUploadTo: boolean;
+  canCreateFolders: boolean;
+  canIngestToChildren: boolean;
+  canBeDeleted: boolean;
+  canBeArchived: boolean;
+  isFolderNavigationEnabled: boolean;
+  isSmartFolderNavigationEnabled: boolean;
+  canSelect: boolean;
+  isConsentManagementEnabled: boolean;
+  isConsentStatusFilterEnabled: boolean;
+}
+
 export interface FotoWareAsset {
   id: string;
   name: string;

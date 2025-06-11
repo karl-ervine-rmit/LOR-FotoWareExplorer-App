@@ -2,19 +2,25 @@
 
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { Asset } from '@/lib/data';
 import { getAsset } from '@/lib/data';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Skeleton } from '@/components/ui/skeleton';
 import { METADATA_FIELD_MAPPINGS } from '@/lib/data';
+import Image from 'next/image';
+import type { Asset, MetadataValue } from '@/lib/data/types';
 
 interface AssetDetailProps {
-  assetId: string;
+  asset: Asset;
 }
 
-export default function AssetDetail({ assetId }: AssetDetailProps) {
-  const [asset, setAsset] = useState<Asset | null>(null);
+function getStringValue(value: MetadataValue | undefined): string {
+  if (!value) return '';
+  return Array.isArray(value.value) ? value.value[0] : value.value;
+}
+
+export default function AssetDetail({ asset: initialAsset }: AssetDetailProps) {
+  const [asset, setAsset] = useState<Asset>(initialAsset);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const pathname = usePathname();
@@ -24,8 +30,10 @@ export default function AssetDetail({ assetId }: AssetDetailProps) {
       try {
         setLoading(true);
         setError(null);
-        const data = await getAsset(assetId);
-        setAsset(data);
+        const data = await getAsset(initialAsset.id);
+        if (data) {
+          setAsset(data);
+        }
       } catch (err) {
         setError('Failed to load asset details');
         console.error('Error loading asset:', err);
@@ -35,7 +43,7 @@ export default function AssetDetail({ assetId }: AssetDetailProps) {
     };
 
     fetchAsset();
-  }, [assetId, pathname]);
+  }, [initialAsset.id, pathname]);
 
   if (loading) {
     return (
@@ -80,9 +88,13 @@ export default function AssetDetail({ assetId }: AssetDetailProps) {
     ),
   };
 
+  const previewUrl = getStringValue(asset.metadata.previewUrl);
+  const thumbnailUrl = getStringValue(asset.metadata.thumbnailUrl);
+  const title = getStringValue(asset.metadata.title);
+
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">{asset.name}</h1>
+      <h1 className="text-2xl font-bold mb-4">{title || asset.name}</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
         <Card>
@@ -90,16 +102,16 @@ export default function AssetDetail({ assetId }: AssetDetailProps) {
             <CardTitle>Preview</CardTitle>
           </CardHeader>
           <CardContent>
-            {asset.previewUrl ? (
-              <img
-                src={asset.previewUrl}
-                alt={asset.name}
+            {(previewUrl || thumbnailUrl) ? (
+              <Image
+                src={previewUrl || thumbnailUrl}
+                alt={title || asset.name}
+                width={1200}
+                height={800}
                 className="w-full h-auto rounded-lg"
               />
             ) : (
-              <div className="bg-gray-100 rounded-lg p-4 text-center">
-                No preview available
-              </div>
+              <Skeleton className="w-full h-[400px] rounded-lg" />
             )}
           </CardContent>
         </Card>

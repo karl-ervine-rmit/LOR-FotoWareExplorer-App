@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import {
   Breadcrumb,
   BreadcrumbEllipsis,
@@ -29,61 +29,22 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { Skeleton } from '@/components/ui/skeleton';
 import React from 'react';
 
 const ITEMS_TO_DISPLAY = 3;
 
-export function Breadcrumbs() {
+interface BreadcrumbsProps {
+  segments?: string[];
+}
+
+export function Breadcrumbs({ segments: propSegments }: BreadcrumbsProps = {}) {
   const pathname = usePathname();
-  const segments = pathname.split('/').filter(Boolean);
-  const [archiveName, setArchiveName] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
-
-  // Reset states when pathname changes
-  useEffect(() => {
-    setArchiveName(null);
-    setIsLoading(false);
-  }, [pathname]);
-
-  useEffect(() => {
-    const archiveIndex = segments.findIndex(segment => segment === 'archives');
-    const archiveId = archiveIndex !== -1 ? segments[archiveIndex + 1] : null;
-
-    const fetchArchiveName = async () => {
-      if (!archiveId || isLoading || archiveName) return;
-
-      setIsLoading(true);
-      try {
-        const response = await fetch(`/api/archives/${archiveId}`);
-        if (response.ok) {
-          const archive = await response.json();
-          setArchiveName(archive.name);
-        }
-      } catch (error) {
-        console.error('Error fetching archive:', error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchArchiveName();
-  }, [pathname, segments, isLoading, archiveName]);
+  const pathSegments = pathname.split('/').filter(Boolean);
+  const segments = propSegments || pathSegments;
 
   const crumbs = segments.map((segment, index) => {
     const href = '/' + segments.slice(0, index + 1).join('/');
-    let label = segment.replace(/-/g, ' ');
-
-    // Replace archive ID with archive name if available, or show loading state
-    if (segment === segments[segments.findIndex(s => s === 'archives') + 1]) {
-      if (isLoading) {
-        return { label: <Skeleton className="h-4 w-24" />, href };
-      }
-      if (archiveName) {
-        label = archiveName;
-      }
-    }
-
+    const label = segment.replace(/-/g, ' ');
     return { label, href };
   });
 

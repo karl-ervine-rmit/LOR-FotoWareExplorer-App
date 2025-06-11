@@ -6,16 +6,22 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-export function getStringValue(value: MetadataValue): string {
+export function getStringValue(value: MetadataValue | string | string[] | number | boolean | null | undefined): string {
   if (typeof value === 'string') return value;
   if (typeof value === 'number') return String(value);
   if (typeof value === 'boolean') return String(value);
   if (value === null || value === undefined) return '';
   if (Array.isArray(value)) {
-    return value.map(v => getStringValue(v as MetadataValue)).join(', ');
+    return value.join(', ');
   }
   if (typeof value === 'object') {
-    if ('value' in value) return getStringValue(value.value as MetadataValue);
+    if ('value' in value) {
+      const metadataValue = value.value;
+      if (Array.isArray(metadataValue)) {
+        return metadataValue.join(', ');
+      }
+      return String(metadataValue);
+    }
     return JSON.stringify(value);
   }
   return '';

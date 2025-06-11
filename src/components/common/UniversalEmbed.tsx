@@ -4,7 +4,7 @@
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import React from 'react';
-import { CulturallySensitiveMask } from './AssetCard';
+import { CulturallySensitiveMask } from './CulturallySensitiveMask';
 
 export type EmbedType =
   | 'image'

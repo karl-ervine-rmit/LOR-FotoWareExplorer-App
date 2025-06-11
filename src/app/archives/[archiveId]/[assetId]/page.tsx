@@ -17,10 +17,10 @@ import { getAsset } from "@/lib/data";
 import { getStringValue } from "@/lib/utils";
 
 interface PageProps {
-  params: {
+  params: Promise<{
     archiveId: string;
     assetId: string;
-  };
+  }>;
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -65,14 +65,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-interface AssetDetailPageProps {
-  params: {
-    archiveId: string;
-    assetId: string;
-  };
-}
-
-export default async function AssetDetailPage({ params }: AssetDetailPageProps) {
+export default async function AssetDetailPage({ params }: PageProps) {
   const resolvedParams = await params;
   // Combine archiveId and assetId to match the format used in getArchiveAssets
   const combinedAssetId = `${resolvedParams.archiveId} ${resolvedParams.assetId}`;
